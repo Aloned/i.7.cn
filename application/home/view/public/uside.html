@@ -1,0 +1,29 @@
+<ul class="side-nav">
+	<li><a href="/my.html" <eq name="nav2" value="1">class="active"</eq> >我的门票</a></li>
+	<li><a href="/person.html" <eq name="nav2" value="2">class="active"</eq> >个人资料</a></li>
+	<li><a href="/my.html" <eq name="nav2" value="3">class="active"</eq> >我的邀请</a></li>
+	<li><a href="javascript:;" class="logout">退出</a></li>
+</ul>
+
+<script type="text/javascript">
+	$(function(){
+		$('.logout').click(function(){
+			$.ajax({
+				type: "post",
+				url: "{:url('login/logout')}",
+				data: {},
+				dataType: 'json',
+				async: true,
+				success: function(res) {
+					if(res.status == 1) {
+						alert(res.msg);
+						window.location.href = '/';
+					}
+				},
+				error: function(e) {
+					console.log(e)
+				}
+			});
+		});
+	});
+</script>

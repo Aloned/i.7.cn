@@ -1,0 +1,20 @@
+<include file="public/header" />
+<div class="layui-side layui-bg-black" id="admin-side">
+	<div class="layui-side-scroll" id="admin-navbar-side" lay-filter="side"></div>
+</div>
+<div class="layui-body" id="admin-body">
+	<div class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-tab">
+		<ul class="layui-tab-title">
+			<li class="layui-this">
+				<i class="layui-icon">&#xe68e;</i>
+				<cite>控制面板</cite>
+			</li>
+		</ul>
+		<div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">
+			<div class="layui-tab-item layui-show">
+				<iframe src="{:url('admin/index/main')}" frameborder="0" style="width: 100%;"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="public/footer" />

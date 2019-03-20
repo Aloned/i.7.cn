@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<title>主页</title>
+
+		<!--CSS-->
+		<link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" />
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/global.css" />
+
+		<!--JS-->
+		<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
+	</head>
+
+	<body>
+		<div class="layui-main my-admin">
+			<div class="layui-tab my-tab">
+				<div class="my-title-box">
+					<h5 class="my-title">领票点列表</h5>
+					<if condition="session('role_id') eq 1|2">
+						<a href="{:url('store/add')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>  添加</a>
+					</if>
+					<a href="/public/uploads/%e9%a2%86%e7%a5%a8%e7%82%b9%e5%af%bc%e5%85%a5%e6%a8%a1%e7%89%88.xlsx">模版下载</a>
+					<form style="width:300px;float: right;height: 30px;" action="{:url('store/importExp')}" method="post" enctype="multipart/form-data" >
+
+							<div style="margin-top: 20px;">
+								<input id="doc-form-file" type="file" name="excel"  multiple>
+							</div>
+
+							<div style="position: relative;left:200px;top:-30px;width: 80px">
+								<button class="layui-btn layui-btn-danger" type="submit">Excel导入</button>
+							</div>
+						<div style="position: relative;left:-200px;top:-80px;width: 80px">
+							<a href="{:url('store/export')}"><button class="layui-btn layui-btn-danger" type="button">Excel导出</button></a>
+						</div>
+
+					</form>
+				</div>
+				<form class="layui-form" action="{:url('store/index')}" id="search" method="post">
+					<div class="layui-form-item">
+						<div class="layui-input-inline my-input-line" style="margin: 10px 0 0 20px">
+							<select name="store_city" id="store_city" lay-filter="store_city">
+								<option value="">全部</option>
+								<volist name="citylist" id="vo">
+									<option value="{$vo.id}" <?php if($cityId == $vo['id']){echo 'selected';} ?>> {$vo.cityname}</option>
+								</volist>
+							</select>
+						</div>
+						<div class="layui-input-inline my-input-line" style="margin:10px 0 0 10px">
+							<input type="text" <?php if(isset($keyword)){echo "value=$keyword";} ?> name="keywords" placeholder="电话号码/公司名称" class="layui-input">
+						</div>
+						<button type="submit" style="margin:10px 0 0 10px" class="layui-btn layui-btn-danger"><i class="layui-icon">&#xe615;</i></button>
+					</div>
+				</form>
+				<div class="my-content">
+					<table class="layui-table">
+						<thead>
+							<tr>
+								<th><a href="{:url('store/index')}?type=1<?php if(isset($cityId)){echo '&store_city='.$cityId;} ?>">ID</a></th>
+			                   	<th>领票点名称</th>
+			                   	<th>联系人</th>
+			                   	<th>联系人电话</th>
+			                   	<th>总票数</th>
+			                   	<th>已领票数</th>
+			                   	<th>余票数</th>
+			                   	<th>地址</th>
+			                   	<th>是否启用</th>
+			                   	<th>操作</th>
+			               	</tr>
+						</thead>
+						<tbody>
+							<foreach name="list" item="vo" key="k" >
+					  			<tr>
+					  				<td>{$vo.store_id}</td>
+			                     	<td>{$vo.store_name}</td>
+					     		 	<td>{$vo.store_contact}</td>
+					     		 	<td>{$vo.store_tel}</td>
+					     		 	<td><span class="txt-color3">{$vo.store_amount}</span></td>
+					     		 	<td><span class="txt-color2">{:specTicket($vo.store_id)}</span></td>
+					     		 	<td><span class="txt-color4">{$vo.store_amount - specTicket($vo.store_id)}</span></td>
+					     		 	<td>{$vo.store_address|mb_substr=0,20,'utf8'}</td>
+			                 		<td>
+		                             	<if condition="($vo.is_show) eq '1'"><span class="my-status-bg layui-bg-green"><i class="layui-icon">&#xe605;</i></span><else><span class="my-status-bg layui-bg-red"><i class="layui-icon">&#x1006;</i></span></if>
+		                         	</td>
+			                     	<td>
+			                      		<a class="layui-btn layui-btn-small" href="{:url('store/edit',['store_id'=>$vo.store_id])}"><i class="layui-icon">&#xe642;</i></a>
+				                      	<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('store/del')}" data-id="{$vo.store_tel}"><i class="layui-icon">&#xe640;</i></a>
+					     			</td>
+			                   	</tr>
+			                </foreach>
+						</tbody>
+					</table>
+					<div class="my-pager">
+						{$pager}共{$count}条
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		layui.config({
+			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
+		}).use('store'); //加载入口
+	</script>
+</html>

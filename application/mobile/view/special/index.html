@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<!-- Safari浏览器私有meta属性 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="APP name">
+	<!-- <script src="js/hotcss.js"></script> -->
+	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+	<!-- <script src="js/touch.js"></script> -->
+	<script src="__PUBLIC__/mobile/js/jsrem.js"></script>
+	<script src="__PUBLIC__/mobile/js/swiper.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/reset1.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/style.css?ver=061101957">
+	<title>专题页面</title>
+	<style type="text/css">
+		.s-wrap{ margin:0 0.3rem; }
+		.s-body-bg{ background-color: #111050; }
+		.s-top{overflow: hidden; min-height: 3rem; background: url(__PUBLIC__/mobile/images1/stop.png) center top no-repeat; background-size: 100%; }
+		.s-top img{ display: block; width: 5.2rem; margin:1.2rem auto 0.8rem; }
+		.s-tit1{ display: block; width: 100%; }
+		.sinfo-tit{ margin-top: 0.6rem; font-size: 0.2rem; text-align: center; }
+		.sinfo-tit span{ position: relative;  color:#ffffff; line-height: 0.3rem; display: inline-block; height: 0.3rem;  }
+		.sinfo-tit span i{ position: absolute; top:50%; display: block; width: 1.36rem; }
+		.sinfo-tit span i img{ display: block; width: 100%; }
+		.sinfo-tit span i.sl{ left: -1.56rem; }
+		.sinfo-tit span i.sr{ right:-1.56rem; }
+
+		.sinfo-cont{ padding:0.6rem 0 1.5rem; background: url(__PUBLIC__/mobile/images1/sinfobottonbg.png) center bottom no-repeat; background-size: 100%; }
+		.sinfo-cont dl{ margin:0.12rem 0.8rem 0; line-height: 1.4;}
+		.sinfo-cont dt{ float: left; display: block; font-size: 0.26rem; width: 1.6rem; color: #1fb5e7; text-align:justify; }
+		.sinfo-cont dd{ margin-left: 1.6rem; font-size: 0.26rem; color: #1fb5e7; }
+		.s-p-tit{  height: 0.5rem; }
+		.s-p-tit h2{ float: left;  padding:0 0.05rem 0 0.1rem; position: relative; color: #110f52; font-size: 0.4rem; line-height: 0.5rem; font-weight: bolder; height: 0.5rem;  background: #18b8e8;}
+		.s-p-tit h2 span{ color: #110f52; font-size: 0.2rem; }
+		.s-p-tit h2 i{position: absolute; right: -0.10rem; top:0; display: block; width: 0.15rem; height: 0.5rem; }
+		.s-p-tit h2 i img{ display: block;  height: 0.5rem; }
+		.s-p{padding:0.5rem 0.4rem; color:#18b8e8; font-size: 0.26rem; line-height: 1.8; }
+
+		.sinfo-cont-time{ padding:0.6rem 0 1.5rem;  }
+		.sinfo-cont-time dl{ margin:0.12rem 0.4rem 0; line-height: 1.4;}
+		.sinfo-cont-time dt{ float: left; display: block; font-size: 0.26rem; width: 1.6rem; color: #1fb5e7; text-align:justify; }
+		.sinfo-cont-time dd{ font-size: 0.26rem; color: #1fb5e7; }
+
+		.s-particip-list{ margin-bottom: 0.8rem; overflow: hidden; }
+		.s-particip-list dl{ padding:0.7rem 0; float: left; width: 47%; border-bottom: 1px solid #596a9d; }
+		.s-particip-list dl:nth-child(2n+2){ margin-left: 6%; }
+		.s-particip-list dl dt{ float: left; width: 1.3rem; height: 1.3rem; border-radius: 100%;-webkit-border-radius: 100%; overflow: hidden; }
+		.s-particip-list dl dt img{ display: block; width: 100%; }
+		.s-particip-list dl dd{ margin-left: 1.4rem; overflow: hidden; }
+		.s-particip-list dl dd h4{ margin: 0.1rem 0; color:#4093f3; font-size: 0.36rem; font-weight: bolder; }
+		.s-particip-list dl dd p{ color:#cfd8ff; font-size: 0.22rem;
+			overflow:hidden;  text-overflow:ellipsis;  white-space:nowrap;}
+
+		.s-media-list{ overflow: hidden; }
+		.s-media-list ul{ margin:0.7rem 0; overflow: hidden; }
+		.s-media-list li{ margin-bottom: 0.2rem; float: left; width: 23%; margin-left:2.6%; }
+		.s-media-list li:nth-child(4n+1){ margin-left: 0%; }
+		.s-media-list li img{ display: block; width: 100%; height: 0.68rem; }
+		.s-ewm{ overflow: hidden; margin:0.8rem 0; }
+		.s-ewm img{ display: block; margin:0 auto; width: 2rem; height: 2rem; }
+		.s-footer{ overflow: hidden; margin-bottom: 1rem; }
+		.s-footer p{ text-align: center; font-weight: bolder; color:#ffffff; font-size: 0.6rem; line-height: 1; }
+		.s-footer p span{ color:#ffffff; font-size: 0.4rem; }
+
+
+	</style>
+</head>
+<body class="s-body-bg">
+
+<header>
+	<div class="head" style="position: relative;  z-index:50;">
+		<ul class="wrap">
+			<li class="fl"><a href="{$website.url}/mobile"><img src="{$website.logo}"></a></li>
+			<li class="fr"><p class="col000 textr font22">报名已破 <span class="fontber" style="color:#e00;">{$website.tcount}</span> 人<br><span class="font16" style="color:#888;">每晚6点更新数据</span></p></li>
+		</ul>
+	</div>
+</header>
+
+
+<div class="s-top">
+	<img src="__PUBLIC__/mobile/images1/sbanner.png" alt="">
+</div>
+<div class="s-wrap">
+	<img src="__PUBLIC__/mobile/images1/stit1.png" alt="" class="s-tit1">
+</div>
+
+<!-- 大会详细信息 -->
+<div class="sinfo-tit">
+    	<span><i class="sl"><img src="__PUBLIC__/mobile/images1/siconl.png"></i>
+    	<i class="sr"><img src="__PUBLIC__/mobile/images1/siconr.png"></i>汇集万家创新企业  共商未来经济发展</span>
+</div>
+
+
+<div class="sinfo-cont">
+	<dl>
+		<dt>规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;模：</dt>
+		<dd>5800人</dd>
+	</dl>
+	<dl>
+		<dt>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：</dt>
+		<dd>2018年7月19日</dd>
+	</dl>
+	<dl>
+		<dt>官&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网：</dt>
+		<dd>6.ihenan.com</dd>
+	</dl>
+	<dl>
+		<dt>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：</dt>
+		<dd>郑州国际会展中心轩辕堂</dd>
+	</dl>
+	<dl>
+		<dt>冠名单位：</dt>
+		<dd>云和数据</dd>
+	</dl>
+	<dl>
+		<dt>分&nbsp;&nbsp;冠&nbsp;&nbsp;名：</dt>
+		<dd>有间</dd>
+	</dl>
+	<dl>
+		<dt>发起单位：</dt>
+		<dd>多谢资本  创业者大会组委会</dd>
+	</dl>
+	<dl>
+		<dt>主办媒体：</dt>
+		<dd>河南电视台都市频道  FM106.6</dd>
+	</dl>
+	<dl>
+		<dt>主办单位：</dt>
+		<dd>亿达中国  一步用车  锐之旗  hivechain
+			中原区块链</dd>
+	</dl>
+	<dl>
+		<dt>协办单位：</dt>
+		<dd>原力星球  金蝶软件  华信云通信
+			企汇网  乐信  纳佰得  易亚网络
+			3T共享办公</dd>
+	</dl>
+</div>
+
+
+
+<!-- public tit -->
+
+<div class="s-p-tit s-wrap">
+	<h2>STPENGTHS<span>/大会亮点</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+<p class="s-p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以汇聚行业精英、促进技术交流、加深商务合作、推动行业发展为大会宗旨，定位为专业、开放、国际化的大型会议会展平台，本届大会以高品质的会议内容和多元化的展现形式令参会企业及个人能够更加准确的把握行业最新趋势，构建资源共享，深化宣传与合作，实现多方共赢。</p>
+
+
+<div class="s-p-tit s-wrap">
+	<h2>TOPICS<span>/议题议程</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+
+<div class="sinfo-cont-time">
+	<dl>
+		<dt>13:00-13:30</dt>
+		<dd>签到</dd>
+	</dl>
+	<dl>
+		<dt>13:30-13:40</dt>
+		<dd>主办方致词：未来已来，区块链引领行业变革</dd>
+	</dl>
+	<dl>
+		<dt>13:45-14:00</dt>
+		<dd>主题演讲： 区块链的源起与应用</dd>
+	</dl>
+	<dl>
+		<dt>14:00-14:15</dt>
+		<dd>主题演讲：金融+区块链会产生怎样的化学反应</dd>
+	</dl>
+	<dl>
+		<dt>14:15-14:30</dt>
+		<dd>主题演讲：区块链技术的发展与机遇</dd>
+	</dl>
+	<dl>
+		<dt>14:30-14:45</dt>
+		<dd>主题演讲：区块链在文娱产业的应用</dd>
+	</dl>
+	<dl>
+		<dt>14:45-15:00</dt>
+		<dd>圆桌论坛：拥抱价值：古典VC&Token Fund的碰撞</dd>
+	</dl>
+	<dl>
+		<dt>15:00-15:15</dt>
+		<dd>主题演讲： Token思维重构商业生态</dd>
+	</dl>
+	<dl>
+		<dt>15:15-16:30</dt>
+		<dd>主题演讲：白帽子，红帽子，区块链技术发展，安全为先</dd>
+	</dl>
+	<dl>
+		<dt>16:30-16:45</dt>
+		<dd>主题演讲：区块链创业的合规性问题</dd>
+	</dl>
+	<dl>
+		<dt>16:45-17:00</dt>
+		<dd>主题演讲：泡沫之下，区块链项目估值体系</dd>
+	</dl>
+	<dl>
+		<dt>17:00-17:15</dt>
+		<dd>圆桌论坛：赶上风口，区块链创业机会有哪些？</dd>
+	</dl>
+	<dl>
+		<dt>17:15-17:30</dt>
+		<dd>主题演讲：以资本的角度解读区块链</dd>
+	</dl>
+	<dl>
+		<dt>17:30-17:45</dt>
+		<dd>主题演讲：区块链技术的迭代与发展</dd>
+	</dl>
+	<dl>
+		<dt>17:45-18:00</dt>
+		<dd>圆桌论坛：风险与机遇并存，面对新物种如何选择</dd>
+	</dl>
+</div>
+
+
+<!-- 拟邀嘉宾 -->
+<div class="s-p-tit s-wrap">
+	<h2>PARTICIPANTS<span>/出席嘉宾</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+
+<div class="s-particip-list s-wrap">
+	<volist name="guestList" id="vo">
+		<dl>
+			<dt><img src="{$vo.thumb}"></dt>
+			<dd>
+				<h4>{$vo.title}</h4>
+				<p>{$vo.subtitle}</p>
+			</dd>
+		</dl>
+	</volist>
+</div>
+
+
+
+<!-- 冠名 -->
+<div class="s-p-tit s-wrap">
+	<h2>Title Sponsor<span>/冠名</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+
+<div class="s-media-list s-wrap">
+	<ul>
+		<volist name="list" id="vo">
+			<volist name="$vo.children" id="sub">
+				<li><a href="#"><img src="{$sub.thumb}"></a></li>
+			</volist>
+		</volist>
+	</ul>
+</div>
+
+
+<!-- 联合主办 -->
+<div class="s-p-tit s-wrap">
+	<h2>Host<span>/联合主办</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+
+<div class="s-media-list s-wrap">
+	<ul>
+		<volist name="list1" id="vo">
+			<li><a href="#"><img src="{$vo.thumb}"></a></li>
+		</volist>
+	</ul>
+</div>
+
+
+<!--  战略合作 -->
+<div class="s-p-tit s-wrap">
+	<h2>Strategic Cooperation<span>/战略合作</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+
+<div class="s-media-list s-wrap">
+	<ul>
+		<volist name="list2" id="vo">
+			<li><a href="#"><img src="{$vo.thumb}"></a></li>
+		</volist>
+	</ul>
+</div>
+
+<!-- 战略媒体 -->
+<!--     <div class="s-p-tit s-wrap">
+        <h2>Invited Media<span>/战略媒体</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+    </div>
+
+
+    <div class="s-media-list s-wrap">
+        <ul>
+            <volist name="list" id="vo">
+                <volist name="$vo.children" id="sub">
+            <li><a href="#"><img src="{$sub.thumb}"></a></li>
+                </volist>
+            </volist>
+        </ul>
+    </div> -->
+<!-- 特邀媒体 -->
+<div class="s-p-tit s-wrap">
+	<h2>Invited Media<span>/特邀媒体</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+
+<div class="s-media-list s-wrap">
+	<ul>
+		<volist name="list3" id="vo">
+			<li><a href="#"><img src="{$vo.thumb}"></a></li>
+		</volist>
+	</ul>
+</div>
+
+<!-- 媒体 -->
+<div class="s-p-tit s-wrap">
+	<h2>Media<span>/媒体</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+</div>
+
+
+<div class="s-media-list s-wrap">
+	<ul>
+		<volist name="list4" id="vo">
+			<li><a href="#"><img src="{$vo.thumb}"></a></li>
+		</volist>
+	</ul>
+</div>
+
+
+<!-- 合作媒体 -->
+<!--     <div class="s-p-tit s-wrap">
+        <h2>MEDIA<span>/合作媒体</span><i><img src="__PUBLIC__/mobile/images1/stitbg.png"></i></h2>
+    </div>
+
+
+    <div class="s-media-list s-wrap">
+        <ul>
+            <volist name="list" id="vo">
+                <volist name="$vo.children" id="sub">
+            <li><a href="#"><img src="{$sub.thumb}"></a></li>
+                </volist>
+            </volist>
+        </ul>
+    </div> -->
+
+
+<!-- 二维码 -->
+<div class="s-ewm">
+	<img src="__PUBLIC__/mobile/images1/sewm.png" alt="">
+</div>
+
+
+<!-- footer -->
+<div class="s-footer">
+	<p>更多精彩关注<br/><span>官网：6.ihenan.com</span></p>
+</div>
+
+
+</body>
+</html>

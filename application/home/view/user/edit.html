@@ -1,0 +1,46 @@
+<include file="public/header" title="修改密码 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+<!-- 个人中心 -->
+<div class="wrap clearfix">
+	<div class="box-left fl">
+		<include file="public/uside"/>
+	</div>
+	<div class="box-right fr">
+	    <div class="modifdata-list">
+    	    <h3 class="textc fontb font36 col000">修改密码</h3>
+			<dl class="clearfix formstyle">
+			    <dt>新密码</dt>
+			    <dd><input type="password" id="password" name="password" placeholder="请输入密码" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt>&nbsp;</dt>
+				<dd><a href="javascript:;" id="edit" class="user-login-btn">确定</a></dd>
+			</dl>
+		</div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$('#edit').click(function(){
+			$.ajax({
+				type: "post",
+				url: "{:url('ajax/edit')}",
+				data: {
+					'password':$('#password').val()
+				},
+				dataType: 'json',
+				async: true,
+				success: function(res) {
+					if(res.status == 1) {
+						alert(res.msg);
+						window.location.href = res.url;
+					}
+				},
+				error: function(e) {
+					console.log(e)
+				}
+			});
+		});
+	});
+</script>
+<include file="public/footer" />

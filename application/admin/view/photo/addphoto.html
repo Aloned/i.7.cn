@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<title>主页</title>
+
+		<!--CSS-->
+		<link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" />
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/global.css" />
+
+		<!--JS-->
+		<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
+	</head>
+
+	<body>
+		<div class="layui-main my-admin">
+			<div class="layui-tab my-tab">
+				<div class="my-title-box">
+					<h5 class="my-title">添加图片</h5>
+					<a href="javascript:history.go(-1);" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe65c;</i></a>
+				</div>
+				<div class="my-content">
+					<form method="post" class="layui-form" action="">
+						<table class="layui-table">
+							<colgroup>
+								<col width="10%" />
+								<col />
+							</colgroup>
+							<tr>
+								<td align="right">选择分类：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<select name="parent_id_1" id="parent_id_1" lay-filter="parent_id_1">
+			                                    <option value="0">顶级分类</option>
+			                                    <volist name="cat_list" id="vo">                                            
+			                                        <option value="{$vo.cat_id}" <if condition="$vo.cat_id eq $type">selected</if> >{$vo.cat_name}</option>
+			                                    </volist>                                            
+											</select>
+										</div>
+										<div class="layui-input-inline">
+											<select name="parent_id_2" id="parent_id_2" lay-filter="parent_id_2">
+			                                	<option value="0">请选择分类</option>
+			                              	</select> 
+										</div>
+										<div class="layui-form-mid layui-word-aux">选择分类</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">图片标题：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="title" lay-verify="required" class="layui-input" placeholder="图片标题" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">图片标题不要太长哦</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">副标题：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="subtitle" class="layui-input" placeholder="副标题" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">副标题：请合理替换</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">预留字段：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="reserved" class="layui-input" placeholder="预留字段" />
+										</div>
+										<div class="layui-form-mid layui-word-aux"><span class="txt-color4">预留字段：请合理使用，如：职务</span></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">图片关键字：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="keywords" class="layui-input" placeholder="图片关键字" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">关键字设置的牛逼，有助于提升排名的哟，多个用“,”隔开</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">简短描述：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="description" class="layui-input" placeholder="简短描述" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">这里就是此图片的摘要了</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">封面图片：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="thumb" class="layui-input" placeholder="图片封面" />
+										</div>
+										<a href="javascript:;" class="layui-btn" id="uploadtimg">上传</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">图片列表：</td>
+								<td>
+									<div class="layui-form-item">
+										<div id="imgBox">
+											<ul>
+												<li class="last">
+													<a href="javascript:;" id="addimgs"></a>
+												</li>
+											</ul>
+										</div>
+										<input type="hidden" name="imgs" id="imgs"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">浏览次数：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="counts" class="layui-input" placeholder="浏览次数" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">浏览次数，可手动，可自己更新</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">作者：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="author" class="layui-input" placeholder="作者" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">作者：宋唐科技</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">排序：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="rank" class="layui-input" placeholder="排序" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">排序：越小越靠前</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">是否显示：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="radio" name="is_show" value="1" title="是" checked="checked">
+  											<input type="radio" name="is_show" value="0" title="否">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">是否推荐：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="radio" name="is_recommend" value="1" title="是">
+  											<input type="radio" name="is_recommend" value="0" title="否" checked="checked">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">是否热门：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="radio" name="is_hot" value="1" title="是">
+  											<input type="radio" name="is_hot" value="0" title="否" checked="checked">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">添加时间：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="addtime" value="{$curdate|date='Y-m-d H:i:s',###}"  id="addtime" class="layui-input" placeholder="添加时间" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">添加文章的时间</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">图片内容：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-block" style="margin-left: 0;">
+											<textarea name="content" lay-verify="content" id="content" placeholder="输入图片内容"></textarea>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">&nbsp;</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<button class="layui-btn" lay-submit="" data-url="{:url('photo/addphoto')}" lay-filter="addphoto">保存</button>
+											<button type="reset" class="layui-btn layui-btn-danger">重置</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		layui.use(['element','form'],function(){
+			var element = layui.element,
+				$ = layui.jquery,
+				form = layui.form;
+			
+			var url = '/category/getCategory/parent_id/'+ {$type};
+			
+			$.ajax({
+		        type : "GET",
+		        url  : url,
+		        error: function(request) {
+		            alert("服务器繁忙, 请联系管理员!");
+		            return;
+		        },
+		        success: function(v) {
+					v = "<option value='0'>请选择分类</option>" + v;
+		            $('#parent_id_2').html(v);
+		            form.render('select');
+		        }
+		  	});
+		});
+		layui.config({
+			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
+		}).use('photo'); //加载入口
+	</script>
+</html>

@@ -1,0 +1,96 @@
+<include file="public/header" title="用户登录 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+
+<!-- 报名 -->
+
+<article>
+	<div class="user-login">
+		<h3 class="textc fontb font36 col000">登录</h3>
+		<div class="wrap">
+			<dl class="clearfix formstyle">
+				<dt class="textr">手机</dt>
+				<dd><input name="utel" type="text" placeholder="请输入您的手机号" class="input1 phoneInput" ></dd>
+			</dl>
+			<!--<dl class="clearfix formstyle">-->
+				<!--<dt class="textr">密码</dt>-->
+				<!--<dd>-->
+					<!--<input type="password" name="password" placeholder="请输入您的密码" class="input1 codeInput">-->
+				<!--</dd>-->
+			<!--</dl>-->
+			<dl class="clearfix formstyle">
+				<dt>&nbsp;</dt>
+				<dd>
+					<a href="javascript:;" class="user-login-btn nextstep">登录</a>
+				</dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt>&nbsp;</dt>
+				<dd>
+					<a href="/online/index.html" style="color: #333;">还没报名呢?</a>
+					<!--<a href="/forget.html" style="color: #333; float: right;">忘记密码?</a>-->
+				</dd>
+			</dl>
+		</div>
+	</div>
+</article>
+
+<script type="text/javascript">
+	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+	var sendBtn = $('.sendbtn');
+	var phoneInput = $('.phoneInput'); //手机号
+	var codeInput = $('.codeInput'); //验证码
+	var loginBtn = $('.user-login-btn'); //下一步
+
+	// 判断手机号是否正确
+	function isTel(phoneInput) {
+		var valuePhone = phoneInput.val();
+		if(valuePhone.length == 11 && myreg.test(valuePhone)) {
+			return true;
+		} else {
+			alert("输入手机有误，请重新输入！");
+			return false;
+		}
+	}
+
+	// 下一步 验证  手机号 和验证码填写是否正确
+	function mobileverification() {
+		var tpl = $(".phoneInput").val();
+//		var mycode = $(".codeInput").val();
+		if(!tpl) {
+			alert('请输入电话号码');
+			return false;
+		}
+//		if(!mycode) {
+//			alert('请输入密码');
+//			return false;
+//		}
+		$.ajax({
+			type: "post",
+			url: "{:url('/sign')}",
+			data: {
+				'utel': phoneInput.val()
+//				'password':	mycode
+			},
+			dataType: 'json',
+			async: true,
+			success: function(res) {
+				if(res.status == 1001) {
+					window.location.href = res.url;
+				}else{
+					alert(res.msg);
+				}
+			},
+			error: function(e) {
+				console.log(e)
+			}
+		});
+	}
+
+
+	// 下一步
+	$('.nextstep').click(function() {
+		mobileverification();
+	});
+</script>
+
+<include file="public/footer" />

@@ -1,0 +1,214 @@
+<include file="public/header" title="忘记密码 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+
+<!-- 报名 -->
+
+<article id="step1">
+	<div class="user-login">
+		<h3 class="textc fontb font36 col000">密码重置</h3>
+		<div class="wrap">
+			<dl class="clearfix formstyle">
+				<dt class="textr">手机</dt>
+				<dd><input type="text" name="utel" placeholder="请输入您的手机号" class="input1 phoneInput"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt class="textr">验证码</dt>
+				<dd>
+					<input type="text" name="code" placeholder="请输入您的验证码" class="input1 codeInput">
+					<a href="javascript:;" class="sendbtn">发送验证码</a>
+				</dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt>&nbsp;</dt>
+				<dd>
+					<a href="javascript:;" class="user-login-btn nextstep">下一步</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</article>
+
+<!-- 报名 -->
+<article id="step2" style="display: none;">
+	<div class="user-login">
+		<h3 class="textc fontb font36 col000">设置密码</h3>
+		<div class="wrap">
+			<dl class="clearfix formstyle">
+			    <dt class="textr">新密码</dt>
+			    <dd><input type="password" id="upassword" name="password" placeholder="请设置新密码" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+			    <dt class="textr">确认新密码</dt>
+			    <dd><input type="password" id="repassword" name="repassword" placeholder="请确认新密码" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt>&nbsp;</dt>
+				<dd><a href="javascript:;" id="submit" class="user-login-btn">提交</a></dd>
+			</dl>
+	    </div>
+	</div>
+</article>
+
+<script type="text/javascript">
+	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+	var sendBtn = $('.sendbtn');
+	var phoneInput = $('.phoneInput'); //手机号
+	var codeInput = $('.codeInput'); //验证码
+	var loginBtn = $('.user-login-btn'); //下一步
+
+	// 判断手机号是否正确
+	function isTel(phoneInput) {
+		var valuePhone = phoneInput.val();
+		if(valuePhone.length == 11 && myreg.test(valuePhone)) {
+			return true;
+		} else {
+			alert("输入手机有误，请重新输入！");
+			return false;
+		}
+	}
+
+	// 倒计数
+	function timeCount(sendBtn) {
+
+		var wait = 59;
+		var time = setInterval(function() {
+			sendBtn.unbind();
+			sendBtn.text(wait + '秒后');
+			sendBtn.css('background', '#6f6e6e');
+			sendBtn.css('pointer-events','none');
+			sendBtn.css('cursor', 'wait');
+			wait--;
+			if(wait < 0) {
+				clearInterval(time);
+				sendBtn.text('重新发送');
+				sendBtn.css('background', '#ff0000');
+				sendBtn.css('cursor', 'pointer');
+				sendBtn.css('pointer-events','auto');
+				sendBtn.click(function() {
+					timeCount(sendBtn)
+				})
+			}
+		}, 1000)
+	}
+	
+	// 下一步 验证  手机号 和验证码填写是否正确
+	function mobileverification() {
+		var tpl = $(".phoneInput").val();
+		var mycode = $(".codeInput").val();
+		var code = $("#code").val();
+		if(!tpl) {
+			alert('请输入电话号码');
+			return false;
+		}
+		if(!mycode) {
+			alert('请输入验证码');
+			return false;
+		}
+		$.ajax({
+			type: "post",
+			url: "{:url('ajax/step2')}",
+			data: {
+				'utel': phoneInput.val(),
+				'code':	mycode
+			},
+			dataType: 'json',
+			async: true,
+			success: function(res) {
+				if(res.status == 1) {
+					//window.location.href = res.url;
+					//console.log(res);
+					$('#step1').hide();
+					$('#step2').show();
+				}
+				if(res.status == 0) {
+					alert(res.msg);
+					$('#step2').hide();
+					$('#step1').show();
+				}
+			},
+			error: function(e) {
+				console.log(e)
+			}
+		});
+	}
+
+	// 发送验证码
+	sendBtn.click(function() {
+		// 判断手机号是否正确
+		var phoneStuta = isTel(phoneInput);
+		if(phoneStuta) {
+			$.ajax({
+				type: "post",
+				url: "{:url('ajax/send2')}",
+				data: {
+					'utel': phoneInput.val()
+				},
+				dataType: 'json',
+				async: true,
+				success: function(res) {
+
+					if(res.status == 1) {
+						// 执行倒计数
+						timeCount(sendBtn)
+					}else{
+						alert(res.msg);
+					}
+
+				},
+				error: function(e) {
+					console.log(e)
+				}
+			});
+		}
+	});
+
+	// 下一步
+	$('.nextstep').click(function() {
+		mobileverification();
+	});
+	
+	//第二步
+	$('#submit').click(function(){
+		var tpl = $(".phoneInput").val();
+		var mycode = $(".codeInput").val();
+		
+		var upassword = $("#upassword").val();
+		var repassword = $("#repassword").val();
+		
+		if(!upassword) {
+			alert('密码不能为空');
+			return false;
+		}
+		if(!repassword) {
+			alert('确认密码不能为空');
+			return false;
+		}
+		if(upassword !=repassword){
+			alert('两次密码不一致');
+			return false;
+		}
+		
+		$.ajax({
+			type: "post",
+			url: "{:url('ajax/forget')}",
+			data: {
+				'password': upassword
+			},
+			dataType: 'json',
+			async: true,
+			success: function(res) {
+				if(res.status == 1) {
+					alert(res.msg);
+					window.location.href = '/';
+				}else{
+					alert(res.msg);
+				}
+			},
+			error: function(e) {
+				console.log(e)
+			}
+		});
+	});
+</script>
+
+<include file="public/footer" />

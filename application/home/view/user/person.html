@@ -1,0 +1,25 @@
+<include file="public/header" title="我的资料 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+<!-- 个人中心 -->
+<div class="wrap clearfix" style="margin:0 auto 100px auto">
+	<div class="box-left fl">
+		<include file="public/uside"/>
+	</div>
+	<div class="box-right fr">
+		 <div class="centerdata-list">
+		 	<h3 class="textc font36 col000 fontber">我的资料</h3>
+			<ul>
+				<li><span class="fl">姓名</span>{$detail.uname}</li>
+				<li><span class="fl">手机</span>{$detail.utel}</li>
+				<li><span class="fl">公司</span>{$detail.ucompany}</li>
+				<li><span class="fl">职务</span>{$detail.uposition}</li>
+				<li><span class="fl">微信</span>{$detail.uweixin}</li>
+			</ul>
+		    <div class="data-btn clearfix">
+		        <a href="/edit.html">修改密码</a>
+		    </div>
+	       </div>
+    </div>
+</div>
+
+<include file="public/footer" />

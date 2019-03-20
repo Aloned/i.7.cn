@@ -1,0 +1,38 @@
+<include file="public/header" title="用户登录 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+<!-- 个人中心 -->
+<!-- 个人中心 -->
+<article>
+	<div class="center-head clearfix">
+		<div class="wrap">
+			<dl class="clearfix">
+				<dt><img src="__PUBLIC__/mobile/images/bgheadimg.png"></dt>
+				<dd>
+					<p class="colfff font32 fontber">{$user.uname}<br/><span class="font26 fontb">普通会员</span></p>
+				</dd>
+			</dl>
+			<ul class="clearfix">
+				<li class="textc">
+					<span class="font36 fontb">{:inviteNumber($user.ucode)}</span>
+					<p class="font22">好友报名数</p>
+				</li>
+				<li class="textc">
+					<span class="font36 fontb">{:invitedNumber($user.ucode)}</span>
+					<p class="font22">好友领票数</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</article>
+
+<article>
+	<div class="center-list">
+		<include file="public/uside"/>
+	</div>
+</article>
+
+<script type="text/javascript">
+	
+</script>
+
+<include file="public/nfooter" />

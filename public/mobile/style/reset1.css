@@ -1,0 +1,106 @@
+html{font-family:"Helvetica Neue", Helvetica, STHeiTi, sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+html,body{-webkit-user-select:none;user-select:none;}
+html,body,div,object,iframe,applet,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,address,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;vertical-align:baseline}
+a{text-decoration:none;-webkit-touch-callout:none;background-color:transparent}
+li{list-style:none}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+h1{font-size:2em;margin:.67em 0}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+img{border:0;-webkit-touch-callout:none;}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+a,button,input,optgroup,select,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;-webkit-appearance:none;outline:none;line-height:normal}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+.clearfix:after{
+  content: "020"; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;  
+  }
+
+.clearfix {
+  /* 触发 hasLayout */ 
+  zoom: 1; 
+  }
+
+
+
+.fl{ float: left; }
+.fr{ float: right; }
+
+
+.font28{ font-size: 0.28rem; }
+.font26{ font-size: 0.26rem; }
+.font22{ font-size: 0.22rem; }
+.font18{ font-size: 0.18rem; }
+.font16{ font-size: 0.16rem; }
+.font14{ font-size: 0.14rem; }
+.font40{ font-size: 0.4rem; }
+.font30{ font-size: 0.3rem; }
+.font32{ font-size: 0.32rem; }
+.font36{ font-size: 0.36rem; }
+
+
+.fontl{ font-weight: lighter; }
+.fontb{ font-weight: 300; }
+.fontber{ font-weight: bolder; }
+
+.textl{ text-align: left; }
+.textc{ text-align: center; }
+.textr{ text-align: right; }
+
+
+/*黑色*/
+.col000{color: #000000; }
+
+/*白色*/
+.colfff{color: #ffffff; }
+
+/*灰色*/
+.col7e{ color:#7e7e7e; }
+/*红色*/
+.colf0{ color: #ff0000; }
+
+/*底部颜色*/
+.col868{ color:#868686; }
+
+
+
+/*弹出层样式*/
+.prompt-box{ display: none; position: fixed; left: 0; top:0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
+.prompt-cont{ position: absolute; left: 50%; top:50%; margin:-3.4rem 0 0 -2.8rem; padding:0 0.3rem; width: 5.6rem; height: 6.8rem; box-sizing: border-box; -webkit-box-sizing: border-box; background: #ffffff; border-radius: 0.2rem; -webkit-border-radius: 0.2rem; overflow: hidden; }
+.prompt-cont h3{ font-size: 0.38rem; color: #000000; text-align: center; margin:0.5rem 0 0 0; font-weight: 600; }
+.prompt-cont p{ margin-top: 0.6rem; font-size: 0.26rem; line-height: 1.6; color: #000000; }
+.prompt-cont a{ display: block;  margin:0.3rem 0.6rem 1.8rem; height: 0.8rem; line-height: 0.8rem; text-align: center; color: #ffffff; font-size: 0.32rem; background: #ff0000; border-radius: 0.1rem;-webkit-border-radius: 0.1rem;}
+
+

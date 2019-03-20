@@ -1,0 +1,1838 @@
+---------------------------------------------------------------
+[ 2019-03-19T11:50:08+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.com/ [运行时间：0.031815s][吞吐率：31.43req/s] [内存消耗：1,628.84kb] [文件加载：51]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T11:55:47+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.com/ [运行时间：0.017168s][吞吐率：58.25req/s] [内存消耗：1,513.54kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=79qanj6hpafqbkm9s9ii2li437',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T12:00:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.035802s][吞吐率：27.93req/s] [内存消耗：1,600.02kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=79qanj6hpafqbkm9s9ii2li437',
+  'connection' => 'close',
+  'referer' => 'http://test.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:08:57+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.com/ [运行时间：0.017194s][吞吐率：58.16req/s] [内存消耗：1,513.52kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:08:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.024962s][吞吐率：40.06req/s] [内存消耗：1,599.66kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=iahtrqjr5i6nvfi4i1bjc1hvm3',
+  'connection' => 'close',
+  'referer' => 'http://test.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:09:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.019759s][吞吐率：50.61req/s] [内存消耗：1,600.01kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=iahtrqjr5i6nvfi4i1bjc1hvm3',
+  'connection' => 'close',
+  'referer' => 'http://test.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:09:35+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013773s][吞吐率：72.61req/s] [内存消耗：1,475.46kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=iahtrqjr5i6nvfi4i1bjc1hvm3',
+  'connection' => 'close',
+  'referer' => 'http://test.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:10:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015043s][吞吐率：66.48req/s] [内存消耗：1,600.08kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=iahtrqjr5i6nvfi4i1bjc1hvm3',
+  'connection' => 'close',
+  'referer' => 'http://test.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:11:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015775s][吞吐率：63.39req/s] [内存消耗：1,475.46kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=iahtrqjr5i6nvfi4i1bjc1hvm3',
+  'connection' => 'close',
+  'referer' => 'http://test.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:11:26+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.041631s][吞吐率：24.02req/s] [内存消耗：1,499.99kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'cookie' => 'PHPSESSID=iahtrqjr5i6nvfi4i1bjc1hvm3',
+  'connection' => 'close',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://test.com/admin/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]session_start(): Cannot send session cache limiter - headers already sent[G:\phpStudy\PHPTutorial\WWW\test\thinkphp\library\think\Session.php:106]
+---------------------------------------------------------------
+[ 2019-03-19T15:16:00+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.com/ [运行时间：0.017208s][吞吐率：58.11req/s] [内存消耗：1,514.07kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:16:02+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.017563s][吞吐率：56.94req/s] [内存消耗：1,599.86kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:16:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015756s][吞吐率：63.47req/s] [内存消耗：1,600.19kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:16:50+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.016134s][吞吐率：61.98req/s] [内存消耗：1,600.23kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:16:57+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015720s][吞吐率：63.61req/s] [内存消耗：1,600.23kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:17:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015001s][吞吐率：66.66req/s] [内存消耗：1,600.24kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:17:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015176s][吞吐率：65.89req/s] [内存消耗：1,600.20kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:36:50+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.020138s][吞吐率：49.66req/s] [内存消耗：1,600.73kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:36:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013744s][吞吐率：72.76req/s] [内存消耗：1,475.48kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:36:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013589s][吞吐率：73.59req/s] [内存消耗：1,475.79kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:36:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013804s][吞吐率：72.44req/s] [内存消耗：1,475.79kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:37:01+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015228s][吞吐率：65.67req/s] [内存消耗：1,500.16kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/login/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]session_start(): Cannot send session cache limiter - headers already sent[G:\phpStudy\PHPTutorial\WWW\test\thinkphp\library\think\Session.php:106]
+---------------------------------------------------------------
+[ 2019-03-19T15:38:57+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.017961s][吞吐率：55.68req/s] [内存消耗：1,600.72kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:40:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.016288s][吞吐率：61.39req/s] [内存消耗：1,600.73kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:40:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013614s][吞吐率：73.45req/s] [内存消耗：1,475.48kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:40:06+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015067s][吞吐率：66.37req/s] [内存消耗：1,500.16kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/login/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]session_start(): Cannot send session cache limiter - headers already sent[G:\phpStudy\PHPTutorial\WWW\test\thinkphp\library\think\Session.php:106]
+---------------------------------------------------------------
+[ 2019-03-19T15:40:16+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015005s][吞吐率：66.64req/s] [内存消耗：1,600.72kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T15:46:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.019584s][吞吐率：51.06req/s] [内存消耗：1,600.64kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=l2nghk32a3dror12jujonor8c6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:31:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.020846s][吞吐率：47.97req/s] [内存消耗：1,599.67kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:31:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013953s][吞吐率：71.67req/s] [内存消耗：1,475.34kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:31:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.014228s][吞吐率：70.28req/s] [内存消耗：1,475.34kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.017324s][吞吐率：57.72req/s] [内存消耗：1,600.23kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.015449s][吞吐率：64.73req/s] [内存消耗：1,600.02kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.016010s][吞吐率：62.46req/s] [内存消耗：1,599.98kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:57+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013943s][吞吐率：71.72req/s] [内存消耗：1,475.34kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:57+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/Login/adminLogin.php
+[ info ] test.com/admin/Login/adminLogin.php [运行时间：0.085920s][吞吐率：11.64req/s] [内存消耗：1,490.08kb] [文件加载：48]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'adminLogin.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/login/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '23',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Login/adminLogin_php' => '',
+  'uKeySn' => '13030B12343AFF00',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:57+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.013823s][吞吐率：72.34req/s] [内存消耗：1,475.34kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.014221s][吞吐率：70.32req/s] [内存消耗：1,475.34kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:35:59+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/Login/adminLogin.php
+[ info ] test.com/admin/Login/adminLogin.php [运行时间：0.015016s][吞吐率：66.60req/s] [内存消耗：1,490.08kb] [文件加载：48]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'adminLogin.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/login/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '23',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Login/adminLogin_php' => '',
+  'uKeySn' => '13030B12343AFF00',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:39:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.020077s][吞吐率：49.81req/s] [内存消耗：1,599.98kb] [文件加载：49]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:39:05+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/Login/adminLogin
+[ info ] test.com/admin/Login/adminLogin [运行时间：0.043725s][吞吐率：22.87req/s] [内存消耗：2,036.43kb] [文件加载：53]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'adminLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/login/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '23',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Login/adminLogin' => '',
+  'uKeySn' => '13030B12343AFF00',
+)
+[ info ] [ RUN ] app\admin\controller\Login->adminLogin[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)[G:\phpStudy\PHPTutorial\WWW\test\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2019-03-19T17:41:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] test.com/admin/login/index [运行时间：0.016954s][吞吐率：58.98req/s] [内存消耗：1,475.34kb] [文件加载：47]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-19T17:41:39+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/Login/adminLogin
+[ info ] test.com/admin/Login/adminLogin [运行时间：0.100857s][吞吐率：9.92req/s] [内存消耗：2,121.05kb] [文件加载：54]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'adminLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/login/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '23',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Login/adminLogin' => '',
+  'uKeySn' => '13030B12343AFF00',
+)
+[ info ] [ RUN ] app\admin\controller\Login->adminLogin[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011793s ] mysql:host=127.0.0.1;port=3306;dbname=hldahui;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_admin` [ RunTime:0.011173s ]
+[ sql ] [ SQL ] SELECT * FROM `md_admin` `a` INNER JOIN `md_admin_role` `r` ON `a`.`role_id`=`r`.`role_id` INNER JOIN `md_store` `s` ON `a`.`store_id`=`s`.`store_id` WHERE  `uk_sn` = '411997d787d87a9fcda2b1e3af0c5350' LIMIT 1 [ RunTime:0.000983s ]
+[ sql ] [ SQL ] UPDATE `md_admin`  SET `last_login`=1552988499,`last_ip`='127.0.0.1'  WHERE  (  admin_id = 99 ) [ RunTime:0.022988s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_admin_log` [ RunTime:0.013209s ]
+[ sql ] [ SQL ] INSERT INTO `md_admin_log` (`log_time` , `admin_id` , `log_info` , `log_ip` , `log_url`) VALUES (1552988499 , 99 , '后台登录' , '127.0.0.1' , '/admin/Login/adminLogin') [ RunTime:0.019059s ]
+---------------------------------------------------------------
+[ 2019-03-19T17:41:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index
+[ info ] test.com/admin/index/index [运行时间：0.053107s][吞吐率：18.83req/s] [内存消耗：2,244.46kb] [文件加载：58]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/index\index.html [ array (
+  0 => 'siteurl',
+  1 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010300s ] mysql:host=127.0.0.1;port=3306;dbname=hldahui;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_config` [ RunTime:0.004136s ]
+[ sql ] [ SQL ] SELECT `url` FROM `md_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_admin` [ RunTime:0.003555s ]
+[ sql ] [ SQL ] SELECT * FROM `md_admin` WHERE  `admin_id` = 99 LIMIT 1 [ RunTime:0.000274s ]
+---------------------------------------------------------------
+[ 2019-03-19T17:41:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/main
+[ info ] test.com/admin/index/main [运行时间：0.100737s][吞吐率：9.93req/s] [内存消耗：2,203.68kb] [文件加载：57]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/main' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->main[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/index\main.html [ array (
+  0 => 'siteurl',
+  1 => 'visittime',
+  2 => 'pvvisit',
+  3 => 'sys_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010468s ] mysql:host=127.0.0.1;port=3306;dbname=hldahui;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_config` [ RunTime:0.004365s ]
+[ sql ] [ SQL ] SELECT `url` FROM `md_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT COUNT(*) as num,FROM_UNIXTIME(addtime,'%Y-%m-%d') as gap from md_user group by gap [ RunTime:0.024374s ]
+[ sql ] [ SQL ] SELECT VERSION() as version [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_user` [ RunTime:0.004277s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `md_user` LIMIT 1 [ RunTime:0.000604s ]
+---------------------------------------------------------------
+[ 2019-03-19T17:41:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/menu
+[ info ] test.com/admin/index/menu [运行时间：0.033365s][吞吐率：29.97req/s] [内存消耗：2,061.16kb] [文件加载：54]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'menu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/index/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/menu' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->menu[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010444s ] mysql:host=127.0.0.1;port=3306;dbname=hldahui;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_config` [ RunTime:0.003978s ]
+[ sql ] [ SQL ] SELECT `url` FROM `md_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000341s ]
+---------------------------------------------------------------
+[ 2019-03-19T17:41:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/category/index
+[ info ] test.com/admin/category/index [运行时间：0.040730s][吞吐率：24.55req/s] [内存消耗：2,592.05kb] [文件加载：60]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ff95dmesmama4ppene87i7p8q6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/category/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->index[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Category.php ]
+[ info ] [ VIEW ] G:\phpStudy\PHPTutorial\WWW\test/application/admin/view/category\index.html [ array (
+  0 => 'siteurl',
+  1 => 'cat_list',
+  2 => 'module_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001110s ] mysql:host=127.0.0.1;port=3306;dbname=hldahui;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_config` [ RunTime:0.003788s ]
+[ sql ] [ SQL ] SELECT `url` FROM `md_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT * FROM  md_category ORDER BY parent_id , sort_order ASC [ RunTime:0.000465s ]

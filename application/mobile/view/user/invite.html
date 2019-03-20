@@ -1,0 +1,135 @@
+<include file="public/nheader" title="我的邀请" keywords="{$website.keywords}" description="{$website.content}" />
+<!-- 我的邀请 -->
+<article>
+	<div class="conl clearfix">
+		<ul>
+			<li class="font32 textc active">我的邀请</li>
+			<li class="font32 textc">邀请排行</li>
+		</ul>
+	</div>
+	<div class="conl-cont clearfix" id="conlCont0">
+		<div class="myinvitation-cont">
+			<div class="wrap">
+				<h4 class="col000 textc font40">已邀请{:inviteNumber($user.ucode)}人,领票{:downNumber($user.ucode)}人</h4>
+				<p class="col000 textc font22">邀请满10人报名并成功领票，可换取VIP门票，组委会电话：0371-55555286<br/>{:poorNumber($user.ucode)}</p>
+				<ul>
+					<li><a href="/mobile/share.html">生成邀请函</a></li>
+					<li><a href="javascript:;" class="yqhyBtn">邀请好友</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div class="myinvitation-list">
+			<h3 class="textc font40 col000">我邀请的人</h3>
+			<ul class="wrap">
+				<volist name="list" id="vo">
+					<li><span class="fl col000 font22">{$vo.uname}</span><span class="fr font18">{$vo.addtime|date="Y-m-d H:i:s",###}</span></li>
+				</volist>
+			</ul>
+		</div>
+	</div>
+	<div class="conl-cont clearfix" id="conlCont1" style="display: none;">
+		<div class="myinvitation-cont">
+			<div class="wrap">
+				<h4 class="col000 textc font40">当前排名第{$rank}位</h4>
+				<p class="col000 textc font22">截止7月10日中午12:00,邀请满10名好友领票可换取大会VIP门票<br>
+					邀请报名数及邀请领票数前100名将分别获得大会提供的"逐梦礼包"和"奋斗大礼包"</p>
+				<ul>
+					<li><a href="/mobile/share.html">生成邀请函</a></li>
+					<li><a href="javascript:;" class="yqhyBtn">邀请好友</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div class="myinvitation-list">
+			<h3 class="textc font40 col000">邀请排行榜</h3>
+			<div class="wrap">
+				<table class="myinvitation-table">
+					<thead>
+						<td>排名</td>
+						<td>用户</td>
+						<td>邀请人数</td>
+					</thead>
+					<volist name="sortlist" id="vo">
+						<tr <if condition="$user.uid eq $vo.uid">class="active" </if> >
+							<td>{$i}</td>
+							<td>{$vo.uname}</td>
+							<td>{$vo.invited}</td>
+						</tr>
+					</volist>
+				</table>
+			</div>
+		</div>
+	</div>
+</article>
+
+
+
+<!-- 提示框 -->
+<div class="prompt-box">
+	<div class="prompt-cont">
+		 <h3>邀请好友</h3>
+		 <p>复制链接发给好友，让大家知道这个热血澎湃，充满希望的集会</p>
+		 <p class="textc" id="content">{$website.url}/mobile/online.html?ufrom={$user.ucode}</p>
+		 <a href="javascript:;" id="copyBT" data-clipboard-text="{$website.url}/mobile/online.html?ufrom={$user.ucode}"><span>复制链接</span></a>
+		 <p class="textc fontb font32">赢VIP门票，创业大会大礼包</p>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	$('.yqhyBtn').bind('touchstart',function(){
+		$('.prompt-box').show();
+	});
+	$('.prompt-box').bind('touchstart',function(){
+		$('.prompt-box').hide();
+	});
+	$('.prompt-cont').bind('touchstart',function(event){
+		event.stopPropagation();
+	});
+	$('.prompt-cont a').bind('touchstart',function(event){
+		
+	});
+
+      function copyArticle(event) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('content'));
+ 
+        const selection = window.getSelection();
+        if(selection.rangeCount > 0) selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('copy');
+        alert("复制成功！");
+      }
+ 
+      document.getElementById('copyBT').addEventListener('click', copyArticle, false);
+</script>
+
+
+<script type="text/javascript">
+	$(function(){
+		function tab() {
+			var conlLi = $('.conl li');
+
+			conlLi.bind('touchstart', function() {
+				var _index = $(this).index();
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.conl-cont').hide();
+				$('#conlCont' + _index).show();
+			})
+		}
+
+		tab();
+		
+		$('.select-show').bind('touchstart',function(){
+	        if ($(this).next().is(':hidden')) {
+	         	$(this).children().next().next().children().attr('src','images/iconshow.png')
+	         	$(this).next().show();
+	        }else{
+	         	$(this).next().hide();
+	         	$(this).children().next().next().children().attr('src','images/iconhide.png')
+	        }
+		});
+	});
+</script>
+
+<include file="public/nfooter" />

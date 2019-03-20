@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no, email=no">
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+    <!-- Safari浏览器私有meta属性 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="APP name">
+	<meta name="author" content="宋唐科技">
+	<meta name="keywords" content="[keywords]" />
+	<meta name="description" content="[description]" />
+	<!-- <script src="__PUBLIC__/mobile/js/hotcss.js"></script> -->
+	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+	<!-- <script src="__PUBLIC__/mobile/js/touch.js"></script> -->
+	<script src="__PUBLIC__/mobile/js/jsrem.js"></script>
+	<script src="__PUBLIC__/mobile/js/swiper.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/reset.css?ver=06111957">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/style.css?ver=06111957">
+	<title>[title]</title>
+
+</head>
+<body>
+	<!-- back top -->
+<a <if condition="session('userid') neq ''">href="/mobile/my.html"<else/>href="/mobile/online.html"</if> class="back-top" style="z-index: 999; position: fixed; right: 0.2rem; bottom: 1.2rem; display: block; text-align: center; line-height: 0.8rem; font-size: 0.22rem; color:#ffffff; width: 1rem; height: 1rem; background: rgba(0,0,0,0.5); border-radius: 100%;border-radius: 100%;">
+	<img src="__PUBLIC__/mobile/images/robbtn.png" style="width: 1rem;height: 1rem;">
+</a>
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+	$('.back-top').on('click',function(){
+
+		 $('html,body').animate({"scrollTop": '0px'}, 800);
+	})
+})
+</script> -->
+<header>
+	<div class="head" style="position: relative;  z-index:50;">
+		<ul class="wrap">
+			<li class="fl"><a href="{$website.url}/mobile"><img src="{$website.logo}"></a></li>
+			<li class="fr"><p class="col000 textr font22">报名已破 <span class="fontber" style="color:#e00;">{$website.tcount}</span> 人<br><span class="font16" style="color:#888;">每晚6点更新数据</span></p></li>
+		</ul>
+	</div>
+</header>
+				

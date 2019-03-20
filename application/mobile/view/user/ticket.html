@@ -1,0 +1,70 @@
+<include file="public/nheader" title="我的门票" keywords="{$website.keywords}" description="{$website.content}" />	
+<!-- 我的门票 -->
+<article>
+	<div class="conl clearfix">
+		<ul>
+			<li class="font32 textc active">待领取</li>
+			<li class="font32 textc">已领取</li>
+		</ul>
+	</div>
+	<div class="conl-cont clearfix" id="conlCont0">
+		<div class="myticket-cont">
+			<div class="wrap">
+				<if condition="$flag eq 0">
+					<p class="font22 colf0 mart50">您有一张门票待领取<br/>大会凭纸质门票入场，请尽快到领票点领取。</p>
+				</if>
+				
+				<a href="/mobile/place.html" class="nolead">查看领票点</a>
+				<img src="__PUBLIC__/mobile/images/banner1.png" />
+				<h4 class="font30 fontber">第六届中国创业者大会</h4>
+				<p class="font26 col000">时间：2018年7月19日7:00入场<br/>地点：郑州市郑东CBD国际会展中心 轩辕堂</p>
+			</div>
+		</div>
+	</div>
+	<div class="conl-cont clearfix" id="conlCont1" style="display: none;">
+		<div class="myticket-cont">
+			<div class="wrap">
+				<img src="__PUBLIC__/mobile/images/banner1.png" />
+				<h4 class="font30 fontber">第六届中国创业者大会</h4>
+				<p class="font26 col000">时间：2018年7月19日7:00入场<br/>地点：郑州市郑东CBD国际会展中心 轩辕堂</p>
+				
+				<if condition="$flag eq 1">
+					<a href="javascript:;" class="lead">已领取</a>
+					<p class="font26 col000">领取地点：{$point.store_address}<br/>领票时间：{$point.edittime|date="Y-m-d H:i:s",###}</p>
+				</if>
+				
+			</div>
+		</div>
+	</div>
+</article>
+<script type="text/javascript">
+	// 切换
+	(function() {
+
+		function tab() {
+			var conlLi = $('.conl li');
+
+			conlLi.bind('touchstart', function() {
+				var _index = $(this).index();
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.conl-cont').hide();
+				$('#conlCont' + _index).show();
+			})
+		}
+
+		tab();
+		
+		$('.select-show').bind('touchstart', function() {
+			if($(this).next().is(':hidden')) {
+				$(this).children().next().next().children().attr('src', 'images/iconshow.png')
+				$(this).next().show();
+			} else {
+				$(this).next().hide();
+				$(this).children().next().next().children().attr('src', 'images/iconhide.png')
+			}
+		});
+
+	})();
+</script>
+
+<include file="public/nfooter" />

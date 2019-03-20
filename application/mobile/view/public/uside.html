@@ -1,0 +1,60 @@
+<ul class="font32" style="font-size:0.30rem;">
+
+	<li><a href="/mobile/ticket.html">我的门票</a><i><img src="__PUBLIC__/mobile/images/iconleft.png"></i></li>
+
+	<!--<li><a href="/mobile/person.html">个人资料</a><i><img src="__PUBLIC__/mobile/images/iconleft.png"></i></li>-->
+
+	<li><a href="/mobile/invite.html">我的邀请 <span style="color:#aaa;">(赢取VIP门票)</span></a><i><img src="__PUBLIC__/mobile/images/iconleft.png"></i></li>
+
+	<!--<li><a href="/mobile/edit.html">修改密码</a><i><img src="__PUBLIC__/mobile/images/iconleft.png"></i></li>-->
+
+	<li><a href="javascript:;" class="logout">退出</a></li>
+
+</ul>
+
+
+
+<script type="text/javascript">
+
+	$(function(){
+
+		$('.logout').click(function(){
+
+			$.ajax({
+
+				type: "post",
+
+				url: "{:url('/mobile/logout')}",
+
+				data: {},
+
+				dataType: 'json',
+
+				async: true,
+
+				success: function(res) {
+
+					if(res.status == 1) {
+
+						alert(res.msg);
+
+						window.location.href = '/';
+
+					}
+
+				},
+
+				error: function(e) {
+
+					console.log(e)
+
+				}
+
+			});
+
+		});
+
+	});
+
+</script>
+

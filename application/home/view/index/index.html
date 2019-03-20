@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta name="author" content="宋唐科技">
+	<meta name="keywords" content="[keywords]" />
+	<meta name="description" content="[description]" />
+	<!-- <script src="__PUBLIC__/home/js/hotcss.js"></script> -->
+	<script src="__PUBLIC__/home/js/jquery.min.js"></script>
+	<!-- <script src="__PUBLIC__/home/js/touch.js"></script> -->
+	<script src="__PUBLIC__/home/js/swiper.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/reset.css?ver=06131011">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/style.css?ver=06131011">
+	<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/mobile";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+	<title>2018云和数据第六届中国创业者大会</title>
+<style type="text/css">
+	body {width:100%;overflow-x:hidden; background: #000000;}
+	.bgx1 { position:  absolute; left: 0; right:0; margin:auto; top:60px;  z-index:5;
+     background: url('http://6.ihenan.com/public/home/images/earth.png'); width:800px; height:800px; background-size:100% 100%; opacity: 0.2;
+ }
+	.bgx2 { position: absolute; left: -50%; right:-50%; margin:auto; top:210px; z-index:1;
+   background: url('http://6.ihenan.com/public/home/images/river.jpg'); width:1920px; height:851px; background-size:100% 100%; opacity: 0.2;margin:0 auto;
+ }
+	.bgx3 { position: absolute; left: -50%; right:-50%; margin:auto; top:210px; z-index:3;
+   background: url('http://6.ihenan.com/public/home/images/river2.jpg'); width:1920px; height:851px; background-size:100% 100%; opacity: 0.2;margin:0 auto;
+ }
+	.bgx4 { position: absolute;left: -50%; right:-50%; margin:auto; top:210px; z-index:2;
+   background: url('http://6.ihenan.com/public/home/images/river3.jpg'); width:1920px; height:851px; background-size:100% 100%; opacity: 0.2;margin:0 auto;
+ }
+	
+@-webkit-keyframes r1 {
+    from {-webkit-transform: rotate(360deg);
+}to {
+    -webkit-transform: rotate(0deg);
+	} 
+	}
+	
+
+.ra1 {
+    -webkit-transform: rotate(360deg);
+    animation: r1 9s linear infinite;
+    -moz-animation: r1 9s linear infinite;
+    -webkit-animation: r1 9s linear infinite;
+    -o-animation: r1 9s linear infinite;
+}
+
+ @keyframes scale1{ 
+            0%{
+				transform: scale(1);opticy:0.9;
+            }
+            25%{
+                transform: scale(1.01);opacity: 1; 
+            }
+            50%{
+                transform: scale(0.99);opacity: 0.8;
+            }
+            75%{
+                transform: scale(1.02);opacity: 1;
+            }
+        }
+
+@keyframes scale2 { 
+            0%{
+                transform: scale(1); opticy:1;
+            }
+            25%{
+                transform: scale(1.03); opacity: 0; 
+            }
+            50%{
+                transform: scale(1);opacity: 0;
+            }
+            75%{
+                transform: scale(0.99);opacity: 1;
+            }
+        }
+@keyframes scale3 { 
+            0%{
+                transform: scale(1); opticy:0;
+            }
+            25%{
+                transform: scale(1.03); opacity: 1; 
+            }
+            50%{
+                transform: scale(1);opacity: 0;
+            }
+            75%{
+                transform: scale(0.99);opacity: 0;
+            }
+        }
+@keyframes scale4 { 
+            0%{
+                transform: scale(1); opticy:0;
+            }
+            25%{
+                transform: scale(1.03); opacity: 0; 
+            }
+            50%{
+                transform: scale(1);opacity: 1;
+            }
+            75%{
+                transform: scale(0.99);opacity: 0;
+            }
+        }
+
+.rrb {-webkit-animation: scale1 2s ease-in-out infinite;}
+.rrc {-webkit-animation: scale2 6s ease-in-out infinite;}
+.rrd {-webkit-animation: scale3 6s ease-in-out infinite;}
+.rre {-webkit-animation: scale4 6s ease-in-out infinite;}
+
+.head{height: 100px; overflow:hidden; background:none; position: relative; z-index: 50;}
+.head .nav li a{ color: #fff; font-size: 18px; }
+
+.meeting-info {
+    background-color: none;
+}
+</style>
+	
+
+</head>
+<body>
+	<div class="bgx1 ra1"></div>
+    <div class="bgx2 rrc"></div>
+    <div class="bgx3 rrd"></div>
+    <div class="bgx4 rre"></div>
+	
+<head>
+	<div class="head">
+		<div class="wrap">
+			<div class="fl logo"><a href="{$website.url}"><img src="/public/home/images/logo.png"></a></div>
+			<div class="fr nav">
+				{:widget('widget/head')}
+			</div>
+			<p class="colfff textr font14 head-pos">报名已破 <span class="fontber">{$website.tcount}</span> 人<br><span class="font12 col7e">每晚6点更新数据</span></p>
+		</div>
+	</div>
+</head>
+				
+
+<!-- 首页banner -->
+
+<article>
+	<div class="banner" style="position: relative; z-index: 50;">
+
+		<div class="wrap z-index-box">
+
+			<img class="b-img1" src="__PUBLIC__/home/images/bicon1.png?ver=06121805">
+
+			<h3 class="font40 fontb colfff textc">云和数据&nbsp;&nbsp;第六届</h3>
+
+			<img class="b-img2" src="__PUBLIC__/home/images/bicon2.png?ver=06121805">
+
+			<p class="font30 fontl colfff textc">新经济 &nbsp;新物种 &nbsp;新驱动</p>
+			<a <if condition="session('userid') neq ''"> href="my.html" <else/> href="online.html" </if> class="button-sty font36 colfff textc rrb">立即报名</a>
+			<p class="font16 textc colfff fontl">已报名{$website.tcount}人</p>
+
+			<p class="font-b font28 textc colfff fontl">7月19号<br/>郑州国际会展中心</p>
+
+		</div>
+
+
+	</div>
+
+</article>
+
+
+
+<!-- 大会信息 -->
+
+<article style="z-index:50; position: relative;">
+
+	<div class="meeting-info">
+
+		<div class="wrap">
+
+			<h3 class="fontb textl font40 colfff" style="display:block; width:221px; height:65px; background:url('../public/mobile/images/tit01.png') no-repeat;background-size:100% 100%; margin:0 0 50px; font-size:0rem;">大会信息</h3>
+
+			<p class="font20" style="color:#c3c4c5";>
+
+				<span class="fontb" style="color:#666;">时间</span> &nbsp; 2018年7月19日<br/>
+
+				<span class="fontb" style="color:#666;">地点</span> &nbsp; 郑州国际会展中心轩辕堂<br/>
+
+				<span class="fontb" style="color:#666;">主题</span> &nbsp; 新经济 &nbsp;新物种 &nbsp;新驱动<br/>
+
+				<span class="fontb" style="color:#666;">规模</span> &nbsp; 5800人<br/>
+
+			</p>
+
+			<p class="font20" style="color:#c3c4c5";>
+
+				<span class="fontb" style="color:#666;">招商</span> &nbsp; 0371-55555286<br/>
+
+				<span class="fontb" style="color:#666;">投诉</span> &nbsp; 0371-55555286<br/>
+
+				<span class="fontb" style="color:#666;">QQ群</span> &nbsp; 5210371 (河南创业者1群)<br>
+				<span class="fontb" style="color:#666;">QQ群</span> &nbsp; 173371 (河南创业者2群)
+
+			</p>
+
+		</div>
+
+	</div>
+
+</article>
+
+
+
+<!-- 参会嘉宾 -->
+
+<article>
+
+	<div class="meeting-guest bg2" >
+
+		<div class="wrap">
+
+			<h3 class="fontb font40 textl colfff"  style="display:block; width:245px; height:65px; background:url('../public/mobile/images/tit02.png') no-repeat;background-size:100% 100%; margin:0 0; font-size:0rem;">参会嘉宾</h3>
+
+			<ul class="index">
+
+				<volist name="guestList" id="vo">
+
+					<li>
+
+						<div class="m-g-img">
+
+							<img src="{$vo.thumb}" />
+
+						</div>
+
+						<p class="font20 textc col000" style="font-weight: bold; color:#eee">{$vo.title}
+							<br><span class="font14" style="font-weight: normal; color:#a1a3a5; font-size:16px;"><empty name="$vo.subtitle">&nbsp;<else/>{$vo.subtitle}</empty></span>
+							<br><span class="font14" style="font-weight: normal; color:#666;">{$vo.reserved}</span>
+						</p>
+
+					</li>
+
+				</volist>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</article>
+
+
+
+<!-- 合作伙伴 -->
+
+<article>
+
+	<div class="cooperation">
+
+		<div class="wrap">
+
+			<h3 class="fontb font40 textl colfff" style="display:block; width:221px; height:65px; background:url('../public/mobile/images/tit03.png') no-repeat;background-size:100% 100%; margin:20px 0 0; font-size:0rem;">合作伙伴</h3>
+
+			<volist name="partList" id="vo">
+
+				<h4 class="font22 textl colfff">{$vo.name}</h4>
+
+				<ul class="clearfix">
+
+					<volist name="$vo.children" id="sub">
+
+						<li><img src="{$sub.thumb}"/></li>
+
+					</volist>
+
+				</ul>
+
+			</volist>
+
+		</div>
+
+	</div>
+
+</article>
+
+
+
+<!-- 往期回顾 -->
+
+<article>
+
+	<div class="past-period">
+
+		<div class="wrap" id="sliderWrap">
+
+			<h3 class="fontb textl font40 colfff" style="display:block; width:221px; height:65px; background:url('../public/mobile/images/tit04.png') no-repeat;background-size:100% 100%; margin:0 0 50px; font-size:0rem;">往期回顾</h3>
+
+			<div class="p-p-img-list clearfix">
+
+				<ul class="clearfix">
+
+					<li><img src="__PUBLIC__/home/images/iicon1.png">
+
+						<p class="font36 colfff textc">615位<span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">演讲嘉宾</span></p>
+
+					</li>
+
+					<li><img src="__PUBLIC__/home/images/iicon2.png">
+
+						<p class="font36 colfff textc">20000+<br/><span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">参会人员</span></p>
+
+					</li>
+
+					<li><img src="__PUBLIC__/home/images/iicon3.png">
+
+						<p class="font36 colfff textc">超过2万+<br/><span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">参会企业</span></p>
+
+					</li>
+
+					<li><img src="__PUBLIC__/home/images/iicon4.png">
+
+						<p class="font36 colfff textc">552位<br/><span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">媒体</span></p>
+
+					</li>
+
+					<li><img src="__PUBLIC__/home/images/iicon5.png">
+
+						<p class="font36 colfff textc">720家<br/><span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">品牌参与</span></p>
+
+					</li>
+
+					<li><img src="__PUBLIC__/home/images/iicon6.png">
+
+						<p class="font36 colfff textc">120家<br/><span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">新媒体</span></p>
+
+					</li>
+
+					<li><img src="__PUBLIC__/home/images/iicon7.png">
+
+						<p class="font36 colfff textc">700+<br/><span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">稿件发布</span></p>
+
+					</li>
+
+					<li><img src="__PUBLIC__/home/images/iicon8.png">
+
+						<p class="font36 colfff textc">3000万次+<br/><span class="font18" style="display:block;auto 0;line-height: 30px; color:#aaa;">曝光次数</span></p>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div class="swiper-container clearfix">
+
+				<div class="swiper-wrapper" style="margin: 0 0.3rem 0 0;">
+
+					<div class="swiper-slide">
+
+						<a href="http://5.ihenan.com/" target="_blank"><img src="__PUBLIC__/home/images/dh5.jpg">
+
+						<p class="textl colfff font18">第五届河南创业者大会<br/><span>3500人参会</span></p></a>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<a href="http://4.ihenan.com/" target="_blank"><img src="__PUBLIC__/home/images/dh4.jpg">
+
+						<p class="textl colfff font18">第四届河南创业者大会<br/><span>2000人参会</span></p></a>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<a href="http://3.ihenan.com/" target="_blank"><img src="__PUBLIC__/home/images/dh3.jpg">
+
+						<p class="textl colfff font18">第三届河南创业者大会<br/><span>3000人参会</span></p></a>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<a href="http://2015.ihenan.com/" target="_blank"><img src="__PUBLIC__/home/images/dh2.jpg">
+
+						<p class="textl colfff font18">第二届河南创业者大会<br/><span>1600人参会</span></p></a>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<a href="http://2014.ihenan.com/" target="_blank"><img src="__PUBLIC__/home/images/dh1.jpg">
+
+						<p class="textl colfff font18">第一届河南创业者大会<br/><span>1300人参会</span></p></a>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<a href="http://mh2.ihenan.com/" target="_blank"><img src="__PUBLIC__/home/images/mh2.jpg">
+
+						<p class="textl colfff font18">第二届互联网庙会<br/><span>2000人参会</span></p></a>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<a href="http://mh.ihenan.com/" target="_blank"><img src="__PUBLIC__/home/images/mh1.jpg">
+
+							<p class="textl colfff font18">第一届互联网庙会<br/><span>2000人参会</span></p></a>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</article>
+
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+
+
+		for(var i = 0; i < $('.swiper-slide').length; i++) {
+
+			if(i % 2 != 0) {
+
+				$('.swiper-slide').eq(i).css('padding-left', 15)
+
+			}
+
+		}
+
+
+
+		var mySwiper = new Swiper('.swiper-container', {
+
+			direction: 'horizontal',
+
+			loopedSlides: 8,
+
+			loop: true,
+
+			slidesPerView: 2,
+
+			slidesPerGroup: 2,
+
+			autoplay: {
+
+				delay: 3000, //1秒切换一次
+
+			}
+
+		})
+
+		//鼠标覆盖停止自动切换
+
+		mySwiper.el.onmouseover = function() {
+
+				mySwiper.autoplay.stop();
+
+			},
+
+			//鼠标移除停止自动切换
+
+			mySwiper.el.onmouseout = function() {
+
+				mySwiper.autoplay.start();
+
+			}
+
+
+
+	})
+
+</script>
+
+
+
+<!-- 联系我们 -->
+
+<article>
+	<div class="contact-us">
+		<div class="wrap">
+			<h3 class="fontb textl font40 col000" style="display:block; width:214px; height:62px; background:url('../public/mobile/images/tit05.png') no-repeat;background-size:100% 100%; margin:0 0 50px; font-size:0rem;">联系我们</h3>
+			<ul>
+				<li>
+					<h4 class=" font24 colfff textl">会务合作</h4>
+					<p class="font20 colfff fontl">赵亚辉</p>
+					<p class="font20 colfff fontl">176 9808 5508</p>
+					<p class="fontl font14 col000"><a href="mailto:fgw@qq.com" class="mail">fgw@qq.com</a></p></p>
+				</li>
+				<li>
+					<h4 class="font24 colfff textl">领票/报名</h4>
+					<p class="font20 colfff fontl">李超</p>
+					<p class="font20 colfff fontl">130 1767 6331</p>
+					<p class="fontl font14 col000"><a href="mailto:fgw@qq.com" class="mail">fgw@qq.com</a></p></p>
+				</li>
+				<li>
+					<h4 class="font24 colfff textl">商务合作</h4>
+					<p class="font20 colfff fontl">组委会</p>
+					<p class="font20 colfff fontl">0371-5555 5286</p>
+					<p class="fontl font14 col000"><a href="mailto:fgw@qq.com" class="mail">fgw@qq.com</a></p></p>
+				</li>
+				<li>
+					<h4 class="font24 colfff textl">媒体合作</h4>
+					<p class="font20 colfff fontl">明路</p>
+					<p class="font20 colfff fontl">152 2600 2885</p>
+					<p class="fontl font14 colfff"><a href="mailto:fgw@qq.com" class="mail">fgw@qq.com</a></p></p>
+				</li>
+			</ul><!-- text-i  -->
+		</div>
+	</div>
+</article>
+
+<include file="public/footer" />

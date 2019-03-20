@@ -1,0 +1,108 @@
+<include file="public/header" title="用户登录 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+
+<!-- 报名 -->
+<article>
+	<div class="user-login">
+		<h3 class="fontb textc col000">用户登录</h3>
+		<div class="wrap">
+			<dl class="clearfix formstyle">
+			    <dt class="textr">手机</dt>
+			    <dd><input type="number" maxlength="11" pattern="[0-9]*" name="utel" placeholder="请输入手机号码" class="input1 phoneInput"></dd>
+			</dl>
+			<!--<dl class="clearfix formstyle">-->
+			    <!--<dt class="textr">密码</dt>-->
+			    <!--<dd><input type="password" name="password" placeholder="请输入您的密码"  class="input1 codeInput"></dd>-->
+			<!--</dl>-->
+			<a href="javascript:;" class="user-login-btn nextstep">登录</a>
+			<!--<a href="/mobile/forget.html" style="color: #333; font-size: 0.28rem;float: left">忘记密码?</a>-->
+			<a href="/mobile/online.html" style="color: #333; font-size: 0.28rem;float: right">还没报名呢?</a>
+	    </div>
+	</div>
+</article>
+
+<nav>
+	<div class="nav-fotter clearfix">
+
+		<ul class="clearfix">
+
+			<li><a href="/mobile/index.html">首页</a></li>
+
+			<!--<li><a href="/mobile/page/1.html">简介</a></li>-->
+
+			<li><a href="/mobile/page/2.html">议程</a></li>
+
+
+			<li><a href="/mobile/online.html">报名</a></li>
+
+
+			<li><a href="/mobile/place.html">领票点</a></li>
+
+			<!--<li><a href="/mobile/news.html">动态</a></li>-->
+
+			<li class="active"><a href="/mobile/my.html">我的</a></li>
+
+		</ul>
+
+	</div>
+</nav>
+<script type="text/javascript">
+	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+	var sendBtn = $('.sendbtn');
+	var phoneInput = $('.phoneInput'); //手机号
+//	var codeInput = $('.codeInput'); //验证码
+	var loginBtn = $('.user-login-btn'); //下一步
+
+	// 判断手机号是否正确
+	function isTel(phoneInput) {
+		var valuePhone = phoneInput.val();
+		if(valuePhone.length == 11 && myreg.test(valuePhone)) {
+			return true;
+		} else {
+			alert("输入手机有误，请重新输入！");
+			return false;
+		}
+	}
+
+	// 下一步 验证  手机号 和验证码填写是否正确
+	function mobileverification() {
+		var tpl = $(".phoneInput").val();
+//		var mycode = $(".codeInput").val();
+		if(!tpl) {
+			alert('请输入电话号码');
+			return false;
+		}
+//		if(!mycode) {
+//			alert('请输入密码');
+//			return false;
+//		}
+		$.ajax({
+			type: "post",
+			url: "{:url('/mobile/login')}",
+			data: {
+				'utel': phoneInput.val()
+//				'password':	mycode
+			},
+			dataType: 'json',
+			async: true,
+			success: function(res) {
+				if(res.status == 1001) {
+					window.location.href = res.url;
+				}else{
+					alert(res.msg);
+				}
+			},
+			error: function(e) {
+				console.log(e)
+			}
+		});
+	}
+
+
+	// 下一步
+	$('.nextstep').click(function() {
+		mobileverification();
+	});
+</script>
+</body>
+</html>

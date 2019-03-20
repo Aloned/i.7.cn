@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>创业者大会 - 管理后台</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+
+		<link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/global.css" media="all">
+
+	</head>
+
+	<body>
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header header header-demo">
+				<div class="layui-main">
+					<div class="admin-login-box">
+						<a class="logo" href="{:url('admin/index/index')}">
+							<img alt="" src="__PUBLIC__/admin/images/logo.png"/>
+						</a>
+					</div>
+					<ul class="layui-nav admin-header-item">
+						<li class="layui-nav-item">
+							<a href="javascript:;" class="clearcache">清除缓存</a>
+						</li>
+						<li class="layui-nav-item">
+							<a target="_blank" href="{$siteurl}">浏览网站</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" class="admin-header-user">
+								<img alt="admin" src="__PUBLIC__/admin/images/default_user.png" />
+								<span>{$admin_info.user_name}</span>
+							</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;" class="editpassword" data-url="{:url('admin/login/editpwd',['admin_id'=>$admin_info.admin_id])}"><i class="layui-icon">&#xe642;</i> 修改密码</a>
+								</dd>
+								<dd>
+									<a href="javascript:;" class="logout" data-url="{:url('login/logout')}"><i class="layui-icon">&#x1006;</i> 注销</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<ul class="layui-nav admin-header-item-mobile">
+						<li class="layui-nav-item">
+							<a href="{:url('login/logout')}"><i class="layui-icon">&#x1006;</i> 注销</a>
+						</li>
+					</ul>
+				</div>
+			</div>

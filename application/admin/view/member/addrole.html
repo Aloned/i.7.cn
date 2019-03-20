@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<title>主页</title>
+
+		<!--CSS-->
+		<link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" />
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/global.css" />
+
+		<!--JS-->
+		<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
+	</head>
+
+	<body>
+		<div class="layui-main my-admin">
+			<div class="layui-tab my-tab">
+				<div class="my-title-box">
+					<h5 class="my-title">添加角色</h5>
+					<a href="javascript:history.go(-1);" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe65c;</i></a>
+				</div>
+				<div class="my-content">
+					<form method="post" class="layui-form" action="">
+						<table class="layui-table">
+							<colgroup>
+								<col width="10%" />
+								<col />
+							</colgroup>
+							<tr>
+								<td align="right">角色名称：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="text" name="role_name" lay-verify="required" class="layui-input" placeholder="角色名称" />
+										</div>
+										<div class="layui-form-mid layui-word-aux">给角色起个名字吧</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">角色描述：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<textarea name="role_desc" class="layui-textarea" placeholder="角色描述"></textarea>
+										</div>
+										<div class="layui-form-mid layui-word-aux">角色描述</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">权限分配：</td>
+								<td>
+									<table class="layui-table" lay-size="lg">
+										<!--<div class="layui-form-item" style="margin-top: 0;">
+											<volist name="menulist" id="vo">
+												<input type="checkbox" name="act_list[{$vo.id}]" lay-skin="primary" value="{$vo.id}" title="{$vo.title}">
+											</volist>
+										</div>-->
+										<volist name="menulist" id="vo">
+											<tr>
+												<td width="20%"><input type="checkbox" name="act_list[{$vo.id}]" lay-skin="primary" value="{$vo.id}" title="{$vo.title}"></td>
+												<td width="80%">
+													<volist name="vo['children']" id="sub">
+														<input type="checkbox" name="act_list[{$sub.id}]" lay-skin="primary" value="{$sub.id}" title="{$sub.title}">
+													</volist>
+												</td>
+											</tr>
+										</volist>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">&nbsp;</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<button class="layui-btn" lay-submit="" data-url="{:url('member/addrole')}" lay-filter="addrole">保存</button>
+											<button type="reset" class="layui-btn layui-btn-danger">重置</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		layui.config({
+			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
+		}).use('member'); //加载入口
+	</script>
+</html>

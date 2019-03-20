@@ -1,0 +1,17 @@
+<include file="public/header"  title="{$detail.title} - {$website.title}" keywords="{$detail.keywords}" description="{$detail.description}"/>
+	<div class="banner-wrap clearfix"></div>
+		
+	<!-- 动态 -->
+	<article>
+		<div class="dynamicinfo">
+		  <div class="wrap">
+				<h3 class="textl col000 font40 fontb">{$detail.title}</h3>
+				<p class="clearfix"><span class="fl font28">{$detail.author}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fr font18 col7e">{$detail.addtime|date="Y-m-d",###}</span></p>  
+				<div class="show">
+					{$detail.content}
+				</div>
+			</div>
+		</div>
+	</article>
+		
+<include file="public/footer"/>

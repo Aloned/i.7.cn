@@ -1,0 +1,46 @@
+<include file="public/nheader" title="邀请函" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+
+
+<!-- 生成邀请函 -->
+<article>
+	<div class="wrap generate-box">
+<div style="display:block; line-height: 0.6rem; font-size:0.25rem; text-align: center; color:#e00;">长按下方图片保存到相册</div>
+		<div class="generate-cont">
+			<img src="{$img}" width="100%" />
+		</div>
+
+	</div>
+</article>
+
+<script type="text/javascript">
+	/*$(function(){
+		$('#save').click(function(){
+			$.ajax({
+				type: "post",
+				url: "{:url('ajax/saveImg')}",
+				data: {
+					'url':'{$img}'
+				},
+				dataType: 'json',
+				async: true,
+				success: function(res) {
+					if(res.status == 1) {
+						alert(res.msg);
+						//window.location.href = res.url;
+					}else{
+						alert(res.msg);
+					}
+				},
+				error: function(e) {
+					console.log(e)
+				}
+			});
+		});
+	});*/
+</script>
+
+</body>
+</html>
+	
+	

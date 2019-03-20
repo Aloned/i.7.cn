@@ -1,0 +1,39 @@
+<include file="public/header" title="{$seo.cat_name} - {$website.title}" keywords="{$seo.keywords}" description="{$seo.cat_desc}"/>
+
+	<div class="banner-wrap clearfix"></div>
+
+
+
+	<!-- 合作伙伴 -->
+
+	<article>
+
+		<div class="cooperation" style="background-color:#fafbfc;">
+
+			 <div class="wrap">
+
+			 	<h3 class="fontb textc font36 col000">{$seo.cat_name}</h3>
+
+			 	<volist name="list" id="vo">
+
+					<h4 class="font22 textl col000">{$vo.name}</h4>
+
+					<ul class="clearfix">
+
+						<volist name="$vo.children" id="sub">
+
+							<li><img src="{$sub.thumb}"/></li>
+
+						</volist>
+
+					</ul>
+
+				</volist>
+
+			 </div>
+
+		</div>
+
+	</article>
+
+<include file="public/footer"/>

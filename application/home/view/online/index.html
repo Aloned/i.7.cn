@@ -1,0 +1,142 @@
+<include file="public/header" title="在线报名第二步 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+
+<div class="banner-wrap clearfix"></div>
+
+<!-- 报名 -->
+<article>
+	<div class="user-login">
+		<h3 class="textc fontb font36 col000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;报 名</h3>
+		<div class="wrap">
+			<dl class="clearfix formstyle">
+				<dt class="textr">手机号</dt>
+				<dd><input type="text" id="utel" name="utel" placeholder="请输入您的手机号" class="input1 phoneInput"></dd>
+			</dl>
+		<dl class="clearfix formstyle">
+			    <dt class="textr">名字</dt>
+			    <dd><input type="text" id="uname" name="uname" placeholder="请输入您的姓名" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+			    <dt class="textr">公司</dt>
+			    <dd><input type="text" id="ucompany" name="ucompany" placeholder="请输入您的公司" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+			    <dt class="textr">职务</dt>
+			    <dd><input type="text" id="uposition" name="uposition" placeholder="请输入您的职务" class="input1"></dd>
+			</dl>
+			<!--<dl class="clearfix formstyle">-->
+			    <!--<dt class="textr">密码</dt>-->
+			    <!--<dd><input type="text" id="upassword" name="password" placeholder="请设置登录密码" class="input1"></dd>-->
+			<!--</dl>-->
+				<dl class="clearfix formstyle">
+				<dt>&nbsp;</dt>
+				<dd><a href="javascript:;" id="submit" class="user-login-btn">报名</a></dd>
+			</dl>
+	    </div>
+	</div>
+</article>
+<include file="public/footer" />
+<script type="text/javascript">
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+
+    // 判断手机号是否正确
+    function isTel(phoneInput) {
+        var valuePhone = phoneInput
+        if(valuePhone.length == 11 && myreg.test(valuePhone)) {
+            return true;
+        } else {
+            alert("输入手机有误，请重新输入！");
+            return false;
+        }
+    }
+
+    $('#submit').click(function(){
+        var tpl = $("#utel").val();
+        isTel(tpl)
+        var uname = $("#uname").val();
+        var ucompany = $("#ucompany").val();
+        var uposition = $("#uposition").val();
+
+        if(!tpl) {
+            alert('请输入电话号码');
+            return false;
+        }
+
+        if(!uname) {
+            alert('姓名不能为空');
+            return false;
+        }
+        if(!ucompany) {
+            alert('公司不能为空');
+            return false;
+        }
+
+//        if(ucompany.length <= 4) {
+//            alert('请提交真实报名信息');
+//            return false;
+//        }
+//        if(uposition.length <= 2) {
+//            alert('请提交真实报名信息');
+//            return false;
+//        }
+        if(!isChinese(ucompany)){
+            alert('请提交真实报名信息');
+            return false;
+        }
+//        if(!isChinese(uposition)){
+//            alert('请提交真实报名信息');
+//            return false;
+//        }
+        if(!isChinese(uname)){
+            alert('姓名必须为中文');
+            return false;
+        }
+        //来自哪里
+        var ufrom = getUfrom('ufrom');
+
+        $.ajax({
+            type: "post",
+            url: "{:url('ajax/apply')}",
+            data: {
+                'ufrom':ufrom,
+                'utel':tpl,
+                'uname': uname,
+                'ucompany': ucompany,
+                'uposition': $('#uposition').val()
+            },
+            dataType: 'json',
+            async: true,
+            success: function(res) {
+                if(res.status == 1) {
+                    alert(res.msg);
+                    window.location.href = '/';
+                }
+                if(res.status == 0) {
+                    alert(res.msg);
+                }
+                if(res.status < 0) {
+                    alert(res.msg);
+                }
+
+            },
+            error: function(e) {
+                console.log(e)
+            }
+        });
+    })
+
+    function getUfrom(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+
+    function isChinese(str){
+        if(/^[\u3220-\uFA29]+$/.test(str)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

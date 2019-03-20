@@ -1,0 +1,116 @@
+<include file="public/header" title="用户登录 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+<!-- 个人中心 -->
+<div class="wrap clearfix" style="margin:0 auto 100px auto">
+	<div class="box-left fl">
+		<include file="public/uside"/>
+	</div>
+	<div class="box-right fr">
+		<div class="conl clearfix">
+			<ul class="clearfix">
+				<li class="font32 textc active">我的邀请</li>
+				<li class="font32 textc">邀请排行</li>
+			</ul>
+		</div>
+		<div class="conl-cont clearfix" id="conlCont0">
+			<div class="record-info">
+				<h3>我的战绩</h3>
+				<ul class="clearfix">
+					<li><span>{:inviteNumber($user.ucode)}</span><br/>好友报名数</li>
+					<li><span>{:invitedNumber($user.ucode)}</span><br/>好友领票数</li>
+				</ul>
+				<p class="textc col000 font14">{:poorNumber($user.ucode)}</p>
+				<a href="javascript:;" class="yqhyBtn">去邀请</a>
+			</div>
+			<div class="invitation-list">
+				<h3>我邀请的人</h3>
+				<ul class="clearfix">
+					<volist name="list" id="vo" empty="您还没有邀请哦">
+						<li class="clearfix"><span class="fl font16 col000">{$vo.uname}</span><span class="fr font14 col7e">{$vo.addtime|date="Y-m-d H:i:s",###}</span></li>
+					</volist>
+				</ul>
+			</div>
+		</div>
+		<div class="conl-cont clearfix" id="conlCont1" style="display: none;">
+			<div class="myinvitation-cont clearfix">
+				<h4 class="col000 textl">当前排名第{$ranking}位</h4>
+				<p class="col000 textl font16">截止7月18日中午12:00,邀请满10名好友领票可升级为大会VIP,领取VIP票,邀请报名数及邀请领票数前100名将分别获得大会提供的"逐梦礼包"和"奋斗大礼包"</p>
+                <a href="javascript:;" class="yqhyBtn">去邀请</a>
+		    </div>
+		    <div class="myinvitation-list clearfix">
+			    <h3 class="textc font26 col000">邀请排行榜</h3>
+				<table class="myinvitation-table">
+					<thead>
+						<td>排名</td>
+						<td>用户</td>
+						<td>邀请人数</td>
+						<td>已领门票</td>
+					</thead>
+					<volist name="sortlist" id="vo">
+						<tr <if condition="$user.uid eq $vo.uid">class="active" </if> >
+							<td>{$i}</td>
+							<td>{$vo.uname}</td>
+							<td>{$vo.invited}</td>
+							<td>{:invitedNumber($vo.ucode)}</td>
+						</tr>
+					</volist>
+				</table>
+		    </div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 提示框 -->
+<div class="prompt-box">
+	<div class="prompt-cont">
+		 <h3>邀请好友</h3>
+		 <p>复制链接发给好友，让大家知道这个热血澎湃，充满希望的集会</p>
+		 <p class="textc" id="content">{$website.url}/online.html?ufrom={$user.ucode}</p>
+		 <a href="javascript:;" id="copyBT" data-clipboard-text="{$website.url}/online.html?ufrom={$user.ucode}"><span>复制链接</span></a>
+		 <p class="textc fontb font32">赢VIP门票，创业大会大礼包</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('.yqhyBtn').bind('click',function(){
+		$('.prompt-box').show();
+	});
+	$('.prompt-box').bind('click',function(){
+		$('.prompt-box').hide();
+	});
+	$('.prompt-cont').bind('click',function(event){
+		event.stopPropagation();
+	});
+	$('.prompt-cont a').bind('click',function(event){
+		
+	});
+	
+	function tab(){
+		var conlLi = $('.conl li');
+	
+		conlLi.bind('click',function(){
+			 var _index = $(this).index();
+			 $(this).addClass('active').siblings().removeClass('active');
+			 $('.conl-cont').hide();
+			 $('#conlCont'+_index).show();
+		})
+	}
+	
+	tab();
+	
+    function copyArticle(event) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('content'));
+ 
+        const selection = window.getSelection();
+        if(selection.rangeCount > 0) selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('copy');
+        alert("复制成功！");
+    }
+ 
+    document.getElementById('copyBT').addEventListener('click', copyArticle, false);
+</script>
+
+<include file="public/footer" />

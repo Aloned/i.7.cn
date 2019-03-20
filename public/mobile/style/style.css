@@ -1,0 +1,548 @@
+.wrap{ margin:0 0.3rem; overflow: hidden; }
+
+
+input{-webkit-appearance:none;border-radius:0px;} 
+
+.head{position: relative; height: 1rem; overflow:hidden; background:#fafbfc; }
+
+.head h2{ line-height: 1rem; }
+
+.head li{ width: 50%; }
+
+.head li img{ display: block; width: 1.54rem; height: 0.6rem; margin: 0.18rem 0 0 0; }
+
+.head li p{ margin-top: 0.25rem; line-height: 0.3rem; }
+
+.head a.back{ display: block; position: absolute; left: 0.3rem; top:50%; margin-top: -0.16rem; height: 0.32rem; line-height: 0.32rem; }
+
+.head a.back .iconrgiht{ display: block; width: 0.18rem; height: 0.32rem; float: left; margin-right: 0.05rem; }
+
+
+
+
+
+.banner{ position: relative; } 
+
+.banner .b-bgimg{ position: absolute; left: 0rem; bottom: -0.2rem; display: block; width: 2.05rem; height: 4.05rem; }
+
+.b-img1{ display: block; margin:1rem auto 0.12rem; width: 2.1rem; height: 0.8rem; }
+
+.b-img2{ display: block; margin:0.10rem auto 0.15rem; width: 6.2rem; height: 0.8rem; }
+
+
+
+
+
+.button-sty{ margin:1.2rem auto 0.2rem; line-height: 0.7rem; display: block; width: 3rem; height: 0.7rem; background: #ff0000; border-radius: 0.35rem;
+
+-moz-border-radius: 0.35rem;
+
+-webkit-border-radius: 0.35rem;
+
+border:0;
+
+}
+
+
+
+.font-b{ margin: 1.2rem 0 0.6rem; line-height: 1.4; }
+
+
+
+
+
+/*大会信息*/
+
+.meeting-info{ background: #000000; overflow: hidden; padding: 0.8rem 0; }
+
+.meeting-info h3{ font-size: 0.5rem;}
+
+.meeting-info p{ line-height: 2; margin-top: 0.6rem; }
+
+
+
+/*参会嘉宾*/
+
+.meeting-guest{ overflow: hidden; padding: 0.8rem 0; }
+
+.meeting-guest.bg1{ background: #f1f2f5;}
+
+.meeting-guest.bg2{ background: #ffffff;}
+
+.meeting-guest h3{ font-size: 0.5rem;}
+
+.meeting-guest ul li{ float: left; width: 33.333%; margin-top: 0.6rem; }
+
+.meeting-guest ul li .m-g-img{ margin:0 auto 0.1rem auto; width: 1.9rem; height: 1.9rem; background: #e1e2e3;  border-radius: 100%; -webkit-border-radius: 100%;}
+
+.meeting-guest ul li img{ width: 1.9rem; height:1.9rem; border-radius: 50%;};
+.meeting-guest ul li p{ line-height: 1.2; margin:0.1rem 0; }
+.meeting-guest ul li p span{ display:block; height:0.36rem; line-height:0.22rem;}
+
+
+
+
+/*合作伙伴*/
+
+.cooperation{ background: #121314; overflow: hidden; padding: 0.8rem 0; }
+
+.cooperation h3{ font-size: 0.5rem; margin-bottom: 0.6rem;}
+
+.cooperation ul{ margin-bottom: 0.3rem; }
+
+.cooperation li{margin-top: 0.02rem; margin-bottom: 0.01rem;  float: left; width: 32.333%; height:1.13rem; margin-left: 1.5%;}
+/*.cooperation li{margin-top: 0.1rem; margin-bottom: 0.01rem;  float: left; width: 32.333%; height: 1.2rem; background: #e2e2e2;  margin-left: 1.5%;}
+*/
+.cooperation li img{width: 100%;}
+
+.cooperation li:nth-child(3n+1){ margin-left: 0;}
+
+
+
+
+
+
+
+/*往期回顾*/
+
+.past-period{ background: #000000; overflow: hidden; padding: 0.8rem 0; }
+
+.past-period h3{ font-size: 0.5rem; margin-bottom: 0.6rem;}
+
+.swiper-container{   }
+
+.swiper-slide{ width: 100%; margin:0; padding: 0;}
+
+.swiper-slide img{ display: block;  width: 6.3rem; border:0.1rem solid #ffffff; }
+
+.swiper-slide p{ margin-top:0.1rem; line-height: 1.4; }
+
+
+
+
+
+
+
+
+
+.p-p-img-list ul{ margin-top: 0.6rem; margin-bottom: 0.5rem;}
+
+.p-p-img-list li{ float: left; width: 24%; padding:0.25rem 0; margin-bottom: 0.1rem; background: #323333; margin-left: 1.333%; }
+
+.p-p-img-list li:nth-child(1){ margin-left: 0%; }
+
+.p-p-img-list li:nth-child(5){ margin-left: 0%; }
+
+.p-p-img-list li img{ display: block; width: 0.5rem; height: 0.5rem; margin:0 auto 0.1rem; }
+
+.p-p-img-list li p{ line-height: 1.1; }
+
+
+
+
+
+/*联系我们*/
+
+.contact-us{ background: #ffffff; overflow: hidden; padding: 0.8rem 0; }
+
+.contact-us h3{ font-size: 0.5rem;}
+
+.contact-us li{ float: left; width: 50%;  margin-top: 0.6rem;}
+
+.contact-us li h4{ margin-bottom: 0.25rem; }
+
+.contact-us li p{ height: 0.38rem; margin-top: 0.12rem; line-height: 0.38rem;}
+
+.contact-us li p img{ display: block; margin-right: 0.1rem; float: left; width: 0.38rem; height: 0.38rem;  }
+
+.contact-us li p.text-i{ text-indent: 0.48rem; }
+
+
+
+/*底部信息*/
+
+.footer{ background: #363636; overflow: hidden; padding: 0.3rem 0 1.1em 0; }
+
+.footer img{ display: block; width: 2.7rem; height: 0.36rem; margin:0 auto 0.1rem; }
+
+.footer p{ line-height: 1.6; }
+
+
+
+
+
+
+
+/*领票点*/
+
+.ticket-point{ background: #ffffff; overflow: hidden; padding: 0.8rem 0; }
+
+.ticket-point h3{ font-size: 0.5rem; margin-bottom: 0.5rem}
+
+.ticket-point p{ line-height: 1.6; font-size: 0.22rem;}
+
+
+
+.select-area{ margin:0.4rem 0.3rem; overflow: hidden; }
+
+.select-area a{ display: block; color: #000; float: left; margin:0 0.1rem 0.1rem 0; height: 0.56rem; padding: 0 0.3rem; border:1px solid #ddd; font-size: 0.22rem; line-height: 0.56rem; border-radius: 1px; -webkit-border-radius: 1px;}
+
+.select-area a.active{ background: #ff0000; border:1px solid #ff0000; color: #ffffff; }
+
+.select-info{ border-top: 1px solid #ecedef; }
+
+.select-show{ padding:0.2rem 0.3rem; position: relative;  background:#f7f8f9; }
+
+.select-show p{ line-height: 1.4; }
+
+.select-show i{ position: absolute; display: block; right: 0.3rem; top:50%; margin-top: -0.07rem; width: 0.28rem; height: 0.14rem; }
+
+.select-show i img{ display: block; width: 0.16rem; height: 0.08rem; }
+
+.select-hide{ display: none; padding:0.4rem 0.3rem;  }
+
+.select-hide p{ line-height: 1.6; }
+
+.bor0{ border:0; }
+
+
+
+/*切换样式*/
+
+.conl li{ float: left; cursor: pointer; width: 50%; color:#000000; height: 0.8rem; line-height: 0.8rem; border-bottom: 0.06rem solid #f2f2f2; }
+
+.conl li.active{ color:#ff0000;border-bottom: 0.06rem solid #ff0000; }
+
+
+
+
+
+/*个人中心*/
+
+.center-head{ overflow: hidden; height: 3.2rem; background: url(../images/centerbg.png) left top no-repeat; background-size: 100% 3.2rem; -webkit-background-size: 100% 3.2rem; }
+
+.center-head dl{ margin:0.5rem 0 0 0 ; }
+
+.center-head dt{ float: left; width: 1rem; height: 1rem; background: #ffffff; border-radius: 100%; -webkit-border-radius:100%; overflow: hidden;}
+
+.center-head dt img{ display: block; width: 1rem; height: 1rem; }
+
+.center-head dd{ margin-left: 1.3rem;  }
+
+.center-head dd p{ line-height: 1.2; padding-top: 0.15rem; }
+
+.center-head li{ color:#ffffff; float: left; width: 50%; }
+
+.center-head li p{ line-height: 1.4; }
+
+
+
+.center-list li{ padding:0 0.3rem;  line-height: 1rem; height: 1rem; position: relative; }
+
+.center-list li+li{ border-top:1px solid #e0e0e0; }
+
+.center-list li a{ display: block; color: #000000; }
+
+.center-list li i{ position: absolute; display: block; right: 0.3rem; top:50%; margin-top: -0.11rem; width: 0.12rem; height: 0.22rem; }
+
+.center-list li i img{ display: block; width: 0.12rem; height: 0.22rem;}
+
+
+
+
+
+/*我的门票*/
+
+.myticket-cont{ overflow: hidden; }
+
+.myticket-cont img{ margin:0.5rem 0; display: block; width: 100%; height: 2.0rem; }
+
+.myticket-cont h4{ margin-bottom: 0.1rem; }
+
+.myticket-cont p{ line-height: 1.4; }
+
+.myticket-cont a.nolead{ display: block;  margin:0.5rem auto; width: 1.6rem; height: 0.6rem; line-height: 0.6rem; text-align: center; color: #ffffff; font-size: 0.24rem; background: #ff0000; border-radius: 2px;-webkit-border-radius: 2px;}
+
+.myticket-cont a.lead{ display: block;  margin:0.5rem auto; width: 1.6rem; height: 0.6rem; line-height: 0.6rem; text-align: center; border:1px solid #d9d9d9; color: #d9d9d9; font-size: 0.24rem; }
+
+.mart50{ margin-top: 0.5rem; }
+
+
+
+/*我的邀请*/
+
+.myinvitation-cont h4{ margin:0.5rem 0 0.1rem; }
+
+.myinvitation-cont p{ line-height: 1.6; }
+
+.myinvitation-cont li{ float: left; width: 49%; }
+
+.myinvitation-cont li+li{ margin-left: 2%; }
+
+.myinvitation-cont li a{ display: block;  margin:0.5rem auto;  height: 0.8rem; line-height: 0.8rem; text-align: center; color: #ffffff; font-size: 0.3rem; background: #ff0000; border-radius: 2px;-webkit-border-radius: 2px; }
+
+
+
+.myinvitation-list{ overflow: hidden; }
+
+.myinvitation-list h3{ padding: 0.4rem 0; border-bottom: 1px solid #dededf; }
+
+.myinvitation-list li{ height: 0.7rem; line-height: 0.7rem; color:#bdbdbd; }
+
+
+
+.myinvitation-table{ padding:0.3rem 0; width: 100%; box-sizing: border-box; -webkit-box-sizing: border-box;  text-align: center; }
+
+.myinvitation-table thead{ font-weight: bolder; }
+
+.myinvitation-table tr{ color:#000000; font-size: 0.24rem; height: 0.6rem; line-height: 0.6rem; }
+
+.myinvitation-table td:nth-child(1){ width: 10%; }
+
+.myinvitation-table td:nth-child(2){ width: 70%; }
+
+.myinvitation-table td:nth-child(3){ width: 20%; text-align: right;}
+
+.myinvitation-table tr.active { color:#ff0000; }
+
+
+
+
+
+/*个人资料*/
+
+.centerdata-list{ background: #ffffff; border-bottom: 0.01rem solid #dcdcdc; }
+
+.centerdata-list li{ font-size: 0.3rem; color:#000000; height: 0.9rem; line-height: 0.9rem; border-bottom: 1px solid #dcdcdc; }
+
+.centerdata-list li{ margin-left: 0.3rem; padding-right: 0.3rem; }
+
+.centerdata-list li:last-child{ border:0; }
+
+.centerdata-list  a{ display: block;  margin:0.3rem; height: 0.8rem; line-height: 0.8rem; text-align: center; color: #ffffff; font-size: 0.32rem; background: #ff0000; border-radius: 0.1rem;-webkit-border-radius: 0.1rem;}
+
+
+
+/*修改资料*/
+
+.modifdata-list{ margin:0.5rem 0; }
+
+.modifdata-list a{ display: block;  margin:0.3rem 0; height: 0.8rem; line-height: 0.8rem; text-align: center; color: #ffffff; font-size: 0.32rem; background: #ff0000; border-radius: 0.1rem;-webkit-border-radius: 0.1rem;}
+
+
+
+dl.formstyle{ margin-bottom: 0.28rem; height: 0.8rem; line-height: 0.8rem; }
+
+dl.formstyle dt{ float: left; width: 0.9rem;  font-size: 0.28rem; color: #000000; line-height: 0.8rem; }
+
+dl.formstyle dd{ margin-left: 1rem; position: relative; width: 5.9rem; overflow: hidden;
+
+-webkit-border-radius: 0.1rem;
+
+-moz-border-radius: 0.1rem;
+
+}
+
+dl.formstyle dd input.input1{  display: block; width: 5.89rem; float: left; border:1px solid #ccc; font-size: 0.28rem; line-height: 0.8rem; 
+
+-webkit-border-radius: 0px;
+
+-moz-border-radius: 0px;
+
+border-radius: 0px;
+
+ box-sizing: border-box; -webkit-box-sizing: border-box;
+
+ padding:0 0.2rem;
+outline:none;-webkit-appearance: none;
+}
+dl.formstyle dd input.input1:hover{border:1px solid #a3a3a3;}
+
+dl.formstyle dd input.input2{
+
+	 display: block; width: 4.2rem; float: left; border:1px solid #ccc; font-size: 0.28rem; line-height: 0.8rem; 
+
+-webkit-border-radius: 0px;
+
+-moz-border-radius: 0px;
+
+border-radius: 0px;
+
+ box-sizing: border-box; -webkit-box-sizing: border-box;
+
+ padding:0 0.2rem;
+outline:none;-webkit-appearance: none;
+}
+dl.formstyle dd input.input2:hover{border:1px solid #a3a3a3;}
+
+
+.select-box{float: left; position: relative; width: 1.59rem; height: 0.82rem; border:1px solid #a3a3a3; box-sizing: border-box; -webkit-box-sizing: border-box;
+
+-webkit-border-radius: 0.1rem;
+
+-moz-border-radius: 0.1rem;
+
+border-radius: 0.1rem;
+
+overflow: hidden;
+
+margin-right: 0.1rem;
+
+
+
+}
+
+.select-box i{ display: block; position: absolute; right: 0.1rem; top:50%; margin-top: -0.035rem; width: 0.14rem; height: 0.07rem; }
+
+.select-box i img{ display: block; width: 0.14rem; height: 0.07rem; }
+
+dl.formstyle dd .select{ display: block; width: 1.19rem; float: left;  font-size: 0.28rem; line-height: 0.8rem; 
+
+-webkit-background: transparent;
+
+background: transparent;
+
+ padding:0 0.2rem;
+
+ border:0;
+
+}
+
+dl.formstyle dd a.sendbtn{ position: absolute; right: 0; top:0; width: 1.6rem; height: 0.83rem; background: #ff0000; color:#ffffff; line-height: 0.8rem; text-align: center; font-size: 0.22rem; }
+
+
+
+
+
+
+
+/*用户登录*/
+
+.user-login{ overflow: hidden; }
+
+.user-login h3{ font-size: 0.5rem; margin: 0.6rem 0;}
+
+.user-login a.user-login-btn{ display: block;  margin:0.6rem 0; height: 0.8rem; line-height: 0.8rem; text-align: center; color: #ffffff; font-size: 0.32rem; background: #ff0000; border-radius: 2px;-webkit-border-radius: 2px;}
+
+
+
+
+
+
+
+
+
+/*议程*/
+
+.agrenda-cont{}
+
+.agrenda-cont p{ margin:0.6rem 0; line-height: 1.8; }
+
+
+
+.agrenda-time{ overflow: hidden; }
+
+.agrenda-time h3{ margin:0 0 0.4rem 0; }
+
+.agrenda-time dl{ margin-bottom: 0.3rem; }
+
+.agrenda-time dt{ float: left; width: 1rem;  line-height: 1.6; text-align: right; font-size: 0.24rem; color:#000000; }
+
+.agrenda-time dd{ margin-left: 1.4rem; font-size: 0.24rem; line-height: 1.6;}
+
+
+
+
+
+/*动态*/
+
+.dynamic-list{ overflow: hidden; margin-bottom: 1.4rem; }
+
+.dynamic-list li{ margin:0.3rem 0; }
+
+.dynamic-list li img{ display: block; width: 100%; height: 2.4rem; }
+
+.dynamic-list li p{ margin-top: 0.2rem; font-size: 0.26rem; color:#000000; line-height: 1.2; }
+
+.dynamic-list li p span{ font-size: 0.22rem; color:#b4b4b4; }
+
+
+
+.dynamicinfo{ overflow: hidden; margin-bottom: 1.4rem; }
+
+.dynamicinfo h3{ margin:0.5rem 0 0; }
+
+.dynamicinfo p{ line-height: 0.3rem; margin-bottom: 0.4rem;  line-height: 1.6; font-size: 0.28rem;}
+
+.dynamicinfo img{ display: block; width: 100%; }
+
+
+
+
+
+/*底部导航*/
+
+.nav-fotter{ position: fixed; bottom: 0; left:0;  width: 100%; height: 0.9rem; background: #040404; z-index: 100; opacity: 0.8;}
+
+.nav-fotter li{ float: left; width: 14.285%; text-align: center;  height: 0.9rem; line-height: 0.9rem;}
+
+.nav-fotter li a{ display: block; font-size: 0.24rem; color:#ffffff;  }
+
+.nav-fotter li.active{ background: #ff0000; }
+
+
+
+
+
+/*报名成功*/
+
+.success-info { overflow: hidden; }
+
+.success-info img{ display: block; margin:0.8rem auto 0.4rem; width: 1.3rem; height: 1.3rem; }
+
+.success-info h3{ font-size: 0.46rem; margin-bottom: 0.4rem;}
+
+.success-info p { line-height: 1.6; }
+
+.success-info a{ display: block;  margin:0.6rem 0; height: 0.8rem; line-height: 0.8rem; text-align: center; color: #ffffff; font-size: 0.32rem; background: #ff0000; border-radius: 0.1rem;-webkit-border-radius: 0.1rem;}
+
+
+
+
+
+/*生成邀请函*/
+
+.generate-cont{padding: 0 0 0.5rem 0;}
+
+.generate-head{ margin:0 auto; width: 1.3rem; height: 1.3rem; background: #ffffff; border-radius: 100%; -webkit-border-radius:100%; overflow: hidden;}
+
+.generate-head img{ display: block; width: 1.3rem; height: 1.3rem; }
+
+.generate-cont h3{ margin: 0.2rem 0; }
+
+.generate-cont p{ line-height: 1.8; }
+
+.genrate-logo img{ display: block; margin:0.8rem auto 0; width:1.9rem; height: 0.94rem; }
+
+.genrate-banner img{ display: block; margin:0.1rem auto 0.5rem; width: 5.5rem; height: 0.7rem; }
+
+.ewm img{ display: block; margin:0.6rem auto 0; width: 1.6rem; height: 1.6rem }
+
+
+
+.generate-box a{ display: block;  margin:0.26rem 0; height: 0.8rem; line-height: 0.8rem; text-align: center; color: #ffffff; font-size: 0.32rem; background: #ff0000; border-radius: 2px;-webkit-border-radius: 2px;}
+
+
+
+
+
+/*介绍*/
+
+.introduce-cont{ overflow: hidden; padding: 0.1rem 0 0.7rem; }
+
+.introduce-cont h3{ margin:0.5rem 0; }
+
+.introduce-cont p{ line-height: 1.8; font-size: 0.26rem;}
+
+
+

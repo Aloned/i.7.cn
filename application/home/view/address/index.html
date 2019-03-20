@@ -1,0 +1,213 @@
+<include file="public/header"  title="{$detail.title} - {$website.title}" keywords="{$detail.keywords}" description="{$detail.description}"/>
+
+	<div class="banner-wrap clearfix"></div>
+
+		
+
+	<!-- 领票点 -->
+
+	<article>
+
+		<div class="ticket-point">
+
+			<div class="wrap">
+
+			 	<h3 class="fontb textc font36 col000">{$detail.title}</h3>
+
+			 	<p>
+
+		    		{$detail.content}
+
+	    	    </p>
+
+			</div>
+
+		</div>
+
+		<!-- 地点详情 -->
+
+		<article style="margin:0 0 100px 0">
+
+			<div class="wrap clearfix">
+
+					<!--<div class="conl clearfix">
+
+						<ul class="clearfix">
+
+							<li class="font32 textc active">郑州</li>
+
+							<li class="font32 textc">其他地区</li>
+
+						</ul>
+
+					</div>-->
+
+					<div class="conl-cont clearfix" id="conlCont0">
+
+						<div class="select-area">
+
+							<volist name="citylist" id="vo">
+
+								<a href="{:url('/address/'.$vo.id)}" id="{$cityid}" <if condition="$vo.id eq $cityid">class="active"</if> >{$vo.cityname}({$vo.count})</a>
+
+							</volist>
+
+						</div>
+
+						<volist name="list" id="vo">
+
+							<div class="select-info <if condition="($i-1) eq 0">bor0</if>">
+
+								<div class="select-show">
+
+									<p class="font16 col7e">
+
+										<span class="marginr30">领票点{$i}</span> <span class="col000">{$vo.store_address}</span>
+
+			                            <i class="fr"><span class="colf0 font16">余票：<?php if($vo['store_amount'] - specTicket($vo['store_id'])<0){echo 0;}else{echo $vo['store_amount'] - specTicket($vo['store_id']);} ?></span><img src="__PUBLIC__/home/images/iconhide.png"></i>
+
+									</p>
+
+								</div>
+
+								<div class="select-hide">
+
+									<p class="font16 col000"><span class="fontber">{$vo.store_name}</span><br/><span class="col7e">联系人：{$vo.store_contact}<br/><?php if(isset($_SESSION['think']['userid'])){echo '电话：'.$vo['store_tel'];} ?></span></p>
+
+								</div>
+
+							</div>
+
+						</volist>
+
+					</div>
+
+					<!--<div class="conl-cont clearfix" id="conlCont1" style="display: none;">
+
+						<ul class="select-area">
+
+							<li>其他地区</li>
+
+							<li>经开区</li>
+
+							<li>高新区</li>
+
+							<li>惠济区</li>
+
+							<li>金水区</li>
+
+							<li>二七区</li>
+
+							<li>管城区</li>
+
+							<li>中原区</li>
+
+						</ul>
+
+						<div class="select-info bor0">
+
+							<div class="select-show">
+
+								<p class="font16 col7e">
+
+									<span class="marginr30">取票地点002</span> <span class="col000">商务内环路25号楼2单元1802室</span>
+
+		                            <i class="fr"><span class="colf0 font16">余票：20</span><img src="images/iconhide.png"></i>
+
+								</p>
+
+							</div>
+
+							<div class="select-hide">
+
+								<p class="font16 col000"><span class="fontber">河南万宝华盛人力资源服务有限公司</span><br/><span class="col7e">联系人：赵新芳<br/>电话：15965465460</span></p>
+
+							</div>
+
+						</div>
+
+						<div class="select-info">
+
+							<div class="select-show">
+
+								<p class="font16 col7e">
+
+									<span class="marginr30">取票地点002</span> <span class="col000">商务内环路25号楼2单元1802室</span>
+
+		                            <i class="fr"><span class="colf0 font16">余票：20</span><img src="images/iconhide.png"></i>
+
+								</p>
+
+							</div>
+
+							<div class="select-hide">
+
+								<p class="font16 col000"><span class="fontber">河南万宝华盛人力资源服务有限公司</span><br/><span class="col7e">联系人：赵新芳<br/>电话：15965465460</span></p>
+
+							</div>
+
+						</div>
+
+						<div class="select-info">
+
+							<div class="select-show">
+
+								<p class="font16 col7e">
+
+									<span class="marginr30">取票地点002</span> <span class="col000">商务内环路25号楼2单元1802室</span>
+
+		                            <i class="fr"><span class="colf0 font16">余票：20</span><img src="images/iconhide.png"></i>
+
+								</p>
+
+							</div>
+
+							<div class="select-hide">
+
+								<p class="font16 col000"><span class="fontber">河南万宝华盛人力资源服务有限公司</span><br/><span class="col7e">联系人：赵新芳<br/>电话：15965465460</span></p>
+
+							</div>
+
+						</div>
+
+					</div>-->
+
+		    </div>
+
+		</article>
+
+	</article>
+
+	<script src="__PUBLIC__/home/js/my.js"></script>
+
+	<script type="text/javascript">
+
+			$('.select-show').bind('click',function(){
+
+		        if ($(this).next().is(':hidden')) {
+
+		         	$(this).children().next().next().children().attr('src','__PUBLIC__/home/images/iconshow.png')
+
+		         	$(this).next().show();
+
+		        }else{
+
+		         	$(this).next().hide();
+
+		         	$(this).children().next().next().children().attr('src','__PUBLIC__/home/images/iconhide.png')
+
+		        }
+
+			});
+
+	
+
+		$('.select-area li').bind('click',function(){
+
+	        $(this).addClass('active').siblings().removeClass('active');
+
+		})
+
+	</script>
+
+<include file="public/footer"/>

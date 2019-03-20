@@ -1,0 +1,45 @@
+<include file="public/nheader" title="修改密码" keywords="{$website.keywords}" description="{$website.content}" />
+<div class="banner-wrap clearfix"></div>
+<!-- 报名 -->
+<article>
+	<div class="user-login">
+		<h3 class="fontb textc col000">修改密码</h3>
+		<div class="wrap">
+			<dl class="clearfix formstyle">
+			    <dt class="textr">新密码</dt>
+			    <dd><input type="password" id="password" name="password" placeholder="请输入密码" class="input1"></dd>
+			</dl>
+			<a href="javascript:;" id="edit"  class="user-login-btn">确定</a>
+	    </div>
+	</div>
+</article>
+<script type="text/javascript">
+	$(function(){
+		$('#edit').click(function(){
+			var pwd = $('#password').val();
+			if(pwd == ''){
+				alert('新密码不能为空');
+				return false;
+			}
+			$.ajax({
+				type: "post",
+				url: "{:url('ajax/edit')}",
+				data: {
+					'password':pwd
+				},
+				dataType: 'json',
+				async: true,
+				success: function(res) {
+					if(res.status == 1) {
+						alert(res.msg);
+						window.location.href = res.url;
+					}
+				},
+				error: function(e) {
+					console.log(e)
+				}
+			});
+		});
+	});
+</script>
+<include file="public/nfooter" />
