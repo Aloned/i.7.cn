@@ -47,7 +47,8 @@ return [
 		'id'=>'7','title'=>'管理员管理','icon'=>'&#xe770;','spread'=>false,
 		'children' => [
 			['title'=>'管理员','icon'=>'&#xe636;','id'=>'8','href'=>'/admin/member/index'],
-			['title'=>'角色管理','icon'=>'&#xe636;','id'=>'9','href'=>'/admin/member/role']
+			['title'=>'角色管理','icon'=>'&#xe636;','id'=>'9','href'=>'/admin/member/role'],
+			['title'=>'登录日志','icon'=>'&#xe636;','id'=>'28','href'=>'/admin/log/index']
 		]
 	],
 	[
