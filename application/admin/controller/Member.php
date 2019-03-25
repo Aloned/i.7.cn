@@ -213,10 +213,10 @@ class Member extends Base
 		
 		if($request->isPost()){
 			//请求参数
-			$data = $request->param(); // 收集数据
+			$data = $request->post(); // 收集数据
 			//把权限列表改成字符串
 			$data['act_list'] = implode(',', $data['act_list']);
-			
+
 			$res = Db::name('admin_role')->where('role_id',$role_id)->update($data); // 写入数据到数据库
 			
 			if($res){
