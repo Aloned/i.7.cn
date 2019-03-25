@@ -92,7 +92,7 @@ layui.config({
 				layer.msg('退出成功', {
 					icon: 1
 				},function(){
-					location.href = '/login'
+					location.href = 'admin/login'
 				});
 			} else {
 				layer.msg('退出失败', {
