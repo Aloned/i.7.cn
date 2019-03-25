@@ -29,21 +29,21 @@
 					<table class="layui-table">
 						<thead>
 							<tr>
-			                   	<th>登录时间</th>
+			                   	<th>操作类型</th>
 			                   	<th>账号</th>
 			                   	<th>姓名</th>
 			                   	<th>登录IP</th>
-			                   	<th>操作</th>
+			                   	<th>登录时间</th>
 			               	</tr>
 						</thead>
 						<tbody>
 							<foreach name="list" item="vo" key="k" >
 					  			<tr>
-					  			 	<td>{$vo.art_id}</td>
-					     		 	<td>{$vo.cat_name}</td>
-					     		 	<td>{$vo.cat_name}</td>
-					     		 	<td>{$vo.cat_name}</td>
-			                     	<td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+					  			 	<td>{$vo.log_info}</td>
+					     		 	<td>{$vo.user_name}</td>
+					     		 	<td>{$vo.true_name}</td>
+					     		 	<td>{$vo.log_ip}</td>
+			                     	<td>{$vo.log_time|date='Y-m-d H:i:s',###}</td>
 			                   	</tr>
 			                </foreach>
 						</tbody>
