@@ -15,7 +15,7 @@ class Log extends Base{
     	$count = Db::name('admin_log')->count();
     	
 		$list = Db::view('admin_log','log_info,log_ip,log_url,log_time,log_id')
-						->view('admin','user_name,true_name','admin_log.admin_id=admin.admin_id')->order('admin_log.log_id desc')->paginate(11,$count);
+						->view('admin','user_name,true_name','admin_log.admin_id=admin.admin_id')->order('admin_log.log_id desc')->paginate(20,$count);
 		
 		//获取分页显示
 		$page = $list->render();
