@@ -54,7 +54,7 @@ class Member extends Base
 			if($data['bind_sn'] == 1){
                 $data['uk_sn'] = md5($data['uk_sn']);
             }
-			
+			unset($data['bind_sn']);
 			$data['password'] = md5($data['password']);
 			$data['add_time'] = time();
 			$data['last_login'] = time();
