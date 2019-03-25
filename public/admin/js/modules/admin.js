@@ -33,5 +33,13 @@ layui.define(['element', 'layer', 'form','base','laydate','layedit'], function(e
 		base.del({'url':url,'id':id});
 	});
 
+	form.on('radio(bind_sn)', function(data){
+		if(data.value == 1){
+			$('#uksn').show();
+		}else{
+			$('#uksn').hide();
+		}
+	});
+
 	exports('admin', {}); //注意，这里是模块输出的核心，模块名必须和use时的模块名一致
 });
