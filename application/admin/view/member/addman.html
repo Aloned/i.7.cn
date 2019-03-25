@@ -19,7 +19,7 @@
 		<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
 	</head>
 
-	<body>
+	<body onload="load()">
 		<div class="layui-main my-admin">
 			<div class="layui-tab my-tab">
 				<div class="my-title-box">
@@ -149,5 +149,47 @@
 			version: new Date().getTime(),
 			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
 		}).use('admin'); //加载入口
+
+		function load()
+		{
+			//如果是IE10及以下浏览器，则跳过不处理
+			if(navigator.userAgent.indexOf("MSIE")>0 && !navigator.userAgent.indexOf("opera") > -1) return;
+			try
+			{
+				var s_pnp=new SoftKey3W();//创建UK类
+				s_pnp.Socket_UK.onopen = function()
+				{
+					bConnect=1;//代表已经连接，用于判断是否安装了客户端服务
+				}
+
+				//在使用事件插拨时，注意，一定不要关掉Sockey，否则无法监测事件插拨
+				s_pnp.Socket_UK.onmessage =function got_packet(Msg)
+				{
+					var PnpData = JSON.parse(Msg.data);
+					if(PnpData.type=="PnpEvent")//如果是插拨事件处理消息
+					{
+						if(PnpData.IsIn)
+						{
+							$('#ukNotice').html('检测到密码锁，请点击登录进行访问')
+						}
+						else
+						{
+							$('#ukNotice').html('请插入加密锁进行登录...')
+						}
+					}
+				}
+
+				s_pnp.Socket_UK.onclose = function()
+				{
+
+				}
+			}
+			catch(e)
+			{
+				alert(e.name + ": " + e.message);
+				return false;
+			}
+		}
+
 	</script>
 </html>
