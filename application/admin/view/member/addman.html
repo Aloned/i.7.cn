@@ -30,7 +30,7 @@
 					<form method="post" class="layui-form" action="">
 						<table class="layui-table">
 							<colgroup>
-								<col width="10%" />
+								<col width="12%" />
 								<col />
 							</colgroup>
 							<tr>
@@ -115,13 +115,13 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="right">是否绑定加密锁：</td>
+								<td align="right">绑定加密锁：</td>
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<input type="radio" name="bind_uk" onclick="check_bind_uk(1)" value="1" title="是" />
-											<input type="text" name="uk_sn" id="uksn" style="display: none">
-											<input type="radio" name="bind_uk" value="0" onclick="check_bind_uk(2)" title="否" checked="checked"/>
+											<input type="radio" lay-filter="bind_sn" name="bind_sn" value="1" title="是" />
+											<input type="radio" lay-filter="bind_sn" name="bind_sn" value="0" title="否" checked="checked"/>
+											<input type="text" name="uk_sn" id="uksn"  placeholder="加密锁编号" style="display: none;width: 300px;height: 28px;font-size: 16px;text-align: center">
 										</div>
 									</div>
 								</td>
@@ -143,17 +143,11 @@
 			</div>
 		</div>
 	</body>
+	<!--<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.min.js"></script>-->
 	<script type="text/javascript">
 		layui.config({
+			version: new Date().getTime(),
 			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
 		}).use('admin'); //加载入口
-		//uk事件
-		function check_bind_uk(data){
-			if(data == 1){
-				$('#uksn').show();
-			}else{
-				$('#uksn').hide();
-			}
-		}
 	</script>
 </html>
