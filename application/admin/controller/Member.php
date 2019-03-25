@@ -213,7 +213,7 @@ class Member extends Base
 		
 		if($request->isPost()){
 			//请求参数
-			$data = $request->post(); // 收集数据
+			$data = $request->param(); // 收集数据
 			//把权限列表改成字符串
 			$data['act_list'] = implode(',', $data['act_list']);
 
