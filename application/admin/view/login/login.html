@@ -26,7 +26,7 @@
 			<header>
 				<h1>管理员后台登录</h1>
 			</header>
-			<div class="my-login-main">
+			<div class="my-login-main" style="height: 150px">
 					<div class="layui-form-item">
 						<label class="my-login-icon">
                         	<i class="layui-icon">&#xe612;</i>
@@ -39,7 +39,11 @@
 					</div>
 			</div>
 			<footer>
-				<p class="lingpiao">领票点管理员登录>></p>
+				<div class="my-login-main" style="height:0px">
+					<div class="layui-form-item">
+				<p onclick="ticketLogin()" class="lingpiao">领票点管理员登录>></p>
+					</div>
+				</div>
 			</footer>
 		</div>
 		<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
@@ -51,6 +55,10 @@
 			layui.config({
 				base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
 			}).use('login'); //加载入口
+
+			function ticketLogin() {
+				location.href='./ticketLogin.html';
+			}
 
 			function load()
 			{

@@ -1,0 +1,109 @@
+---------------------------------------------------------------
+[ 2019-03-25T10:55:58+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/system/cleanCache
+[ info ] test.com/admin/system/cleanCache [运行时间：0.073736s][吞吐率：13.56req/s] [内存消耗：2,151.37kb] [文件加载：57]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'cleanCache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m8jq9rc529ifn6ocq4qrvv6va2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/system/cleanCache' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->cleanCache[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\System.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010127s ] mysql:host=127.0.0.1;port=3306;dbname=hldahui;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `md_config` [ RunTime:0.011457s ]
+[ sql ] [ SQL ] SELECT `url` FROM `md_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000295s ]
+---------------------------------------------------------------
+[ 2019-03-25T11:00:12+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/logout
+[ info ] test.com/admin/login/logout [运行时间：0.017492s][吞吐率：57.17req/s] [内存消耗：1,472.48kb] [文件加载：46]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m8jq9rc529ifn6ocq4qrvv6va2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://test.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/logout' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->logout[ G:\phpStudy\PHPTutorial\WWW\test\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-25T11:00:16+08:00 ] 127.0.0.1 127.0.0.1 GET /login
+[ info ] test.com/login [运行时间：0.014903s][吞吐率：67.10req/s] [内存消耗：1,224.23kb] [文件加载：39]
+[ info ] [ LANG ] G:\phpStudy\PHPTutorial\WWW\test\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m8jq9rc529ifn6ocq4qrvv6va2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'test.com',
+)
+[ info ] [ PARAM ] array (
+  '/login' => '',
+)
+[ info ] [ LOG ] INIT File

@@ -197,4 +197,9 @@ class Login extends Controller {
 
         return view();
     }
+
+    //领票点登录
+    function ticketLogin(){
+        return view('ticketLogin');
+    }
 }
