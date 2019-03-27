@@ -44,7 +44,7 @@ class Store extends Base
             }
         }
         $search2 = '';
-        $store_city = I('store_city');
+        $store_city = input('store_city');
         if(isset($store_city) && !empty($store_city)){
             $search2 = ['store_city' =>$store_city];
         }
@@ -54,7 +54,7 @@ class Store extends Base
         $count = Db::name('store_resource')->where($search)->count();
 
         $list = Db::name('store_resource')->alias('sr')
-            ->join('store s','sr.store_id=s.store.id','LEFT')
+            ->join('store s','sr.store_id = s.store_id','LEFT')
             ->where($search)
             ->where($search2)
             ->order('sr.id','DESC')
@@ -64,6 +64,11 @@ class Store extends Base
 
         if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
             $this -> assign('keyword',$_POST['keywords']);
+        }
+        if($store_city){
+            $this -> assign('cityId',$store_city);
+        }else{
+            $this -> assign('cityId','');
         }
 
         //获取城市列表
