@@ -31,7 +31,49 @@ class Store extends Base
         echo 12;
     }
 
-	//领票点列表
+    public function resource()
+    {
+        $search = '';
+        if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
+            if(is_numeric($_POST['keywords'])){
+                //手机号
+                $search = ['store_tel' => $_POST['keywords']];
+            }else{
+                //地址
+                $search = 'store_name like '.'"%'.$_POST['keywords'].'%"';
+            }
+        }
+
+        $admininfo = getAdminInfo(session('admin_id'));
+
+        //select 得到二维数组  find 得到一维数组
+        $count = Db::name('store')->where($search)->count();
+
+        $list = Db::name('store')->where($search)->order('id','DESC')->paginate(50,$count);
+
+        $page = $list->render();
+
+        if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
+            $this -> assign('keyword',$_POST['keywords']);
+        }
+        if(isset($_POST['store_city']) && !empty($_POST['store_city'])){
+            $this -> assign('cityId',$_POST['store_city']);
+        }else{
+            $this -> assign('cityId','');
+        }
+
+        //获取城市列表
+        $citylist = Db::name('city')->order('orderid asc')->select();
+        $this->assign('citylist',$citylist);
+        $this -> assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('pager',$page);
+
+        return view();
+    }
+
+
+    //领票点列表
     public function index()
     {
         $search = '';
