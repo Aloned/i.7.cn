@@ -1,2 +1,5 @@
-thinkphp
-runtime
+thinkphp/
+runtime/
+uploads/
+composer.json
+composer.lock
