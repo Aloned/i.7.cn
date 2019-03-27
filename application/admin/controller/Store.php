@@ -37,29 +37,33 @@ class Store extends Base
         if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
             if(is_numeric($_POST['keywords'])){
                 //手机号
-                $search = ['store_tel' => $_POST['keywords']];
+                $search = ['s.store_tel' => $_POST['keywords']];
             }else{
-                //地址
-                $search = 'store_name like '.'"%'.$_POST['keywords'].'%"';
+                //联系人
+                $search = 's.store_contact like '.'"%'.$_POST['keywords'].'%"';
             }
         }
+        $search2 = '';
+        $store_city = I('store_city');
+        if(isset($store_city) && !empty($store_city)){
+            $search2 = ['store_city' =>$store_city];
+        }
 
-        $admininfo = getAdminInfo(session('admin_id'));
+//        $admininfo = getAdminInfo(session('admin_id'));
 
-        //select 得到二维数组  find 得到一维数组
-        $count = Db::name('store')->where($search)->count();
+        $count = Db::name('store_resource')->where($search)->count();
 
-        $list = Db::name('store')->where($search)->order('id','DESC')->paginate(50,$count);
+        $list = Db::name('store_resource')->alias('sr')
+            ->join('store s','sr.store_id=s.store.id','LEFT')
+            ->where($search)
+            ->where($search2)
+            ->order('sr.id','DESC')
+            ->paginate(50,$count);
 
         $page = $list->render();
 
         if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
             $this -> assign('keyword',$_POST['keywords']);
-        }
-        if(isset($_POST['store_city']) && !empty($_POST['store_city'])){
-            $this -> assign('cityId',$_POST['store_city']);
-        }else{
-            $this -> assign('cityId','');
         }
 
         //获取城市列表
