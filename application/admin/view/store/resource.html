@@ -23,16 +23,13 @@
 		<div class="layui-main my-admin">
 			<div class="layui-tab my-tab">
 				<div class="my-title-box">
-					<h5 class="my-title">领票点资源列表</h5>
 					<if condition="session('role_id') eq 1|2">
-						<a href="{:url('store/add')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>  添加</a>
+					<h5 class="my-title">领票点资源列表</h5>
+						<a href="{:url('store/uploadResource')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>上传资源</a>
+					<else/>
+						<h5 class="my-title">我的资源列表</h5>
+						<a href="{:url('store/uploadResource')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>上传资源</a>
 					</if>
-					<form style="width:300px;float: right;height: 30px;" action="{:url('store/importExp')}" method="post" enctype="multipart/form-data" >
-						<div style="position: relative;left:-200px;top:-80px;width: 80px">
-							<a href="{:url('store/export')}"><button class="layui-btn layui-btn-danger" type="button">Excel导出</button></a>
-						</div>
-
-					</form>
 				</div>
 				<form class="layui-form" action="{:url('store/index')}" id="search" method="post">
 					<div class="layui-form-item">
@@ -45,7 +42,7 @@
 							</select>
 						</div>
 						<div class="layui-input-inline my-input-line" style="margin:10px 0 0 10px">
-							<input type="text" <?php if(isset($keyword)){echo "value=$keyword";} ?> name="keywords" placeholder="电话号码/公司名称" class="layui-input">
+							<input type="text" <?php if(isset($keyword)){echo "value=$keyword";} ?> name="keywords" placeholder="电话号码/姓名" class="layui-input">
 						</div>
 						<button type="submit" style="margin:10px 0 0 10px" class="layui-btn layui-btn-danger"><i class="layui-icon">&#xe615;</i></button>
 					</div>

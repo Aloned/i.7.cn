@@ -31,6 +31,7 @@ class Store extends Base
         echo 12;
     }
 
+    //领票点资源列表
     public function resource()
     {
         $search = '';
@@ -79,6 +80,53 @@ class Store extends Base
         $this->assign('pager',$page);
 
         return view();
+    }
+
+    //领票点资源上传
+    public function uploadResource(){
+        $request = Request::instance();
+        if($request->isPost()){
+            $res = getAdminInfo(session('admin_id'));
+            $res = $request->param();
+            print_r($res);die;
+        }
+        return view('uploadResource');
+    }
+
+    //编辑单页内容
+    public function editcontent(){
+        //是否为POST请求
+        $request = Request::instance();
+
+        $data = $request->except('file');
+
+        $category = Db::name('category')->where(['mod_id'=>5,'cat_id'=>input('param.cat_id')])->find();
+
+        if($request->isPost()){
+
+            $data['addtime'] = time();
+
+            $res = Db::name('content')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+
+            if($res){
+                $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
+            }else{
+                $msg = ['status'=>0,'msg'=>'更新单页内容失败'];
+            }
+            return json($msg);
+        }
+        //单页内容详情
+        $content = Db::name('content')->where('cat_id',input('cat_id'))->find();
+
+        $this->assign('content',$content);
+        $this->assign('category',$category);
+
+        return view();
+    }
+
+    //编辑器文件上传
+    public function layeditupload(){
+        return editUpload('content');
     }
 
 
