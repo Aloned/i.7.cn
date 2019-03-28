@@ -86,9 +86,18 @@ class Store extends Base
     public function uploadResource(){
         $request = Request::instance();
         if($request->isPost()){
-            $res = getAdminInfo(session('admin_id'));
-            $res = $request->param();
-            print_r($res);die;
+            $store_id = session('store_id');
+            $data = $request->except('file');
+            $data['created_on'] = date('Y-m-d H:i:s',time());
+            $data['store_id'] = $store_id;
+
+            $res = Db::name('store_resource')->insert($data);
+            if($res){
+                $msg = ['status'=>1,'msg'=>'资源上传成功','url'=>url('admin/Store/resource')];
+            }else{
+                $msg = ['status'=>0,'msg'=>'资源上传失败'];
+            }
+            return json($msg);
         }
         return view('uploadResource');
     }
