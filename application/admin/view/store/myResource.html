@@ -45,6 +45,7 @@
 			                   	<th>状态</th>
 			                   	<th>审核人</th>
 			                   	<th>审核时间</th>
+			                   	<th>审核备注</th>
 			                   	<th>操作</th>
 			               	</tr>
 						</thead>
@@ -58,6 +59,7 @@
 					     		 	<td>{$status[$vo.is_pass]}</td>
 					     		 	<td>{$vo.checked_by|default='暂无'}</td>
 					     		 	<td><?php if($vo['checked_on'] != '0000-00-00 00:00:00'){echo $vo['checked_on'];} ?></td>
+									<td>{$vo.remark}</td>
 			                     	<td>
 			                      		<a class="layui-btn layui-btn-small" href="{:url('store/editResource',['id'=>$vo.id])}"><i class="layui-icon">&#xe642;</i></a>
 				                      	<!--<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('store/del')}" data-id="{$vo.store_tel}"><i class="layui-icon">&#xe640;</i></a>-->
