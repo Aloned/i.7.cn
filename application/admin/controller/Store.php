@@ -74,6 +74,7 @@ class Store extends Base
 
         //获取城市列表
         $citylist = Db::name('city')->order('orderid asc')->select();
+        $this->assign('status',array('待审核','审核通过','未通过'));
         $this->assign('citylist',$citylist);
         $this -> assign('list',$list);
         $this->assign('count',$count);
@@ -102,35 +103,28 @@ class Store extends Base
         return view('uploadResource');
     }
 
-    //编辑单页内容
-    public function editcontent(){
+    //编辑资源内容
+    public function editResource(){
         //是否为POST请求
         $request = Request::instance();
 
         $data = $request->except('file');
-
-        $category = Db::name('category')->where(['mod_id'=>5,'cat_id'=>input('param.cat_id')])->find();
-
         if($request->isPost()){
+            $data['modified_on'] = date('Y-m-d H:i:s',time());
 
-            $data['addtime'] = time();
-
-            $res = Db::name('content')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+            $res = Db::name('store_resource')->update($data);
 
             if($res){
-                $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
+                $msg = ['status'=>1,'msg'=>'资源更新成功','url'=>url('admin/store/resource')];
             }else{
-                $msg = ['status'=>0,'msg'=>'更新单页内容失败'];
+                $msg = ['status'=>0,'msg'=>'资源更新失败'];
             }
             return json($msg);
         }
-        //单页内容详情
-        $content = Db::name('content')->where('cat_id',input('cat_id'))->find();
+        $res = Db::name('store_resource')->where(['id'=>input('id')])->find();
+        $this->assign('res',$res);
 
-        $this->assign('content',$content);
-        $this->assign('category',$category);
-
-        return view();
+        return view('editResource');
     }
 
     //编辑器文件上传
