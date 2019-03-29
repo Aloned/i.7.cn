@@ -218,7 +218,7 @@ function resourceCount($store_id){
     return $count;
 }
 
-//审核通过d资源数
+//审核通过资源数
 function resourcePassCount($store_id){
     $count = Db::name('store_resource')->where('store_id',$store_id)->where('is_pass=1')->count();
     return $count;
