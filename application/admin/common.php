@@ -238,3 +238,8 @@ function downloadExcel($strTable,$filename)
 	header('Pragma:public');
 	echo '<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'.$strTable.'</html>';
 }
+
+//获取商务合作类型字典
+function getCooperationType(){
+    return array('','冠名/分论坛冠名','主办方','协办方','参展方');
+}
