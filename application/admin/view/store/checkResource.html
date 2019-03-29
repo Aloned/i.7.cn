@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<title>主页</title>
+
+		<!--CSS-->
+		<link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" />
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/global.css" />
+
+		<!--JS-->
+		<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
+	</head>
+
+	<body>
+		<div class="layui-main my-admin">
+			<div class="layui-tab my-tab">
+				<div class="my-title-box">
+					<h5 class="my-title">{$res.title}></h5>
+					<a href="javascript:history.go(-1);" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe65c;</i></a>
+				</div>
+				<div class="my-content">
+					<div>
+						{$res.content}
+					</div>
+					<form method="post" class="layui-form" action="">
+						<table class="layui-table">
+							<colgroup>
+								<col width="10%"/>
+								<col />
+							</colgroup>
+							<input type="hidden" name="id" value="{$res.id}">
+							<tr>
+								<td align="right">审核结果：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="radio" name="is_pass" value="1" title="通过" <if condition="($res.is_pass) eq 1"> checked="checked" </if>>
+											<input type="radio" name="is_pass" value="2" title="驳回" <if condition="($res.is_pass) eq 2"> checked="checked" </if>>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">备注：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<textarea name="remark" class="layui-textarea" placeholder="备注信息">{$res.remark}</textarea>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<button class="layui-btn" lay-submit="" data-url="{:url('store/checkResource')}" lay-filter="editcontent">确认提交</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		layui.config({
+			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
+		}).use('content'); //加载入口
+	</script>
+</html>
