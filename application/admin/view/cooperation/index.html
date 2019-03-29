@@ -24,43 +24,36 @@
 			<div class="layui-tab my-tab">
 				<div class="my-title-box">
 					<h5 class="my-title">合作报名列表</h5>
-					<a href="{:url('article/addarticle')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>  添加</a>
+					<div>
+						<a href="{:url('store/export')}"><button class="layui-btn" style="width: 110px;line-height: 35px;height: 35px;font-size: 14px;text-align: center" type="button">导出Excel</button></a>
+					</div>
 				</div>
 				<div class="my-content">
 					<table class="layui-table">
 						<thead>
 							<tr>
 			                   	<th>ID</th>
-			                   	<th>文章标题</th>
-			                   	<th>所属分类</th>
-			                   	<th>是否显示</th>
-			                   	<th>是否热门</th>
-			                   	<th>是否推荐</th>
-			                   	<th>发布时间</th>
+			                   	<th>姓名</th>
+			                   	<th>电话</th>
+			                   	<th>公司</th>
+			                   	<th>职位</th>
+			                   	<th>合作方式</th>
+			                   	<th>报名日期</th>
 			                   	<th>操作</th>
 			               	</tr>
 						</thead>
 						<tbody>
 							<foreach name="list" item="vo" key="k" >
 					  			<tr>
-					  			 	<td>{$vo.art_id}</td>
-			                     	<td> 
-				                      	<a href="javascript:;">{$vo.title|mb_substr=0,20,'utf-8'}</a>
-					     		 	</td>
-					     		 	<td>{$vo.cat_name}</td>
-			                 		<td>
-		                             	<if condition="($vo.is_show) eq '1'"><span class="my-status-bg layui-bg-green"><i class="layui-icon">&#xe605;</i></span><else><span class="my-status-bg layui-bg-red"><i class="layui-icon">&#x1006;</i></span></if>                            
-		                         	</td> 
-		                         	<td>
-		                            	<if condition="($vo.is_hot) eq '1'"><span class="my-status-bg layui-bg-green"><i class="layui-icon">&#xe605;</i></span><else><span class="my-status-bg layui-bg-red"><i class="layui-icon">&#x1006;</i></span></if>
-		                         	</td>
-		                         	<td>
-		                            	<if condition="($vo.is_recommend) eq '1'"><span class="my-status-bg layui-bg-green"><i class="layui-icon">&#xe605;</i></span><else><span class="my-status-bg layui-bg-red"><i class="layui-icon">&#x1006;</i></span></if>
-		                         	</td>
-			                     	<td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+					  			 	<td>{$vo.id}</td>
+					     		 	<td>{$vo.name}</td>
+					     		 	<td>{$vo.tel}</td>
+					     		 	<td>{$vo.company}</td>
+					     		 	<td>{$vo.position}</td>
+					     		 	<td>{$type[$vo.cooperation_ways]}</td>
+									<td>{$vo.created_on}</td>
 			                     	<td>
-			                      		<a class="layui-btn layui-btn-small" href="{:url('article/editarticle',['art_id'=>$vo.art_id])}"><i class="layui-icon">&#xe642;</i></a>
-			                      		<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('article/delarticle')}" data-id="{$vo.art_id}"><i class="layui-icon">&#xe640;</i></a>
+			                      		<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('cooperation/del')}" data-id="{$vo.id}"><i class="layui-icon">&#xe640;</i></a>
 					     			</td>
 			                   	</tr>
 			                </foreach>
