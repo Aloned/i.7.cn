@@ -45,7 +45,7 @@
 				</div>
 				<form class="layui-form" action="{:url('store/index')}" id="search" method="post">
 					<div class="layui-form-item">
-						<div class="layui-input-inline my-input-line" style="margin: 10px 0 0 20px">
+						<div class="layui-input-inline my-input-line" style="margin: 10px 0 0 20px;width: 120px;">
 							<select name="store_city" id="store_city" lay-filter="store_city">
 								<option value="">全部</option>
 								<volist name="citylist" id="vo">
@@ -70,6 +70,7 @@
 			                   	<th>总票数</th>
 			                   	<th>已领票数</th>
 			                   	<th>余票数</th>
+			                   	<th>资源</th>
 			                   	<th>地址</th>
 			                   	<th>是否启用</th>
 			                   	<th>操作</th>
@@ -85,6 +86,10 @@
 					     		 	<td><span class="txt-color3">{$vo.store_amount}</span></td>
 					     		 	<td><span class="txt-color2">{:specTicket($vo.store_id)}</span></td>
 					     		 	<td><span class="txt-color4">{$vo.store_amount - specTicket($vo.store_id)}</span></td>
+					     		 	<td style="font-size: 13px">
+										<span class="txt-color4">已上传：{:resourceCount($vo.store_id)}</span>
+										<span class="txt-color2">已通过：{:resourcePassCount($vo.store_id)}</span>
+									</td>
 					     		 	<td>{$vo.store_address|mb_substr=0,20,'utf8'}</td>
 			                 		<td>
 		                             	<if condition="($vo.is_show) eq '1'"><span class="my-status-bg layui-bg-green"><i class="layui-icon">&#xe605;</i></span><else><span class="my-status-bg layui-bg-red"><i class="layui-icon">&#x1006;</i></span></if>
