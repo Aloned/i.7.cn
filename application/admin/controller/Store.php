@@ -45,20 +45,33 @@ class Store extends Base
             }
         }
         $search2 = '';
+        $search3 = '';
         $store_city = input('store_city');
+        $is_pass = input('is_pass');
         if(isset($store_city) && !empty($store_city)){
             $search2 = ['store_city' =>$store_city];
         }
 
-//        $admininfo = getAdminInfo(session('admin_id'));
+        if($is_pass ==='0' ){
+            $search3 = ['is_pass' =>$is_pass];
+        }else{
+            if(!empty($is_pass)){
+                $search3 = ['is_pass' =>$is_pass];
+            }
+        }
 
-        $count = Db::name('store_resource')->where($search)->count();
+        $count = Db::name('store_resource')
+            ->where($search)
+            ->where($search2)
+            ->where($search3)
+            ->count();
 
         $list = Db::name('store_resource')->alias('sr')
             ->join('store s','sr.store_id = s.store_id','LEFT')
             ->where($search)
             ->where($search2)
-            ->order('sr.id','DESC')
+            ->where($search3)
+            ->order('sr.is_pass desc','sr.id desc')
             ->paginate(50,$count);
 
         $page = $list->render();
@@ -76,6 +89,7 @@ class Store extends Base
         $citylist = Db::name('city')->order('orderid asc')->select();
         $this->assign('status',array('待审核','审核通过','未通过'));
         $this->assign('citylist',$citylist);
+        $this->assign('is_pass',$is_pass);
         $this -> assign('list',$list);
         $this->assign('count',$count);
         $this->assign('pager',$page);
@@ -107,6 +121,24 @@ class Store extends Base
 
         return view('checkResource');
     }
+
+    //删除资源
+    public function delResource(){
+        //是否为POST请求
+        $request = Request::instance();
+        if($request->isPost()){
+            $res = Db::name('store_resource')->where('id',input('id'))->delete();
+
+            if($res){
+                $msg = ['status'=>1,'msg'=>'资源删除成功','url'=>url('admin/store/resource')];
+            }else{
+                $msg = ['status'=>-2,'msg'=>'资源删除失败'];
+            }
+
+            return json($msg);
+        }
+    }
+
 
     //我的资源列表
     public function myResource()
