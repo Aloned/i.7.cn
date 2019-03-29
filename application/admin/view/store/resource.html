@@ -23,15 +23,10 @@
 		<div class="layui-main my-admin">
 			<div class="layui-tab my-tab">
 				<div class="my-title-box">
-					<if condition="session('role_id') eq 1|2">
-					<h5 class="my-title">领票点资源列表</h5>
-						<a href="{:url('store/uploadResource')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>上传资源</a>
-					<else/>
 						<h5 class="my-title">我的资源列表</h5>
 						<a href="{:url('store/uploadResource')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>上传资源</a>
-					</if>
 				</div>
-				<form class="layui-form" action="{:url('store/index')}" id="search" method="post">
+				<form class="layui-form" action="{:url('store/resource')}" id="search" method="post">
 					<div class="layui-form-item">
 						<div class="layui-input-inline my-input-line" style="margin: 10px 0 0 20px">
 							<select name="store_city" id="store_city" lay-filter="store_city">
@@ -51,7 +46,6 @@
 					<table class="layui-table">
 						<thead>
 							<tr>
-								<th><a href="{:url('store/index')}?type=1<?php if(isset($cityId)){echo '&store_city='.$cityId;} ?>">ID</a></th>
 			                   	<th>资源标题</th>
 			                   	<th>领票点</th>
 			                   	<th>联系人</th>
@@ -71,12 +65,12 @@
 			                     	<td>{$vo.store_contact}</td>
 					     		 	<td>{$vo.store_tel}</td>
 					     		 	<td>{$vo.created_on}</td>
-					     		 	<td>{$vo.is_pass}</td>
-					     		 	<td>{$vo.checked_by}</td>
+					     		 	<td>{$status[$vo.is_pass]}</td>
+					     		 	<td>{$vo.checked_by|default='暂无'}</td>
 					     		 	<td>{$vo.checked_on}</td>
 			                     	<td>
-			                      		<a class="layui-btn layui-btn-small" href="{:url('store/edit',['store_id'=>$vo.store_id])}"><i class="layui-icon">&#xe642;</i></a>
-				                      	<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('store/del')}" data-id="{$vo.store_tel}"><i class="layui-icon">&#xe640;</i></a>
+			                      		<a class="layui-btn layui-btn-small" href="{:url('store/editResource',['id'=>$vo.id])}"><i class="layui-icon">&#xe642;</i></a>
+				                      	<!--<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('store/del')}" data-id="{$vo.store_tel}"><i class="layui-icon">&#xe640;</i></a>-->
 					     			</td>
 			                   	</tr>
 			                </foreach>
