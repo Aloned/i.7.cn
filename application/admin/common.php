@@ -191,29 +191,37 @@ function randomkeys($length) {
 //指定领票点的余票数
 function specTicket($id){
 	$count = Db::name('user')->where(['store_id'=>$id,'is_show'=>1])->count();
-	
 	return $count;
 }
 
 //指定用户的邀请人数
 function inviteNumber($ucode){
 	$count = Db::name('user')->where('ufrom',$ucode)->count();
-	
 	return $count;
 }
 
 //指定用户的邀请人数
 function downNumber($ucode){
     $count = Db::name('user')->where('ufrom',$ucode)->where(['is_show'=>1])->count();
-
     return $count;
 }
 
 //报名总人数
 function signTotal(){
 	$count = Db::name('user')->count();
-	
 	return $count;
+}
+
+//上传资源数
+function resourceCount($store_id){
+    $count = Db::name('store_resource')->where('store_id',$store_id)->count();
+    return $count;
+}
+
+//审核通过d资源数
+function resourcePassCount($store_id){
+    $count = Db::name('store_resource')->where('store_id',$store_id)->where('is_pass=1')->count();
+    return $count;
 }
 
 /**
