@@ -27,16 +27,24 @@
 				</div>
 				<form class="layui-form" action="{:url('store/resource')}" id="search" method="post">
 					<div class="layui-form-item">
-						<div class="layui-input-inline my-input-line" style="margin: 10px 0 0 20px">
+						<div class="layui-input-inline my-input-line" style="margin: 10px 0 0 20px;width: 140px;">
 							<select name="store_city" id="store_city" lay-filter="store_city">
-								<option value="">全部</option>
+								<option value="">地区</option>
 								<volist name="citylist" id="vo">
 									<option value="{$vo.id}" <?php if($cityId == $vo['id']){echo 'selected';} ?>> {$vo.cityname}</option>
 								</volist>
 							</select>
 						</div>
-						<div class="layui-input-inline my-input-line" style="margin:10px 0 0 10px">
+						<div class="layui-input-inline my-input-line" style="margin:10px 0 0 20px;width: 230px">
 							<input type="text" <?php if(isset($keyword)){echo "value=$keyword";} ?> name="keywords" placeholder="电话号码/姓名" class="layui-input">
+						</div>
+						<div class="layui-input-inline my-input-line" style="margin:10px 0 0 10px;width: 100px">
+							<select name="is_pass">
+								<option value="">审核状态</option>
+								<option value="0" <?php if($is_pass === '0'){echo "selected";} ?>>待审核</option>
+								<option value="1" <?php if($is_pass == 1){echo "selected";} ?>>通过</option>
+								<option value="2" <?php if($is_pass == 2){echo "selected";} ?>>未通过</option>
+							</select>
 						</div>
 						<button type="submit" style="margin:10px 0 0 10px" class="layui-btn layui-btn-danger"><i class="layui-icon">&#xe615;</i></button>
 					</div>
