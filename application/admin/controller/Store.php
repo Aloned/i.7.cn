@@ -89,14 +89,16 @@ class Store extends Base
         $request = Request::instance();
         $data = $request->except('file');
         if($request->isPost()){
-            $data['modified_on'] = date('Y-m-d H:i:s',time());
+            $admininfo = getAdminInfo(session('admin_id'));
+            $data['checked_on'] = date('Y-m-d H:i:s',time());
+            $data['checked_by'] = $admininfo['true_name'];
 
             $res = Db::name('store_resource')->update($data);
 
             if($res){
-                $msg = ['status'=>1,'msg'=>'资源更新成功','url'=>url('admin/store/myResource')];
+                $msg = ['status'=>1,'msg'=>'处理完成','url'=>url('admin/store/resource')];
             }else{
-                $msg = ['status'=>0,'msg'=>'资源更新失败'];
+                $msg = ['status'=>0,'msg'=>'处理失败,请稍后再试'];
             }
             return json($msg);
         }
