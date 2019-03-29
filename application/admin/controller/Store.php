@@ -31,7 +31,7 @@ class Store extends Base
         echo 12;
     }
 
-    //领票点资源列表
+    //资源审核列表
     public function resource()
     {
         $search = '';
@@ -83,6 +83,63 @@ class Store extends Base
         return view();
     }
 
+    //审核页面
+    public function checkResource(){
+        //是否为POST请求
+        $request = Request::instance();
+        $data = $request->except('file');
+        if($request->isPost()){
+            $data['modified_on'] = date('Y-m-d H:i:s',time());
+
+            $res = Db::name('store_resource')->update($data);
+
+            if($res){
+                $msg = ['status'=>1,'msg'=>'资源更新成功','url'=>url('admin/store/myResource')];
+            }else{
+                $msg = ['status'=>0,'msg'=>'资源更新失败'];
+            }
+            return json($msg);
+        }
+        $res = Db::name('store_resource')->where(['id'=>input('id')])->find();
+        $this->assign('res',$res);
+
+        return view('checkResource');
+    }
+
+    //我的资源列表
+    public function myResource()
+    {
+        $search = '';
+        if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
+                $search = ['s.title' => $_POST['keywords']];
+        }
+
+        $store_id = session('store_id');
+
+        $count = Db::name('store_resource')->where('store_id='.$store_id)->where($search)->count();
+
+        $list = Db::name('store_resource')->alias('sr')
+            ->join('store s','sr.store_id = s.store_id','LEFT')
+            ->where($search)
+            ->where('sr.store_id='.$store_id)
+            ->order('sr.id','DESC')
+            ->paginate(50,$count);
+
+        $page = $list->render();
+
+        if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
+            $this -> assign('keyword',$_POST['keywords']);
+        }
+
+        $this->assign('status',array('待审核','审核通过','未通过'));
+        $this -> assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('pager',$page);
+
+        return view();
+    }
+
+
     //领票点资源上传
     public function uploadResource(){
         $request = Request::instance();
@@ -94,7 +151,7 @@ class Store extends Base
 
             $res = Db::name('store_resource')->insert($data);
             if($res){
-                $msg = ['status'=>1,'msg'=>'资源上传成功','url'=>url('admin/Store/resource')];
+                $msg = ['status'=>1,'msg'=>'资源上传成功','url'=>url('admin/Store/myResource')];
             }else{
                 $msg = ['status'=>0,'msg'=>'资源上传失败'];
             }
@@ -115,7 +172,7 @@ class Store extends Base
             $res = Db::name('store_resource')->update($data);
 
             if($res){
-                $msg = ['status'=>1,'msg'=>'资源更新成功','url'=>url('admin/store/resource')];
+                $msg = ['status'=>1,'msg'=>'资源更新成功','url'=>url('admin/store/myResource')];
             }else{
                 $msg = ['status'=>0,'msg'=>'资源更新失败'];
             }
