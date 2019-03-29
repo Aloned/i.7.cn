@@ -43,6 +43,12 @@ return [
 			['title'=>'会员列表','icon'=>'&#xe621;','id'=>'19','href'=>'/admin/user/index']
 		]
 	],
+    [
+        'id'=>'31','title'=>'商务合作','icon'=>'&#xe64c;','spread'=>false,
+        'children' => [
+            ['title'=>'报名列表','icon'=>'&#xe621;','id'=>'32','href'=>'/admin/cooperation/index']
+        ]
+    ],
 	[
 		'id'=>'7','title'=>'管理员管理','icon'=>'&#xe770;','spread'=>false,
 		'children' => [
