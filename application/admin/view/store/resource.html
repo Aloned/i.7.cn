@@ -23,8 +23,7 @@
 		<div class="layui-main my-admin">
 			<div class="layui-tab my-tab">
 				<div class="my-title-box">
-						<h5 class="my-title">我的资源列表</h5>
-						<a href="{:url('store/uploadResource')}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe654;</i>上传资源</a>
+						<h5 class="my-title">资源审核列表</h5>
 				</div>
 				<form class="layui-form" action="{:url('store/resource')}" id="search" method="post">
 					<div class="layui-form-item">
@@ -67,10 +66,10 @@
 					     		 	<td>{$vo.created_on}</td>
 					     		 	<td>{$status[$vo.is_pass]}</td>
 					     		 	<td>{$vo.checked_by|default='暂无'}</td>
-					     		 	<td>{$vo.checked_on}</td>
+					     		 	<td><?php if($vo['checked_on'] != '0000-00-00 00:00:00'){echo $vo['checked_on'];} ?></td>
 			                     	<td>
-			                      		<a class="layui-btn layui-btn-small" href="{:url('store/editResource',['id'=>$vo.id])}"><i class="layui-icon">&#xe642;</i></a>
-				                      	<!--<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('store/del')}" data-id="{$vo.store_tel}"><i class="layui-icon">&#xe640;</i></a>-->
+			                      		<a class="layui-btn layui-btn-small" href="{:url('store/checkResource',['id'=>$vo.id])}"><i class="layui-icon">&#xe63c;</i></a>
+				                      	<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('store/delResource')}" data-id="{$vo.id}"><i class="layui-icon">&#xe640;</i></a>
 					     			</td>
 			                   	</tr>
 			                </foreach>
