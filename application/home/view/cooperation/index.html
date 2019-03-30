@@ -5,7 +5,7 @@
 
 
 	<!-- 动态 -->
-<form id="formcop" method="post" action="">
+<form id="formcop" method="post" action="/">
 	<input type="text" name="name" placeholder="姓名">
 	<input type="text" name="company" placeholder="公司">
 	<input type="text" name="position" placeholder="职位">
@@ -16,6 +16,51 @@
 		<option value="3">协办方</option>
 		<option value="4">参展方</option>
 	</select>
+	<button type="submit">提交</button>
 </form>
 
 <include file="public/footer"/>
+<script type="text/javascript">
+	$('#formcop').submit(function () {
+		return false;
+	})
+	function check_form()
+
+	{
+
+		var phone = $('#phone').val();
+
+		if(!checkMobile(phone) && !checkTelphone(phone)){
+
+			layer.alert('请输入正确的号码！',{icon:2});
+
+			return false;
+
+		}
+
+		$('#formcop').submit()
+
+	}
+
+	function checkMobile(tel) {
+		//var reg = /(^1[3|4|5|7|8][0-9]{9}$)/;
+		var reg = /^1[0-9]{10}$/;
+		if (reg.test(tel)) {
+			return true;
+		}else{
+			return false;
+		};
+	}
+
+	function checkTelphone(tel){
+		var reg = /^(([0-4]\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/;
+		if(reg.test(tel)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+
+
+</script>
