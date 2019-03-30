@@ -15,14 +15,24 @@ class Cooperation extends Base
         $request = Request::instance();
         if($request->isPost()){
             $data = $request->param();
+            $data['created_on'] = date('Y-m-d H:i:s',time());
             $res = Db::name('cooperation')->insert($data);
             if($res){
-                $msg = ['status'=>1,'msg'=>'报名成功','url'=>url('home/index')];
+                $this->success('您已经报名成功，工作人员稍后将与您联系!','Index/index');
             }else{
-                $msg = ['status'=>0,'msg'=>'网络繁忙,请稍后再试'];
+                $this->error('报名失败');
             }
-            return json($msg);
         }
+        $this->assign('nav',0);
 		return view();
+    }
+
+    public function existPhone(){
+        $phone = input('phone');
+        $exist = Db::name('cooperation')->where('tel='.$phone)->find();
+        if($exist){
+            return json(array('code'=>1,'msg'=>'该手机号已经提交过报名信息'));
+        }
+        exit;
     }
 }
