@@ -32,7 +32,7 @@
 						<label class="my-login-icon">
                         	<i class="layui-icon">&#xe612;</i>
                    	 	</label>
-						<div class="layui-btn layui-btn-lg layui-btn-normal" id="ukNotice">请插入加密锁进行登录...</div>
+						<div class="layui-btn layui-btn-lg layui-btn-normal" id="ukNotice">未检测到密码锁</div>
 					</div>
 
 					<div class="layui-form-item my-input-box">
@@ -53,6 +53,7 @@
 		<script type="text/javascript" src="__PUBLIC__/admin/js/Syunew3.js"></script>
 
 		<script type="text/javascript">
+			var bConnect = 0;
 			layui.config({
 				base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
 			}).use('login'); //加载入口
