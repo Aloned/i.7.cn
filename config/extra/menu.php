@@ -72,12 +72,12 @@ return [
 			['title'=>'移动端','icon'=>'&#xe621;','id'=>'14','href'=>'/admin/banner/index/type/0']
 		]
 	],
-	[
-		'id'=>'10','title'=>'留言反馈','icon'=>'&#xe609;','spread'=>false,
-		'children' => [
-			['title'=>'自定义表单','icon'=>'&#xe621;','id'=>'11','href'=>'/admin/feedback/index']
-		]
-	],
+//	[
+//		'id'=>'10','title'=>'留言反馈','icon'=>'&#xe609;','spread'=>false,
+//		'children' => [
+//			['title'=>'自定义表单','icon'=>'&#xe621;','id'=>'11','href'=>'/admin/feedback/index']
+//		]
+//	],
 	[
 		'id'=>'15','title'=>'系统设置','icon'=>'&#xe620;','spread'=>false,
 		'children' => [
