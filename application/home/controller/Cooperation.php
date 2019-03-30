@@ -18,9 +18,9 @@ class Cooperation extends Base
             $data['created_on'] = date('Y-m-d H:i:s',time());
             $res = Db::name('cooperation')->insert($data);
             if($res){
-                $this->success('您已经报名成功，工作人员稍后将与您联系!','Index/index');
+                $this->success('感谢报名，组委会工作人员会尽快与您取得联系!','Index/index');
             }else{
-                $this->error('报名失败');
+                $this->error('报名失败,请稍后再试');
             }
         }
         $this->assign('nav',0);
