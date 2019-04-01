@@ -50,9 +50,21 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<input type="text" name="img" class="layui-input" placeholder="模板图片" />
+											<input type="text" name="path" class="layui-input" placeholder="模板图片" />
 										</div>
 										<a href="javascript:;" class="layui-btn" id="uploadbimg">上传</a>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td align="right">状态：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="radio" name="is_show" value="1" title="显示" checked="checked">
+											<input type="radio" name="is_show" value="2" title="隐藏">
+										</div>
 									</div>
 								</td>
 							</tr>
@@ -62,7 +74,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<button class="layui-btn" lay-submit="" data-url="{:url('banner/addbanner')}" lay-filter="addbanner">保存</button>
+											<button class="layui-btn" lay-submit="" data-url="{:url('template/add')}" lay-filter="add">保存</button>
 											<button type="reset" class="layui-btn layui-btn-danger">重置</button>
 										</div>
 									</div>
@@ -77,6 +89,6 @@
 	<script type="text/javascript">
 		layui.config({
 			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
-		}).use('banner'); //加载入口
+		}).use('template'); //加载入口
 	</script>
 </html>
