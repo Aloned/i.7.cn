@@ -84,7 +84,8 @@ return [
 			['title'=>'网站设置','icon'=>'&#xe621;','id'=>'16','href'=>'/admin/system/index'],
 			['title'=>'友情链接','icon'=>'&#xe621;','id'=>'17','href'=>'/admin/system/linklist'],
 			['title'=>'城市管理','icon'=>'&#xe621;','id'=>'22','href'=>'/admin/system/citylist'],
-			['title'=>'短信管理','icon'=>'&#xe621;','id'=>'23','href'=>'/admin/system/message']
+			['title'=>'短信管理','icon'=>'&#xe621;','id'=>'23','href'=>'/admin/system/message'],
+			['title'=>'自定义模板','icon'=>'&#xe621;','id'=>'33','href'=>'/admin/template/index']
 		]
 	]
 ];
