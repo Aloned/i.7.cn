@@ -32,6 +32,7 @@
 			                   	<th>ID</th>
 			                   	<th>缩略图</th>
 			                   	<th>标题</th>
+			                   	<th>状态</th>
 			                   	<th>操作</th>
 			               	</tr>
 						</thead>
@@ -43,6 +44,7 @@
 				                      	<img src="{$vo.path}" height="20"/>
 					     		 	</td>
 					     		 	<td>{$vo.name}</td>
+					     		 	<td>{$status[$vo.is_show]}</td>
 			                     	<td>
 			                      		<a class="layui-btn layui-btn-small" href="{:url('template/edit',['id'=>$vo.id])}"><i class="layui-icon">&#xe642;</i></a>
 			                      		<a class="layui-btn layui-btn-danger layui-btn-small del" href="javascript:;" data-url="{:url('template/del',['id'=>$vo.id])}" data-id="{$vo.id}"><i class="layui-icon">&#xe640;</i></a>
