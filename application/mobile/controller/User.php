@@ -125,10 +125,19 @@ ORDER BY
 		$image = \think\Image::open('./posters/image.png');
 		//给图片添加文字
 		//$image->text('宋唐好文玩','./posters/fonts/HYQingKongTiJ.ttf',20,'#ffffff',\Think\Image::WATER_NORTH,[0,300])->save('./posters/share/'.$uid.'.png');
-		$image->water('./posters/ewm/'.$uid.'.png',[562,1090])->save('./posters/share/'.$uid.'.png');
+		$image->water('./posters/ewm/'.$uid.'.png',[562,1100])->save('./posters/share/'.$uid.'.png');
 		$img = $url.'/posters/share/'.$uid.'.png';
+		$img = '/posters/share/'.$uid.'.png';
 
 		$this->assign('img',$img);
 		return view();
 	}
+
+	//选择模板
+    public function checkTemplate(){
+	    $templateList = Db::name('template')->where('is_show = 1')->select();
+	    $this->assign('template',$templateList);
+	    return view('template');
+//	    $this->redirect('/mobile/share.html');
+    }
 }
