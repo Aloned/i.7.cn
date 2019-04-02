@@ -118,6 +118,7 @@ ORDER BY
 	}
 	
 	public function share(){
+//	    var_dump(input('id'));die;
 		$url = Db::name('config') -> where('id',1) -> value('url');
 		$uid = Db::name('user')->where('uid',session('userid'))->value('uid');
 		
@@ -135,9 +136,9 @@ ORDER BY
 
 	//选择模板
     public function checkTemplate(){
-	    $templateList = Db::name('template')->where('is_show = 1')->select();
-	    $this->assign('template',$templateList);
-	    return view('template');
-//	    $this->redirect('/mobile/share.html');
+//	    $templateList = Db::name('template')->where('is_show = 1')->select();
+//	    $this->assign('template',$templateList);
+//	    return view('template');
+	    $this->redirect('/mobile/share',array("id"=>"jack"));
     }
 }
