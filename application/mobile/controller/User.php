@@ -118,12 +118,13 @@ ORDER BY
 	}
 	
 	public function share(){
-//	    var_dump(input('id'));die;
+	    $id = input('id');
+        $path = Db::name('template')->field('path')->where('is_show = 1 and id='.$id)->find();
 		$url = Db::name('config') -> where('id',1) -> value('url');
 		$uid = Db::name('user')->where('uid',session('userid'))->value('uid');
-		
+
 		$this->inviteEwm();
-		$image = \think\Image::open('./posters/image.png');
+		$image = \think\Image::open('.'.$path['path']);
 		//给图片添加文字
 		//$image->text('宋唐好文玩','./posters/fonts/HYQingKongTiJ.ttf',20,'#ffffff',\Think\Image::WATER_NORTH,[0,300])->save('./posters/share/'.$uid.'.png');
 		$image->water('./posters/ewm/'.$uid.'.png',[562,1100])->save('./posters/share/'.$uid.'.png');
@@ -136,9 +137,18 @@ ORDER BY
 
 	//选择模板
     public function checkTemplate(){
-//	    $templateList = Db::name('template')->where('is_show = 1')->select();
-//	    $this->assign('template',$templateList);
-//	    return view('template');
-	    $this->redirect('/mobile/share',array("id"=>"jack"));
+        $request = Request::instance();
+        if($request->isPost()){
+            $id = input('id');
+            if($id){
+                $this->redirect('/mobile/share',array("id"=>$id));
+            }else{
+                $this->redirect('/mobile/index');
+            }
+        }
+
+	    $templateList = Db::name('template')->where('is_show = 1')->select();
+	    $this->assign('template',$templateList);
+	    return view('template');
     }
 }
