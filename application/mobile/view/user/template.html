@@ -16,6 +16,7 @@
 	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
 	<script src="__PUBLIC__/mobile/js/jsrem.js"></script>
 	<script src="__PUBLIC__/mobile/js/swiper.js"></script>
+	<script src="__PUBLIC__/admin/js/la.js"></script>
 	<script src="__PUBLIC__/mobile/js/swiper.animate1.0.3.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/reset.css?ver=06111957">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/swiper.min.css">
@@ -24,9 +25,30 @@
 	<title>[title]</title>
 	<style>
 		.swiper-container {
-			margin-top:0.3rem ;
+			margin-top:0.2rem ;
 			width: 100%;
 			height: 10rem;
+		}
+		.swiper-slide>img{
+			width: 100%;
+			height: 96.4%;
+			box-shadow:rgb(0, 0, 0) 0px 2px 4px 0px;
+		}
+		.button1{
+			width: 50%;
+			margin-left: 25%;
+			height: 0.7rem;
+			line-height: 0.7rem;
+			color:rgb(255, 255, 255);
+			font-size:0.33rem;
+			letter-spacing: 2px;
+			box-shadow:rgb(0, 0, 0) 0px 3px 5px 0px;
+			border-width:0px;
+			border-color:rgb(197, 229, 145);
+			border-style:solid;
+			border-radius:5rem;
+			background-color:rgba(0, 0, 0, 0);
+			background:-webkit-gradient(linear,0% 0%,0% 100%,from(#00CCFF),to(#0066FF))
 		}
 	</style>
 </head>
@@ -46,33 +68,40 @@
 <div class="banner-wrap clearfix"></div>
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" data-id="110" style="background: red">Slide 1</div>
-			<div class="swiper-slide" data-id="120" style="background: yellow">Slide 2</div>
-			<div class="swiper-slide" data-id="130" style="background: blue">Slide 3</div>
+			<volist name="template" id="vo">
+				<div class="swiper-slide" data-id="{$vo.id}">
+					<img src="{$vo.path}" alt="图片加载中">
+				</div>
+			</volist>
 		</div>
 		<!-- 滚动条 -->
-		<div class="swiper-scrollbar"></div>
+		<!--<div class="swiper-scrollbar"></div>-->
 	</div>
+<form action="" method="post">
+	<input type="hidden" id="id" name="id" value="{$template[0]['id']}">
+	<button type="submit" class="button1" >生成我的邀请函</button>
+</form>
 <script type="text/javascript">
+	$('.button1').click(function () {
+		$(this).css('background','#eee').html('加载中ing').css('color','#000000')
+	})
 
 	var mySwiper = new Swiper ('.swiper-container', {
 		direction: 'horizontal', // 垂直切换选项
 		loop: false, // 循环模式选项
 		effect : 'coverflow',
-		slidesPerView: 1.5,
+		slidesPerView: 1.4,
 		centeredSlides: true,
 
 		// 如果需要滚动条
-		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
+		// scrollbar: {
+		// 	el: '.swiper-scrollbar',
+		// },
 		on:{
 			slideChangeTransitionStart: function(){
-				$('.swiper-slide:eq('+this.activeIndex+')').attr('data-id')
+				$('#id').val($('.swiper-slide:eq('+this.activeIndex+')').attr('data-id'))
 			},
 		},
 	})
 
 </script>
-
-<include file="public/nfooter" />
