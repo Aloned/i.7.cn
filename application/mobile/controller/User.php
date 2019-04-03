@@ -148,7 +148,11 @@ ORDER BY
         }
 
 	    $templateList = Db::name('template')->where('is_show = 1')->select();
-	    $this->assign('template',$templateList);
-	    return view('template');
+        if($templateList){
+            $this->assign('template',$templateList);
+            return view('template');
+        }else{
+            $this->error('暂无模板','/mobile/index');
+        }
     }
 }
