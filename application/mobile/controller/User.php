@@ -137,14 +137,9 @@ ORDER BY
 
 	//选择模板
     public function checkTemplate(){
-        $request = Request::instance();
-        if($request->isPost()){
-            $id = input('id');
-            if($id){
+        $id = input('id');
+        if($id){
                 $this->redirect('/mobile/share',array("id"=>$id));
-            }else{
-                $this->redirect('/mobile/index');
-            }
         }
 
 	    $templateList = Db::name('template')->where('is_show = 1')->select();
