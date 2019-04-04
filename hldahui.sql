@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-03-30 17:34:12
+Date: 2019-04-04 14:57:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -60,7 +60,7 @@ INSERT INTO `md_admin` VALUES ('19', '5', '19', '18339985440', '李智轩', '183
 INSERT INTO `md_admin` VALUES ('20', '5', '20', '15093447765', '张丹', '15093447765', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('21', '5', '21', '15238301680', '杜志同', '15238301680', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('22', '5', '22', '13083719599', '张帅国', '13083719599', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
-INSERT INTO `md_admin` VALUES ('99', '1', '1', 'admin', 'admin', '13555555555', 'e10adc3949ba59abbe56e057f20f883e', '1528956923', '1', '1553929294', '127.0.0.1', '411997d787d87a9fcda2b1e3af0c5350');
+INSERT INTO `md_admin` VALUES ('99', '1', '1', 'admin', 'admin', '13555555555', 'e10adc3949ba59abbe56e057f20f883e', '1528956923', '1', '1554341400', '127.0.0.1', '411997d787d87a9fcda2b1e3af0c5350');
 INSERT INTO `md_admin` VALUES ('100', '5', '23', '15690872222', '朱建华', '15690872222', 'e10adc3949ba59abbe56e057f20f883e', '1529562288', '1', '1529562288', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('101', '1', '1', 'zihangzihang', 'ss', '18537109888', 'e10adc3949ba59abbe56e057f20f883e', '1529991925', '1', '1529991925', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('102', '1', '1', 'sfsdfsd', 'wfwe', '15655554545', '61146e6c895a39755b22b49e8e15dc7a', '1551960912', '1', '1551960912', '127.0.0.1', '');
@@ -427,7 +427,7 @@ CREATE TABLE `md_admin_log` (
   `log_url` varchar(50) DEFAULT NULL COMMENT 'url',
   `log_time` int(10) DEFAULT NULL COMMENT '日志时间',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=219 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of md_admin_log
@@ -650,6 +650,11 @@ INSERT INTO `md_admin_log` VALUES ('215', '99', '账号密码登录', '127.0.0.1
 INSERT INTO `md_admin_log` VALUES ('216', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1553909776');
 INSERT INTO `md_admin_log` VALUES ('217', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1553914217');
 INSERT INTO `md_admin_log` VALUES ('218', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1553929294');
+INSERT INTO `md_admin_log` VALUES ('219', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554099237');
+INSERT INTO `md_admin_log` VALUES ('220', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554100480');
+INSERT INTO `md_admin_log` VALUES ('221', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554167602');
+INSERT INTO `md_admin_log` VALUES ('222', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554270378');
+INSERT INTO `md_admin_log` VALUES ('223', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554341400');
 
 -- ----------------------------
 -- Table structure for md_admin_role
@@ -667,7 +672,7 @@ CREATE TABLE `md_admin_role` (
 -- ----------------------------
 -- Records of md_admin_role
 -- ----------------------------
-INSERT INTO `md_admin_role` VALUES ('1', '超级管理员', '1,2,3,4,5,24,25,6,100,101,102,18,19,31,32,7,8,9,28,20,21,29,30,12,13,14,10,11,15,16,17,22,23', '1', '超级管理员');
+INSERT INTO `md_admin_role` VALUES ('1', '超级管理员', '1,2,3,4,5,24,25,6,100,101,102,18,19,31,32,7,8,9,28,20,21,29,30,12,13,14,15,16,17,22,23,33', '1', '超级管理员');
 INSERT INTO `md_admin_role` VALUES ('2', '领票点总管理员', '7,8,20,21,15,22', '0', '领票点总管理员');
 INSERT INTO `md_admin_role` VALUES ('3', '网站编辑', '3,4,5,24,25,6,12,13,14', '0', '网站编辑');
 INSERT INTO `md_admin_role` VALUES ('4', '其他角色', '10,11', '0', '其他角色');
@@ -847,7 +852,7 @@ CREATE TABLE `md_config` (
 -- ----------------------------
 -- Records of md_config
 -- ----------------------------
-INSERT INTO `md_config` VALUES ('1', 'http://6.ihenan.com', '中国创业者大会', '中国创业者大会', '/uploads/logo/20180604/3cd62ffbdb13297ed5d58b79ad3b852e.png', '957', '中国创业者大会', '豫ICP备 123456号', '', '', '');
+INSERT INTO `md_config` VALUES ('1', 'test.com', '中国创业者大会', '中国创业者大会', '/uploads/logo/20180604/3cd62ffbdb13297ed5d58b79ad3b852e.png', '957', '中国创业者大会', '豫ICP备 123456号', '', '', '');
 
 -- ----------------------------
 -- Table structure for md_content
@@ -979,6 +984,27 @@ CREATE TABLE `md_message` (
 -- Records of md_message
 -- ----------------------------
 INSERT INTO `md_message` VALUES ('1', 'ZZ00321', 'ZZ0032188', '【中国创业者大会】您的短信验证码是@，有效期为10分钟，请尽快完成认证。', '1', '验证码');
+
+-- ----------------------------
+-- Table structure for md_parallel_session
+-- ----------------------------
+DROP TABLE IF EXISTS `md_parallel_session`;
+CREATE TABLE `md_parallel_session` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `admin_id` int(11) NOT NULL COMMENT '管理员id',
+  `title` varchar(255) NOT NULL DEFAULT '' COMMENT '论坛标题',
+  `ico` varchar(255) NOT NULL DEFAULT '' COMMENT 'logo',
+  `banner` varchar(255) NOT NULL DEFAULT '' COMMENT 'banner',
+  `content` varchar(255) NOT NULL DEFAULT '' COMMENT '内容',
+  `url` varchar(255) NOT NULL DEFAULT '' COMMENT '论坛链接地址',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1开启;2关闭;',
+  `created_on` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of md_parallel_session
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for md_photo
@@ -1373,6 +1399,26 @@ CREATE TABLE `md_store_resource` (
 -- ----------------------------
 -- Records of md_store_resource
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for md_template
+-- ----------------------------
+DROP TABLE IF EXISTS `md_template`;
+CREATE TABLE `md_template` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `path` varchar(255) NOT NULL DEFAULT '',
+  `is_show` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1开启,2关闭',
+  `update_on` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of md_template
+-- ----------------------------
+INSERT INTO `md_template` VALUES ('5', 'test1', '/uploads/template/20190403/100cfb603dc27395168108f35ae8efbf.png', '1', '0000-00-00 00:00:00');
+INSERT INTO `md_template` VALUES ('6', '2342342', '/uploads/template/20190403/3eed108f6f8a554b6edcc02ba414cbad.png', '1', '0000-00-00 00:00:00');
+INSERT INTO `md_template` VALUES ('7', '2423', '/uploads/template/20190403/4ebaef86e1715bdac22cd9b862464400.png', '1', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for md_user
