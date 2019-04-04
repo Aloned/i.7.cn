@@ -27,14 +27,9 @@ return [
 		]
 	],
     [
-        'id'=>'100','title'=>'区块链峰会管理','icon'=>'&#xe705;','spread'=>false,
+        'id'=>'100','title'=>'分论坛管理','icon'=>'&#xe705;','spread'=>false,
         'children' => [
-            ['title'=>'嘉宾列表','icon'=>'&#xe621;','id'=>'101','href'=>'/admin/photo/index/type/50'],
-            ['title'=>'冠名','icon'=>'&#xe621;','id'=>'102','href'=>'/admin/photo/index/type/51'],
-            ['title'=>'联合主办','icon'=>'&#xe621;','id'=>'102','href'=>'/admin/photo/index/type/52'],
-            ['title'=>'战略合作','icon'=>'&#xe621;','id'=>'102','href'=>'/admin/photo/index/type/53'],
-            ['title'=>'特邀媒体','icon'=>'&#xe621;','id'=>'102','href'=>'/admin/photo/index/type/54'],
-            ['title'=>'媒体','icon'=>'&#xe621;','id'=>'102','href'=>'/admin/photo/index/type/55'],
+            ['title'=>'分论坛列表','icon'=>'&#xe621;','id'=>'101','href'=>'/admin/subForum/index']
         ]
     ],
 	[
