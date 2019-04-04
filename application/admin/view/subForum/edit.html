@@ -23,7 +23,7 @@
 		<div class="layui-main my-admin">
 			<div class="layui-tab my-tab">
 				<div class="my-title-box">
-					<h5 class="my-title">编辑单页</h5>
+					<h5 class="my-title">编辑分论坛</h5>
 					<a href="javascript:history.go(-1);" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe65c;</i></a>
 				</div>
 				<div class="my-content">
@@ -38,7 +38,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<input type="text" name="title" class="layui-input layui-disabled" readonly="readonly" value="{$category.cat_name}" placeholder="单页标题" />
+											<input type="text" name="title" class="layui-input layui-disabled" value="{$res.title}" placeholder="单页标题" />
 										</div>
 									</div>
 								</td>
@@ -48,7 +48,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<input type="text" name="keywords" value="{$content.keywords}" class="layui-input" placeholder="关键字" />
+											<input type="text" name="keywords" value="{$res.keywords}" class="layui-input" placeholder="关键字" />
 										</div>
 										<div class="layui-form-mid layui-word-aux">关键字设置的牛逼，有助于提升排名的哟，多个用“,”隔开</div>
 									</div>
@@ -59,7 +59,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<textarea type="text" name="description" class="layui-textarea" placeholder="简短描述">{$content.description}</textarea>
+											<textarea type="text" name="description" class="layui-textarea" placeholder="简短描述">{$res.description}</textarea>
 										</div>
 										<div class="layui-form-mid layui-word-aux">这里就是摘要了</div>
 									</div>
@@ -71,7 +71,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-block" style="margin-left: 0;">
-											<textarea name="content" lay-verify="content" id="content" placeholder="输入内容">{$content.content}</textarea>
+											<textarea name="content" lay-verify="content" id="content" placeholder="输入内容">{$res.content}</textarea>
 										</div>
 									</div>
 								</td>
