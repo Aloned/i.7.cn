@@ -30,7 +30,7 @@ class subForum extends Base{
 
             $data['addtime'] = time();
 
-            $res = Db::name('content')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+            $res = Db::name('parallel_session')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
 
             if($res){
                 $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
@@ -60,7 +60,7 @@ class subForum extends Base{
 
             $data['addtime'] = time();
 
-            $res = Db::name('content')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+            $res = Db::name('parallel_session')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
 
             if($res){
                 $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
@@ -70,7 +70,7 @@ class subForum extends Base{
             return json($msg);
         }
         //单页内容详情
-        $content = Db::name('content')->where('cat_id',input('cat_id'))->find();
+        $content = Db::name('parallel_session')->where('cat_id',input('cat_id'))->find();
 
         $this->assign('content',$content);
         $this->assign('category',$category);
@@ -80,17 +80,17 @@ class subForum extends Base{
 
     //编辑器文件上传
     public function layeditupload(){
-        return editUpload('content');
+        return editUpload('subForum');
     }
 
 	//删除
 	public function del(){
 		$request = Request::instance();
 		if($request->isPost()){
-	    	$res = Db::name('cooperation')->where('id',input('id'))->delete();
+	    	$res = Db::name('parallel_session')->where('id',input('id'))->delete();
 			
 			if($res){
-				$msg = ['status'=>1,'msg'=>'删除成功','url'=>url('admin/cooperation/index')];
+				$msg = ['status'=>1,'msg'=>'删除成功','url'=>url('admin/subForum/index')];
 			}else{
 				$msg = ['status'=>-2,'msg'=>'删除失败'];
 			}
