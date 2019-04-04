@@ -1,0 +1,35 @@
+<include file="public/header" title="{$seo.cat_name} - {$website.title}" keywords="{$seo.keywords}" description="{$seo.cat_desc}"/>
+
+	<div class="banner-wrap clearfix"></div>
+
+		
+
+	<!-- 动态 -->
+
+	<article>
+
+		<div class="dynamic-list wrap">
+
+			<h3 class="textc font36 col000 fontb">动态</h3>
+
+	        <ul>
+
+	        	<volist name="list" id="vo">
+
+	        		<li>
+
+		        		<a <if condition="$vo.outurl eq ''">href="{:url('/shownews/'.$vo.art_id)}"<else/> target="_blank" href="{$vo.outurl}"</if> id="{$vo.art_id}"><img src="{$vo.thumb}">
+
+		        		<p>{$vo.title}<br/><span>{$vo.addtime|date='m-d',###}</span></p></a>
+
+		        	</li>
+
+	        	</volist>
+
+	        </ul>    	
+
+		</div>
+
+	</article>
+
+<include file="public/footer"/>
