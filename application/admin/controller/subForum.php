@@ -8,20 +8,79 @@ use think\Paginator;
 
 
 class subForum extends Base{
-	//合作报名列表
+	//分论坛列表d
     public function index()
     {
-    	$count = Db::name('cooperation')->count();
-		$list = Db::name('cooperation')->order('id desc')->paginate(11,$count);
-		$type = getCooperationType();
+    	$count = Db::name('parallel_session')->count();
+		$list = Db::name('parallel_session')->order('id desc')->paginate(11,$count);
 
 		//获取分页显示
 		$page = $list->render();
-		$this->assign('type',$type);
 		$this->assign('list',$list);
 		$this->assign('pager',$page);
 		
     	return view();
+    }
+
+    //添加分论坛
+    public function add(){
+        //是否为POST请求
+        $request = Request::instance();
+        if($request->isPost()){
+
+            $data['addtime'] = time();
+
+            $res = Db::name('content')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+
+            if($res){
+                $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
+            }else{
+                $msg = ['status'=>0,'msg'=>'更新单页内容失败'];
+            }
+            return json($msg);
+        }
+
+        //管理员
+        $adminList = Db::name('admin')->field('admin_id,true_name')->where('is_open = 1')->select();
+
+        $this->assign('adminList',$adminList);
+        return view();
+    }
+
+    //编辑单页内容
+    public function edit(){
+        //是否为POST请求
+        $request = Request::instance();
+
+        $data = $request->except('file');
+
+        $category = Db::name('category')->where(['mod_id'=>5,'cat_id'=>input('param.cat_id')])->find();
+
+        if($request->isPost()){
+
+            $data['addtime'] = time();
+
+            $res = Db::name('content')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+
+            if($res){
+                $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
+            }else{
+                $msg = ['status'=>0,'msg'=>'更新单页内容失败'];
+            }
+            return json($msg);
+        }
+        //单页内容详情
+        $content = Db::name('content')->where('cat_id',input('cat_id'))->find();
+
+        $this->assign('content',$content);
+        $this->assign('category',$category);
+
+        return view();
+    }
+
+    //编辑器文件上传
+    public function layeditupload(){
+        return editUpload('content');
     }
 
 	//删除
@@ -39,40 +98,4 @@ class subForum extends Base{
 			return json($msg);
 		}
 	}
-
-    //导出
-    public function export()
-    {
-        $list = Db::name('cooperation')->select();
-        $type = getCooperationType();
-
-        $strTable ='<table width="500" border="1">';
-        $strTable .= '<tr>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">ID</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">姓名</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">联系人电话</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">公司</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">职位</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">合作方式</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">报名日期</td>';
-        $strTable .= '</tr>';
-        if(is_array($list)){
-            foreach($list as $k=>$val){
-                $strTable .= '<tr>';
-                $strTable .= '<td style="text-align:center;font-size:12px;">&nbsp;'.$val['id'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['name'].' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['tel'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['company'].' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['position'].' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$type[$val['cooperation_ways']].' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['created_on'].' </td>';
-                $strTable .= '</tr>';
-            }
-        }
-        $strTable .='</table>';
-        unset($list);
-        downloadExcel($strTable,'商务合作报名信息');
-        exit();
-    }
-
 }
