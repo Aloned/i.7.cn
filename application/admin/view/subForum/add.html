@@ -38,7 +38,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<input type="text" name="title" class="layui-input layui-disabled" readonly="readonly" placeholder="论坛标题" />
+											<input type="text" lay-verify="required" name="title" class="layui-input" placeholder="论坛标题" />
 										</div>
 									</div>
 								</td>
@@ -59,7 +59,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<textarea type="text" name="description" class="layui-textarea" placeholder="简短描述"></textarea>
+											<textarea type="text" name="desc" class="layui-textarea" placeholder="简短描述"></textarea>
 										</div>
 										<div class="layui-form-mid layui-word-aux">这里就是摘要了</div>
 									</div>
@@ -71,7 +71,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-block" style="margin-left: 0;">
-											<textarea name="content" lay-verify="content" id="content" placeholder="输入内容"></textarea>
+											<textarea name="content" id="content" placeholder="输入内容"></textarea>
 										</div>
 									</div>
 								</td>
@@ -81,7 +81,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<select name="admin_id">
+											<select name="admin_id" lay-verify="required">
 												<option value="">请选择</option>
 												<volist name="adminList" id="vo">
 													<option value="{$vo.admin_id}">{$vo.true_name}</option>
@@ -97,7 +97,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<button class="layui-btn" lay-submit="" data-url="{:url('subForum/add')}" lay-filter="add">添加</button>
+											<button class="layui-btn" lay-submit="" data-url="{:url('subforum/add')}" lay-filter="add">添加</button>
 											<button type="reset" class="layui-btn layui-btn-danger">重置</button>
 										</div>
 									</div>
