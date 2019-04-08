@@ -20,11 +20,16 @@ class Index extends Base
 		//合作伙伴
 		$catmap = ['parent_id'=>7,'is_show'=>1];
 		$cates = Db::name('category')->where($catmap)->field('cat_id,cat_name,sort_order')->order('sort_order asc')->select();
-		
+
+        //获取分论坛列表
+        $subforums = Db::name('parallel_session')->find('id,title')->where('status = 1')->select();
+
 		foreach($cates as $key=>$val){
 			$list[$key]['name'] = $val['cat_name'];
 			$list[$key]['children'] = Db::view('photo','id,cat_id,title,description,thumb,content,is_show,is_hot,is_recommend,rank,addtime')->where('cat_id',$val['cat_id'])->order('rank asc')->select();
 		}
+
+        $this->assign('subforums',$subforums);
 
 		$this->assign('banners',$banners);
 		$this->assign('guestList',$guestList);
