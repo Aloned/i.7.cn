@@ -1,36 +1,113 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<!-- Safari浏览器私有meta属性 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="APP name">
 	<meta name="author" content="创业者大会">
-	<meta name="keywords" content="{$res.keywords}" />
-	<meta name="description" content="{$res.desc}" />
-	<!-- <script src="__PUBLIC__/home/js/hotcss.js"></script> -->
-	<script src="__PUBLIC__/home/js/jquery.min.js"></script>
-	<!-- <script src="__PUBLIC__/home/js/touch.js"></script> -->
-	<script src="__PUBLIC__/home/js/swiper.js"></script>
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/reset.css?ver=06130952">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/style.css?ver=06130952">
-	<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/mobile";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-	<title>{$res.title}</title>
+	<meta name="keywords" content="[keywords]" />
+	<meta name="description" content="[description]" />
+	<!-- <script src="__PUBLIC__/mobile/js/hotcss.js"></script> -->
+	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+	<!-- <script src="__PUBLIC__/mobile/js/touch.js"></script> -->
+	<script src="__PUBLIC__/mobile/js/jsrem.js"></script>
+	<script src="__PUBLIC__/mobile/js/swiper.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/reset.css?ver=06111957">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/style.css?ver=06111957">
+	<title>[title]</title>
+
 </head>
 <body>
-<head>
-	<div class="head">
-		<div class="wrap">
-			<div class="fl logo"><a href="{$website.url}"><img src="{$website.logo}"></a></div>
-			<div class="fr nav">
-				<ul class="clearfix">
-					<li><a href="/home/index" title="论坛入口">主论坛入口</a></li>
-				</ul>
-			</div>
-		</div>
+<!-- back top -->
+<a <if condition="session('userid') neq ''">href="/mobile/my.html"<else/>href="/mobile/online.html"</if> class="back-top" style="z-index: 999; position: fixed; right: 0.2rem; bottom: 1.2rem; display: block; text-align: center; line-height: 0.8rem; font-size: 0.22rem; color:#ffffff; width: 1rem; height: 1rem; background: rgba(0,0,0,0.5); border-radius: 100%;border-radius: 100%;">
+<img src="__PUBLIC__/mobile/images/robbtn.png" style="width: 1rem;height: 1rem;">
+</a>
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+	$('.back-top').on('click',function(){
+
+		 $('html,body').animate({"scrollTop": '0px'}, 800);
+	})
+})
+</script> -->
+<header>
+	<div class="head" style="position: relative;  z-index:50;">
+		<ul class="wrap">
+			<li class="fl"><a href="{$website.url}/mobile"><img src="{$website.logo}"></a></li>
+			<li class="fr"><p class="col000 textr font22">报名已破 <span class="fontber" style="color:#e00;">{$website.tcount}</span> 人<br><span class="font16" style="color:#888;">每晚6点更新数据</span></p></li>
+		</ul>
 	</div>
-</head>
-{$res.content}
+</header>
+<div class="banner-wrap clearfix"></div>
+
+<!-- 动态 -->
+<article>
+	<div class="dynamic-list wrap">
+		<ul>
+			<volist name="list" id="vo">
+				<li>
+					<a <if condition="$vo.outurl eq ''">href="{:url('/shownews/'.$vo.art_id)}"<else/> target="_blank" href="{$vo.outurl}"</if> id="{$vo.art_id}"><img src="{$vo.thumb}">
+					<p>{$vo.title}<br/><span>{$vo.addtime|date='m-d',###}</span></p></a>
+				</li>
+			</volist>
+		</ul>
+	</div>
+</article>
+<nav>
+
+	<div class="nav-fotter clearfix">
+
+		<ul class="clearfix">
+
+			<li><a href="/mobile/index.html">首页</a></li>
+
+			<!--<li><a href="/mobile/page/1.html">简介</a></li>-->
+
+			<li><a href="/mobile/page/2.html">议程</a></li>
+
+
+			<li><a href="/mobile/online.html">报名</a></li>
+
+
+			<li><a href="/mobile/place.html">领票点</a></li>
+
+			<!--<li><a href="/mobile/news.html">动态</a></li>-->
+
+			<li class="active"><a href="/mobile/my.html">我的</a></li>
+
+		</ul>
+
+	</div>
+
+</nav>
+
+<!--尾部-->
+
+<footer>
+
+	<div class="footer">
+
+		<div class="wrap">
+
+			<img src="__PUBLIC__/home/images/fb.png" style="width:30%; height:30%;">
+
+			<p class="textc font18 col868">©2005-2018 河南创业者大会版权所有 &nbsp;豫ICP备16026558号</p>
+
+		</div>
+
+	</div>
+
+</footer>
+
 </body>
 
 
+
+</html>
