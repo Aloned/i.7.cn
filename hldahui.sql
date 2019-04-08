@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-04-04 14:57:44
+Date: 2019-04-08 18:02:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -60,7 +60,7 @@ INSERT INTO `md_admin` VALUES ('19', '5', '19', '18339985440', '李智轩', '183
 INSERT INTO `md_admin` VALUES ('20', '5', '20', '15093447765', '张丹', '15093447765', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('21', '5', '21', '15238301680', '杜志同', '15238301680', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('22', '5', '22', '13083719599', '张帅国', '13083719599', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
-INSERT INTO `md_admin` VALUES ('99', '1', '1', 'admin', 'admin', '13555555555', 'e10adc3949ba59abbe56e057f20f883e', '1528956923', '1', '1554341400', '127.0.0.1', '411997d787d87a9fcda2b1e3af0c5350');
+INSERT INTO `md_admin` VALUES ('99', '1', '1', 'admin', 'admin', '13555555555', 'e10adc3949ba59abbe56e057f20f883e', '1528956923', '1', '1554703245', '127.0.0.1', '411997d787d87a9fcda2b1e3af0c5350');
 INSERT INTO `md_admin` VALUES ('100', '5', '23', '15690872222', '朱建华', '15690872222', 'e10adc3949ba59abbe56e057f20f883e', '1529562288', '1', '1529562288', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('101', '1', '1', 'zihangzihang', 'ss', '18537109888', 'e10adc3949ba59abbe56e057f20f883e', '1529991925', '1', '1529991925', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('102', '1', '1', 'sfsdfsd', 'wfwe', '15655554545', '61146e6c895a39755b22b49e8e15dc7a', '1551960912', '1', '1551960912', '127.0.0.1', '');
@@ -427,7 +427,7 @@ CREATE TABLE `md_admin_log` (
   `log_url` varchar(50) DEFAULT NULL COMMENT 'url',
   `log_time` int(10) DEFAULT NULL COMMENT '日志时间',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=225 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of md_admin_log
@@ -655,6 +655,7 @@ INSERT INTO `md_admin_log` VALUES ('220', '99', '账号密码登录', '127.0.0.1
 INSERT INTO `md_admin_log` VALUES ('221', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554167602');
 INSERT INTO `md_admin_log` VALUES ('222', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554270378');
 INSERT INTO `md_admin_log` VALUES ('223', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554341400');
+INSERT INTO `md_admin_log` VALUES ('224', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554703245');
 
 -- ----------------------------
 -- Table structure for md_admin_role
@@ -993,18 +994,21 @@ CREATE TABLE `md_parallel_session` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `admin_id` int(11) NOT NULL COMMENT '管理员id',
   `title` varchar(255) NOT NULL DEFAULT '' COMMENT '论坛标题',
-  `ico` varchar(255) NOT NULL DEFAULT '' COMMENT 'logo',
+  `keywords` varchar(255) NOT NULL DEFAULT '' COMMENT '关键字',
+  `desc` varchar(255) NOT NULL DEFAULT '' COMMENT '描述',
   `banner` varchar(255) NOT NULL DEFAULT '' COMMENT 'banner',
   `content` varchar(255) NOT NULL DEFAULT '' COMMENT '内容',
-  `url` varchar(255) NOT NULL DEFAULT '' COMMENT '论坛链接地址',
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1开启;2关闭;',
   `created_on` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of md_parallel_session
 -- ----------------------------
+INSERT INTO `md_parallel_session` VALUES ('1', '99', '标题', '关键字', '描述', '', '水电费发送到', '1', '2019-04-08 14:18:36');
+INSERT INTO `md_parallel_session` VALUES ('2', '8', '123', '123', '123', '', '', '1', '2019-04-08 15:55:03');
+INSERT INTO `md_parallel_session` VALUES ('3', '6', '1111', '2222', '3333', '', '444', '1', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for md_photo
