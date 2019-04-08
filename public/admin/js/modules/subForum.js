@@ -10,7 +10,7 @@ layui.define(['element', 'layer', 'form','base','laydate','layedit'], function(e
 	//编辑器
 	var editIndex = layedit.build('content',{
 		height:300,
-		uploadImage: {url: '/admin/subForum/layeditupload', type: 'post'}
+		uploadImage: {url: '/admin/subforum/layeditupload', type: 'post'}
 		//tool:['left','center','right','face']
 	});
 	
