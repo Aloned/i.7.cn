@@ -27,7 +27,7 @@ return [
 		]
 	],
     [
-        'id'=>'100','title'=>'分论坛管理','icon'=>'&#xe705;','spread'=>false,
+        'id'=>'100','title'=>'分论坛管理','icon'=>'&#xe638;','spread'=>false,
         'children' => [
             ['title'=>'分论坛列表','icon'=>'&#xe621;','id'=>'101','href'=>'/admin/subForum/index']
         ]
