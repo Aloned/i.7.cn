@@ -28,6 +28,7 @@
 				</div>
 				<div class="my-content">
 					<form method="post" class="layui-form" action="">
+						<input type="hidden" name="id" value="{$res.id}">
 						<table class="layui-table">
 							<colgroup>
 								<col width="10%" />
@@ -38,7 +39,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<input type="text" name="title" class="layui-input layui-disabled" value="{$res.title}" placeholder="单页标题" />
+											<input type="text" name="title" class="layui-input" lay-verify="required" value="{$res.title}" placeholder="论坛标题" />
 										</div>
 									</div>
 								</td>
@@ -59,7 +60,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<textarea type="text" name="description" class="layui-textarea" placeholder="简短描述">{$res.description}</textarea>
+											<textarea type="text" name="desc" class="layui-textarea" placeholder="简短描述">{$res.desc}</textarea>
 										</div>
 										<div class="layui-form-mid layui-word-aux">这里就是摘要了</div>
 									</div>
@@ -71,7 +72,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-block" style="margin-left: 0;">
-											<textarea name="content" lay-verify="content" id="content" placeholder="输入内容">{$res.content}</textarea>
+											<textarea name="content" id="content" placeholder="输入内容">{$res.content}</textarea>
 										</div>
 									</div>
 								</td>
@@ -81,7 +82,7 @@
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<select name="admin_id">
+											<select name="admin_id" lay-verify="required">
 												<option value="">请选择</option>
 												<volist name="adminList" id="vo">
 													<option value="{$vo.admin_id}" <if condition="$vo.admin_id eq $res.admin_id">selected</if> >{$vo.true_name}</option>
@@ -92,11 +93,22 @@
 								</td>
 							</tr>
 							<tr>
+								<td align="right">是否开启：</td>
+								<td>
+									<div class="layui-form-item">
+										<div class="layui-input-inline my-input-line">
+											<input type="radio" name="status" value="1" <if condition="($res.status) eq 1"> checked="checked" </if> title="是">
+											<input type="radio" name="status" value="2" <if condition="($res.status) eq 2"> checked="checked" </if> title="否">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
 								<td align="right">&nbsp;</td>
 								<td>
 									<div class="layui-form-item">
 										<div class="layui-input-inline my-input-line">
-											<button class="layui-btn" lay-submit="" data-url="{:url('subForum/edit')}" lay-filter="edit">保存</button>
+											<button class="layui-btn" lay-submit="" data-url="{:url('subforum/edit')}" lay-filter="edit">保存</button>
 											<button type="reset" class="layui-btn layui-btn-danger">重置</button>
 										</div>
 									</div>
