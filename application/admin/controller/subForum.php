@@ -29,15 +29,16 @@ class subforum extends Base{
         //是否为POST请求
         $request = Request::instance();
         if($request->isPost()){
+            $data = $request->param();
+            unset($data['file']);
+            $data['created_on'] = date('Y-m-d H:i:s',time());
 
-            $data['addtime'] = time();
-
-            $res = Db::name('parallel_session')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+            $res = Db::name('parallel_session')->insert($data); // 写入数据到数据库
 
             if($res){
-                $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
+                $msg = ['status'=>1,'msg'=>'添加成功','url'=>url('admin/subforum/index')];
             }else{
-                $msg = ['status'=>0,'msg'=>'更新单页内容失败'];
+                $msg = ['status'=>0,'msg'=>'添加失败'];
             }
             return json($msg);
         }
@@ -53,21 +54,16 @@ class subforum extends Base{
     public function edit(){
         //是否为POST请求
         $request = Request::instance();
-
-        $data = $request->except('file');
-
         $adminList = Db::name('admin')->field('admin_id,true_name')->where('is_open = 1')->select();
 
         if($request->isPost()){
-
-            $data['addtime'] = time();
-
-            $res = Db::name('parallel_session')->where('cat_id',input('cat_id'))->update($data); // 写入数据到数据库
+            $data = $request->except('file');
+            $res = Db::name('parallel_session')->update($data); // 写入数据到数据库
 
             if($res){
-                $msg = ['status'=>1,'msg'=>'更新单页内容成功','url'=>url('admin/content/index')];
+                $msg = ['status'=>1,'msg'=>'更新成功','url'=>url('admin/subforum/index')];
             }else{
-                $msg = ['status'=>0,'msg'=>'更新单页内容失败'];
+                $msg = ['status'=>0,'msg'=>'更新失败'];
             }
             return json($msg);
         }
