@@ -7,12 +7,14 @@ use think\Request;
 use think\Paginator;
 
 
-class subForum extends Base{
-	//分论坛列表d
+class subforum extends Base{
+	//分论坛列表
     public function index()
     {
     	$count = Db::name('parallel_session')->count();
-		$list = Db::name('parallel_session')->order('id desc')->paginate(11,$count);
+		$list = Db::name('parallel_session')->alias('ps')
+            ->join('admin a','ps.admin_id = a.admin_id','LEFT')
+            ->order('id desc')->paginate(11,$count);
 
 		//获取分页显示
 		$page = $list->render();
@@ -54,7 +56,7 @@ class subForum extends Base{
 
         $data = $request->except('file');
 
-        $category = Db::name('category')->where(['mod_id'=>5,'cat_id'=>input('param.cat_id')])->find();
+        $adminList = Db::name('admin')->field('admin_id,true_name')->where('is_open = 1')->select();
 
         if($request->isPost()){
 
@@ -70,10 +72,10 @@ class subForum extends Base{
             return json($msg);
         }
         //单页内容详情
-        $content = Db::name('parallel_session')->where('cat_id',input('cat_id'))->find();
+        $res = Db::name('parallel_session')->where('id',input('id'))->find();
 
-        $this->assign('content',$content);
-        $this->assign('category',$category);
+        $this->assign('res',$res);
+        $this->assign('adminList',$adminList);
 
         return view();
     }
