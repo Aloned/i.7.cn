@@ -75,7 +75,7 @@ border:0;
 
 .meeting-guest ul li .m-g-img{ margin:0 auto 0.1rem auto; width: 1.9rem; height: 1.9rem; background: #e1e2e3;  border-radius: 100%; -webkit-border-radius: 100%;}
 
-.meeting-guest ul li img{ width: 1.9rem; height:1.9rem; border-radius: 50%;};
+.meeting-guest ul li img{ width: 1.9rem; height:1.9rem; border-radius: 50%;}
 .meeting-guest ul li p{ line-height: 1.2; margin:0.1rem 0; }
 .meeting-guest ul li p span{ display:block; height:0.36rem; line-height:0.22rem;}
 
@@ -544,5 +544,10 @@ dl.formstyle dd a.sendbtn{ position: absolute; right: 0; top:0; width: 1.6rem; h
 
 .introduce-cont p{ line-height: 1.8; font-size: 0.26rem;}
 
+
+/*分论坛*/
+.sublist{background: red;position: relative;}
+.sublist >div{position:absolute;min-width: 4rem;left: 0;top:0;background: #040404;font-size: 0.29rem;display:none;opacity:0.8;color: #ffffff}
+.sublist div >div{width: 100%;float: left;height: 0.9rem;line-height: 0.8rem;box-sizing: border-box;border: 0.5px solid #eee}
 
 
