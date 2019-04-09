@@ -22,7 +22,7 @@ class Index extends Base
 		$cates = Db::name('category')->where($catmap)->field('cat_id,cat_name,sort_order')->order('sort_order asc')->select();
 
         //获取分论坛列表
-        $subforums = Db::name('parallel_session')->find('id,title')->where('status = 1')->select();
+        $subforums = Db::name('parallel_session')->field('id,title')->where('status = 1')->select();
 
 		foreach($cates as $key=>$val){
 			$list[$key]['name'] = $val['cat_name'];
