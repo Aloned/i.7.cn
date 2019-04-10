@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-04-08 18:02:59
+Date: 2019-04-10 17:59:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -60,7 +60,7 @@ INSERT INTO `md_admin` VALUES ('19', '5', '19', '18339985440', '李智轩', '183
 INSERT INTO `md_admin` VALUES ('20', '5', '20', '15093447765', '张丹', '15093447765', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('21', '5', '21', '15238301680', '杜志同', '15238301680', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('22', '5', '22', '13083719599', '张帅国', '13083719599', 'cfcd208495d565ef66e7dff9f98764da', '1529464646', '1', '1529464646', '127.0.0.1', '');
-INSERT INTO `md_admin` VALUES ('99', '1', '1', 'admin', 'admin', '13555555555', 'e10adc3949ba59abbe56e057f20f883e', '1528956923', '1', '1554703245', '127.0.0.1', '411997d787d87a9fcda2b1e3af0c5350');
+INSERT INTO `md_admin` VALUES ('99', '1', '1', 'admin', 'admin', '13555555555', 'e10adc3949ba59abbe56e057f20f883e', '1528956923', '1', '1554867857', '127.0.0.1', '411997d787d87a9fcda2b1e3af0c5350');
 INSERT INTO `md_admin` VALUES ('100', '5', '23', '15690872222', '朱建华', '15690872222', 'e10adc3949ba59abbe56e057f20f883e', '1529562288', '1', '1529562288', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('101', '1', '1', 'zihangzihang', 'ss', '18537109888', 'e10adc3949ba59abbe56e057f20f883e', '1529991925', '1', '1529991925', '127.0.0.1', '');
 INSERT INTO `md_admin` VALUES ('102', '1', '1', 'sfsdfsd', 'wfwe', '15655554545', '61146e6c895a39755b22b49e8e15dc7a', '1551960912', '1', '1551960912', '127.0.0.1', '');
@@ -427,7 +427,7 @@ CREATE TABLE `md_admin_log` (
   `log_url` varchar(50) DEFAULT NULL COMMENT 'url',
   `log_time` int(10) DEFAULT NULL COMMENT '日志时间',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=225 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=226 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of md_admin_log
@@ -656,6 +656,7 @@ INSERT INTO `md_admin_log` VALUES ('221', '99', '账号密码登录', '127.0.0.1
 INSERT INTO `md_admin_log` VALUES ('222', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554270378');
 INSERT INTO `md_admin_log` VALUES ('223', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554341400');
 INSERT INTO `md_admin_log` VALUES ('224', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554703245');
+INSERT INTO `md_admin_log` VALUES ('225', '99', '账号密码登录', '127.0.0.1', '/admin/login/index', '1554867857');
 
 -- ----------------------------
 -- Table structure for md_admin_role
