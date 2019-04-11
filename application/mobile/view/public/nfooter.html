@@ -1,11 +1,18 @@
 <nav>
+
 	<div class="nav-fotter clearfix">
 
 		<ul class="clearfix">
 
 			<li><a href="/mobile/index.html">首页</a></li>
 
-			<!--<li><a href="/mobile/page/1.html">简介</a></li>-->
+			<li class="sublist"><a href="javascript:">分论坛</a>
+				<div>
+					<div>1</div>
+					<div>1</div>
+					<div>1</div>
+				</div>
+			</li>
 
 			<li><a href="/mobile/page/2.html">议程</a></li>
 
@@ -13,16 +20,36 @@
 			<li><a href="/mobile/online.html">报名</a></li>
 
 
-			<li><a href="/mobile/place.html">领票点</a></li>
+			<!--<li><a href="/mobile/place.html">领票点</a></li>-->
 
 			<!--<li><a href="/mobile/news.html">动态</a></li>-->
 
-			<li class="active"><a href="/mobile/my.html">我的</a></li>
+			<li class="active"><a href="/mobile/my.html">个人中心</a></li>
 
 		</ul>
 
 	</div>
+
 </nav>
 
-	</body>
+</body>
+<script>
+	$(function () {
+		var h = '';
+		$('.sublist').on('touchstart', function () {
+			if(!h){
+				h = '-'+$(this).find('div').css('height')
+			}
+			var d = $(this).find('div')
+			d.css('top',h)
+			if(d.is(':visible')){
+				d.hide()
+			}else{
+				d.show()
+			}
+		})
+	})
+</script>
+
+
 </html>
