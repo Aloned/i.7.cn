@@ -6,13 +6,7 @@
 
 			<li><a href="/mobile/index.html">首页</a></li>
 
-			<li class="sublist"><a href="javascript:">分论坛</a>
-				<div>
-					<div>1</div>
-					<div>1</div>
-					<div>1</div>
-				</div>
-			</li>
+            {:widget('widget/foot')}
 
 			<li><a href="/mobile/page/2.html">议程</a></li>
 
@@ -48,6 +42,10 @@
 				d.show()
 			}
 		})
+        $('.subforumTar').on('touchstart', function () {
+            var url = $(this).attr('url');
+            window.location.href= url;
+        })
 	})
 </script>
 
