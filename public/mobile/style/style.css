@@ -547,7 +547,7 @@ dl.formstyle dd a.sendbtn{ position: absolute; right: 0; top:0; width: 1.6rem; h
 
 /*分论坛*/
 .sublist{background: red;position: relative;}
-.sublist >div{position:absolute;min-width: 4rem;left: 0;top:0;background: #040404;font-size: 0.29rem;display:none;opacity:0.8;color: #ffffff}
-.sublist div >div{width: 100%;float: left;height: 0.9rem;line-height: 0.8rem;box-sizing: border-box;border: 0.5px solid #eee}
+.sublist >div{position:absolute;min-width: 4rem;left: 0;top:0;background: #040404;display:none;opacity:0.8;color: #ffffff}
+.sublist div >a{width: 100%;float: left;height: 0.9rem;line-height: 0.8rem;font-size: 0.3rem;box-sizing: border-box;border: 0.5px solid #eee}
 
 
