@@ -12,7 +12,8 @@ class Subforum extends Base
 	//分论坛
     public function index()
     {
-        $res = Db::name('parallel_session')->where('id = 1')->find();
+        $id = input('id');
+        $res = Db::name('parallel_session')->where('id = '.$id)->find();
         $this->assign('res',$res);
 		return view();
     }
