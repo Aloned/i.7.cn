@@ -1,5 +1,5 @@
 <?php
-namespace app\home\widget;
+namespace app\mobile\widget;
 
 use think\Controller;
 use think\Db;
@@ -9,14 +9,12 @@ use think\Session;
 class Widget extends controller
 {
 	//头部菜单
-    public function head()
+    public function foot()
     {
-		$topcate = Db::name('category')->where('is_show','1')->order('sort_order asc')->column('cat_id,parent_id,cat_name,sort_order,keywords');
+		$subforums = Db::name('parallel_session')->where('status','1')->order('id asc')->field('title,id')->select();
 		
-		$catelist = get_parent_list($topcate,0);
-		
-		$this->assign('list',$catelist);
+		$this->assign('subforums',$subforums);
 
-		return $this->fetch('widget/head');
+		return $this->fetch('widget/foot');
     }
 }
