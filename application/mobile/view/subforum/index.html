@@ -11,17 +11,16 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="APP name">
 	<meta name="author" content="创业者大会">
-	<meta name="keywords" content="[keywords]" />
-	<meta name="description" content="[description]" />
+	<meta name="keywords" content="{$res.keywords}" />
+	<meta name="description" content="{$res.desc}" />
 	<!-- <script src="__PUBLIC__/mobile/js/hotcss.js"></script> -->
 	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
 	<!-- <script src="__PUBLIC__/mobile/js/touch.js"></script> -->
 	<script src="__PUBLIC__/mobile/js/jsrem.js"></script>
-	<script src="__PUBLIC__/mobile/js/swiper.js"></script>
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/reset.css?ver=06111957">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/style.css?ver=06111957">
-	<title>[title]</title>
+	<title>{$res.title}</title>
 
 </head>
 <body>
@@ -29,9 +28,8 @@
 <a <if condition="session('userid') neq ''">href="/mobile/my.html"<else/>href="/mobile/online.html"</if> class="back-top" style="z-index: 999; position: fixed; right: 0.2rem; bottom: 1.2rem; display: block; text-align: center; line-height: 0.8rem; font-size: 0.22rem; color:#ffffff; width: 1rem; height: 1rem; background: rgba(0,0,0,0.5); border-radius: 100%;border-radius: 100%;">
 <img src="__PUBLIC__/mobile/images/robbtn.png" style="width: 1rem;height: 1rem;">
 </a>
-
-
-
+<div class="banner-wrap clearfix"></div>
+				{$res.content}
 <include file="public/nfooter"/>
 
 </body>
