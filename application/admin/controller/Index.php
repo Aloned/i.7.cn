@@ -14,7 +14,7 @@ class Index extends Base
     	$admin_info = getAdminInfo(session('admin_id'));
 		$this->assign('admin_info',$admin_info);
 		//获取分论坛列表
-        $subforums = Db::name('parallel_session')->find('id,title')->where('status = 1')->select();
+        $subforums = Db::name('parallel_session')->field('id,title')->where('status = 1')->select();
         $this->assign('subforums',$subforums);
 
     	return view();
