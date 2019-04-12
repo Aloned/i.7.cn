@@ -11,7 +11,7 @@ class Widget extends controller
 	//头部菜单
     public function foot()
     {
-		$subforums = Db::name('parallel_session')->where('status','1')->order('id asc')->field('title,id')->select();
+		$subforums = Db::name('parallel_session')->where('status','1')->order('id desc')->field('title,id')->select();
 		
 		$this->assign('subforums',$subforums);
 
