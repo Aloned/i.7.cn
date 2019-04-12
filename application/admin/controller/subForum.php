@@ -32,7 +32,6 @@ class subforum extends Base{
             $data = $request->param();
             unset($data['file']);
             $data['created_on'] = date('Y-m-d H:i:s',time());
-
             $res = Db::name('parallel_session')->insert($data); // 写入数据到数据库
 
             if($res){
