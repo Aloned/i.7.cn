@@ -98,7 +98,7 @@ class Store extends Base
     }
 
     //审核页面
-    public function checkResource(){
+    public function checkresource(){
         //是否为POST请求
         $request = Request::instance();
         $data = $request->except('file');
@@ -119,11 +119,11 @@ class Store extends Base
         $res = Db::name('store_resource')->where(['id'=>input('id')])->find();
         $this->assign('res',$res);
 
-        return view('checkResource');
+        return view('checkresource');
     }
 
     //删除资源
-    public function delResource(){
+    public function delresource(){
         //是否为POST请求
         $request = Request::instance();
         if($request->isPost()){
@@ -141,7 +141,7 @@ class Store extends Base
 
 
     //我的资源列表
-    public function myResource()
+    public function myresource()
     {
         $search = '';
         if(isset($_POST['keywords']) && !empty($_POST['keywords'])){
@@ -175,7 +175,7 @@ class Store extends Base
 
 
     //领票点资源上传
-    public function uploadResource(){
+    public function uploadresource(){
         $request = Request::instance();
         if($request->isPost()){
             $store_id = session('store_id');
@@ -185,17 +185,17 @@ class Store extends Base
 
             $res = Db::name('store_resource')->insert($data);
             if($res){
-                $msg = ['status'=>1,'msg'=>'资源上传成功','url'=>url('admin/Store/myResource')];
+                $msg = ['status'=>1,'msg'=>'资源上传成功','url'=>url('admin/Store/myresource')];
             }else{
                 $msg = ['status'=>0,'msg'=>'资源上传失败'];
             }
             return json($msg);
         }
-        return view('uploadResource');
+        return view('uploadresource');
     }
 
     //编辑资源内容
-    public function editResource(){
+    public function editresource(){
         //是否为POST请求
         $request = Request::instance();
 
@@ -206,7 +206,7 @@ class Store extends Base
             $res = Db::name('store_resource')->update($data);
 
             if($res){
-                $msg = ['status'=>1,'msg'=>'资源更新成功','url'=>url('admin/store/myResource')];
+                $msg = ['status'=>1,'msg'=>'资源更新成功','url'=>url('admin/store/myresource')];
             }else{
                 $msg = ['status'=>0,'msg'=>'资源更新失败'];
             }
@@ -215,7 +215,7 @@ class Store extends Base
         $res = Db::name('store_resource')->where(['id'=>input('id')])->find();
         $this->assign('res',$res);
 
-        return view('editResource');
+        return view('editresource');
     }
 
     //编辑器文件上传
