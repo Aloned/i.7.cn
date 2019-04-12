@@ -29,7 +29,7 @@ return [
     [
         'id'=>'100','title'=>'分论坛管理','icon'=>'&#xe638;','spread'=>false,
         'children' => [
-            ['title'=>'分论坛列表','icon'=>'&#xe621;','id'=>'101','href'=>'/admin/subForum/index']
+            ['title'=>'分论坛列表','icon'=>'&#xe621;','id'=>'101','href'=>'/admin/subforum/index']
         ]
     ],
 	[
@@ -56,7 +56,7 @@ return [
 		'id'=>'20','title'=>'领票点管理','icon'=>'&#xe715;','spread'=>false,
 		'children' => [
 			['title'=>'领票点列表','icon'=>'&#xe621;','id'=>'21','href'=>'/admin/store/index'],
-			['title'=>'我的资源列表','icon'=>'&#xe621;','id'=>'29','href'=>'/admin/store/myResource'],
+			['title'=>'我的资源列表','icon'=>'&#xe621;','id'=>'29','href'=>'/admin/store/myresource'],
 			['title'=>'领票点资源审核','icon'=>'&#xe621;','id'=>'30','href'=>'/admin/store/resource']
 		]
 	],
