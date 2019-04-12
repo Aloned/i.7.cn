@@ -7,7 +7,7 @@ use think\Request;
 use think\Paginator;
 
 
-class subforum extends Base{
+class Subforum extends Base{
 	//分论坛列表
     public function index()
     {
