@@ -5,27 +5,30 @@
 
 
 	<!-- 动态 -->
-<form id="formcop" method="post" action="">
-	<input type="text" id="name" name="name" required  lay-verify="required" class="layui-input" placeholder="姓名">
+<form id="formcoop" method="post" id="sbuforum" action="">
+	<input type="text" id="name" name="name" placeholder="姓名">
 	<input type="text" id="company" name="company" placeholder="公司">
 	<input type="text" id="position" name="position" placeholder="职位">
 	<input type="text" id="tel" name="tel" placeholder="联系方式">
+	<div style="clear: both"></div>
+	<p>合作方式：</p>
 	<select id="cooperation_ways" name="cooperation_ways">
-		<option value="">合作方式</option>
+		<option value="">请选择</option>
 		<option value="1">冠名/分论坛冠名</option>
 		<option value="2">主办方</option>
 		<option value="3">协办方</option>
 		<option value="4">参展方</option>
 	</select>
-	<hr>
-	<button id="submit" type="submit">提交</button>
+	<div style="clear: both"></div>
+	<hr style="width: 86%;margin-left: 7%;border: none;border-bottom: 1px solid #000000">
+	<button id="submitcoop" type="submit">提&nbsp;&nbsp;交</button>
 </form>
 </div>
 <script src="__PUBLIC__/plugins/layui/layui.all.js"></script>
 <include file="public/footer"/>
 <script type="text/javascript">
 
-	$('#formcop').submit(function () {
+	$('#formcoop').submit(function () {
 		if(!check_form()){
 			return false;
 		}
@@ -47,7 +50,7 @@
 		var position = $('#position').val().replace(/\ +/g, "");
 		var type = $('#cooperation_ways').val();
 		if(name=='' || company=='' || position=='' || type==''){
-			layer.alert('请完善报名信息');
+			layer.alert('请完善报名信息后提交!');
 			return false;
 		}
 		var i = true;
