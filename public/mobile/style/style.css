@@ -550,4 +550,10 @@ dl.formstyle dd a.sendbtn{ position: absolute; right: 0; top:0; width: 1.6rem; h
 .sublist >div{position:absolute;min-width: 4rem;left: 0;top:0;background: #040404;display:none;opacity:0.8;color: #ffffff}
 .sublist div >div{width: 100%;float: left;height: 0.9rem;line-height: 0.8rem;font-size: 0.3rem;box-sizing: border-box;border: 0.5px solid #eee}
 
+/*商务合作*/
+#formcoop>input{font-size: 0.32rem;border:none;border-bottom: 1px solid #0a0a0a;background: none;width: 86%;height: 0.8rem;margin-top: 0.3rem;margin-left: 7%}
+#formcoop>p{float: left;font-size:0.32rem;margin-left: 7%;margin-top: 0.2rem;color: #8e8e8e}
+#cooperation_ways{float: left;margin-top:0.1rem;position:absolute;border:none;width:60%;height:0.65rem;line-height:24px;font-size:0.3rem;background: white;text-align: center;color: #4a4a4a;}
+#submitcoop{width: 86%;height: 1rem;border:none;font-size: 0.5rem;line-height: 0.6rem;margin: 0.3rem 0 1.2rem 7%;background: #009688;color: white}
+.layui-layer-btn0{font-size: 0.3rem;!important;}
 
