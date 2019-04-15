@@ -1,6 +1,6 @@
 
 <ul class="clearfix">
-	<li><a href="{$website.url}" title="{$website.title}" <eq name="$nav" value="0"> class="active" </eq>>首页</a></li>
+	<li><a href="/home/index" title="{$website.title}" <eq name="$nav" value="0"> class="active" </eq>>首页</a></li>
 	<volist name="list" id="vo">
 		<li>
 			<switch name="$vo.cat_id" >
@@ -23,21 +23,21 @@
 		</li>
 	</volist>
 	<li><a href="{:url('/my')}" title="我的" <eq name="$nav" value="99"> class="active" </eq>>我的</a></li>
-	<div id="subOne">分论坛 &#8743;</div>
+	<div id="subOne">分论坛 &#8744;</div>
 	<dl id="subforum">
-			<a href="">分论坛1</a>
-			<a href="">分论坛似的发射点发射点发射点1</a>
-			<a href="">分论坛1</a>
+		<volist name="subforums" id="vo"></volist>
+			<a href="/home/subforum/id/{$vo.id}">{$vo.title}</a>
+		</volist>
 	</dl>
 </ul>
 <script>
 	$(function () {
 		$('#subOne').click(function () {
 			if($('#subforum').is(':visible')){
-				$(this).html('分论坛 &#8743;');
+				$(this).html('分论坛 &#8744;');
 				$('#subforum').hide();
 			}else{
-				$(this).html('分论坛 &#8744;');
+				$(this).html('分论坛 &#8743;');
 				$('#subforum').show();
 			}
 		})
