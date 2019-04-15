@@ -315,9 +315,9 @@ dl.formstyle dd a.user-login-btn:hover,dl.formstyle dd a.sendbtn:hover {backgrou
 .select-show:hover {background-color:#f1f3f5;  -webkit-transition-property: background-color; -webkit-transition-duration: 0.3s;-webkit-transition-timing-function: linear;}
 
 #subOne{position: absolute;left:204px;top:83px;min-width: 80px;font-size: 18px;}
-#subforum{position: absolute;left:204px;top:111px;min-width: 180px;font-size: 18px;background: rgba(255,255,255,0.9);display: none}
-#subforum>a{padding: 15px 8px 15px 8px;font-size: 16px;display: block;color: black}
-#subforum>a:hover{background: #1fb5e7;color: white}
+#subforum{position: absolute;left:264px;top:111px;min-width: 180px;font-size: 18px;background: rgba(255,255,255,0.9);display: none;padding:10px;border-radius: 5px}
+#subforum>a{padding: 10px 8px 10px 8px;font-size: 16px;display: block;color: black;border-bottom: 1px solid #eee;text-align: center}
+#subforum>a:hover{background: #1fb5e7;color: white;border-radius: 15px}
 #subOne:hover{cursor:pointer}
 
 
