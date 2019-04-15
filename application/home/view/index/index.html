@@ -110,9 +110,10 @@
 .rrd {-webkit-animation: scale3 6s ease-in-out infinite;}
 .rre {-webkit-animation: scale4 6s ease-in-out infinite;}
 
-.head{height: 100px; overflow:hidden; background:none; position: relative; z-index: 50;}
+.head{height: 100px; background:none; position: relative; z-index: 50;}
 .head .nav li a{ color: #fff; font-size: 18px; }
-
+	#subOne{color: #fff;}
+	#subforum{background:#fff;color: #fff;z-index: 9999}
 .meeting-info {
     background-color: none;
 }
@@ -129,7 +130,7 @@
 <head>
 	<div class="head">
 		<div class="wrap">
-			<div class="fl logo"><a href="{$website.url}"><img src="/public/home/images/logo.png"></a></div>
+			<div class="fl logo"><a href="/home/index"><img src="/public/home/images/logo.png"></a></div>
 			<div class="fr nav">
 				{:widget('widget/head')}
 			</div>
