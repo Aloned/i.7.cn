@@ -23,7 +23,7 @@
 		</li>
 	</volist>
 	<li><a href="{:url('/my')}" title="我的" <eq name="$nav" value="99"> class="active" </eq>>我的</a></li>
-	<div id="subOne">分论坛 &#8744;</div>
+	<div id="subOne" class="noselect">分论坛 &#8744;</div>
 	<dl id="subforum">
 		<volist name="subforums" id="vo">
 			<a target="_blank" href="/home/subforum/index/id/{$vo.id}">{$vo.title}</a>
