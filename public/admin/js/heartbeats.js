@@ -15,9 +15,8 @@ function onLoad() {
             if (PnpData.type == "PnpEvent")//如果是插拨事件处理消息
             {
                 if (!PnpData.IsIn){
-                    alert('处罚了')
                     var uk_sn = getCookie('uk_sn');
-                    var sn = s_pnp.GetProduceDate(PnpData.DevicePath);
+                    var sn = hex_md5(s_pnp.GetProduceDate(PnpData.DevicePath));
                     if(uk_sn == sn){
                         $.post('/admin/Login/logout',function(res){
                             if(res.status == 1) {
