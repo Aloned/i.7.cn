@@ -54,6 +54,7 @@ class Login extends Controller {
 						session('store_id', $admin_info['store_id']);
 						session('role_id', $admin_info['role_id']);
 						session('act_list',$admin_info['act_list']);
+						session('login_type','ticket');
 
 						Db::name('admin') -> where("admin_id = " . $admin_info['admin_id']) -> update(['last_login' => time(), 'last_ip' => $request -> ip()]);
 						session('last_login_time', $admin_info['last_login']);
@@ -112,6 +113,8 @@ class Login extends Controller {
                         session('store_id', $admin_info['store_id']);
                         session('role_id', $admin_info['role_id']);
                         session('act_list',$admin_info['act_list']);
+                        session('login_type','uk');
+                        cookie('uk_sn',$admin_info['uk_sn']);
 
                         Db::name('admin') -> where("admin_id = " . $admin_info['admin_id']) -> update(['last_login' => time(), 'last_ip' => $request -> ip()]);
                         session('last_login_time', $admin_info['last_login']);
@@ -149,7 +152,7 @@ class Login extends Controller {
      */
     public function logout(){
 		session::clear();
-
+		cookie('uk_sn',null);
         $msg = ['status' => 1, 'msg' => '退出成功'];
 		return json($msg);
     }
