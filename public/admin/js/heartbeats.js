@@ -14,103 +14,39 @@ function onLoad() {
             var PnpData = JSON.parse(Msg.data);
             if (PnpData.type == "PnpEvent")//如果是插拨事件处理消息
             {
-                if (!PnpData.IsIn){
-                    try
-                    {
-                        var DevicePath,ProduceDate,version;
-
-                        //由于是使用事件消息的方式与服务程序进行通讯，
-                        //好处是不用安装插件，不分系统及版本，控件也不会被拦截，同时安装服务程序后，可以立即使用，不用重启浏览器
-                        //不好的地方，就是但写代码会复杂一些
-                        var s_simnew1=new SoftKey3W(); //创建UK类
-
-                        s_simnew1.Socket_UK.onopen = function() {
-                            s_simnew1.ResetOrder();//这里调用ResetOrder将计数清零，这样，消息处理处就会收到0序号的消息，通过计数及序号的方式，从而生产流程
-                        }
-
-                        //写代码时一定要注意，每调用我们的一个UKEY函数，就会生产一个计数，即增加一个序号，较好的逻辑是一个序号的消息处理中，只调用我们一个UKEY的函数
-                        s_simnew1.Socket_UK.onmessage =function got_packet(Msg)
-                        {
-                            var UK_Data = JSON.parse(Msg.data);
-                            if(UK_Data.type!="Process")return ;//如果不是流程处理消息，则跳过
-                            switch(UK_Data.order)
-                            {
-                                case 0:
-                                {
-                                    s_simnew1.FindPort(0); //发送命令取UK的路径
-                                }
-                                    break;
-                                case 1:
-                                {
-                                    if( UK_Data.LastError!=0){window.alert ( "未发现加密锁，请插入加密锁");s_simnew1.Socket_UK.close();return false;}
-                                    DevicePath=UK_Data.return_value;//获得返回的UK的路径
-                                    s_simnew1.GetVersion(DevicePath); //发送命令取UK的版本
-                                }
-                                    break;
-                                case 2:
-                                {
-                                    if( UK_Data.LastError!=0){ window.alert("返回版本号错误，错误码为："+UK_Data.LastError.toString());s_simnew1.Socket_UK.close();return false;}
-                                    version=UK_Data.return_value;//获得返回的UK的版本
-                                    if(version>10)
-                                    {
-                                        //取得锁的出厂编码
-                                        s_simnew1.GetProduceDate( DevicePath);//发送命令取UK的出厂编码
-                                    }
-                                    else
-                                    {
-                                        window.alert ("锁的版本少于11");
-                                    }
-                                }
-                                    break;
-                                case 3:
-                                {
-                                    if( UK_Data.LastError!=0){ window.alert("取得锁的出厂编码错误，错误码为："+UK_Data.LastError.toString());s_simnew1.Socket_UK.close();return false;}
-                                    ProduceDate=UK_Data.return_value;//获得返回的UK的出厂编码
-                                    var uk_sn = getCookie('uk_sn');
-                                    var sn = hex_md5(ProduceDate);
-                                    if(uk_sn == sn){
-                                        $.post('/admin/Login/logout',function(res){
-                                            if(res.status == 1) {
-                                                layer.msg('退出成功', {
-                                                    icon: 1
-                                                },function(){
-                                                    location.href = 'admin/login'
-                                                });
-                                            } else {
-                                                layer.msg('退出失败', {
-                                                    icon: 2
-                                                });
-                                            }
-                                        });
-                                }
-                                    break;
+                if (!PnpData.IsIn) {
+                    var uk_sn = getCookie('uk_sn');
+                    var sn = hex_md5(ProduceDate);
+                    if (uk_sn == sn) {
+                        $.post('/admin/Login/logout', function (res) {
+                            if (res.status == 1) {
+                                layer.msg('退出成功', {
+                                    icon: 1
+                                }, function () {
+                                    location.href = 'admin/login'
+                                });
+                            } else {
+                                layer.msg('退出失败', {
+                                    icon: 2
+                                });
                             }
-                        }
-                        s_simnew1.Socket_UK.onclose = function(){
-
-                        }
-                        return true;
-                    }
-
-                    catch(e)
-                    {
-                        alert(e.name + ": " + e.message);
-                        return false;
-                    }
+                        });
                     }
                 }
             }
-        }
 
-        s_pnp.Socket_UK.onclose = function () {
+            s_pnp.Socket_UK.onclose = function () {
 
+            }
         }
-    } catch (e) {
-        alert(e.name + ": " + e.message);
-        return false;
+    } catch
+        (e)
+        {
+            alert(e.name + ": " + e.message);
+            return false;
+        }
     }
 }
-
 function getCookie(cookie_name) {
     var allcookies = document.cookie;
     //索引长度，开始索引的位置
