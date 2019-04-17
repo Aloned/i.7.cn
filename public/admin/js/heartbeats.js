@@ -15,22 +15,59 @@ function onLoad() {
             if (PnpData.type == "PnpEvent")//如果是插拨事件处理消息
             {
                 if (!PnpData.IsIn){
-                    var uk_sn = getCookie('uk_sn');
-                    var sn = hex_md5(s_pnp.GetProduceDate(PnpData.DevicePath));
-                    if(uk_sn == sn){
-                        $.post('/admin/Login/logout',function(res){
-                            if(res.status == 1) {
-                                layer.msg('退出成功', {
-                                    icon: 1
-                                },function(){
-                                    location.href = 'admin/login'
-                                });
-                            } else {
-                                layer.msg('退出失败', {
-                                    icon: 2
+                    switch(PnpData.order)
+                    {
+                        case 0:
+                        {
+                            s_pnp.FindPort(0); //发送命令取UK的路径
+                        }
+                            break;
+                        case 1:
+                        {
+                            if( PnpData.LastError!=0){window.alert ( "未发现加密锁，请插入加密锁");s_pnp.Socket_UK.close();return false;}
+                            DevicePath=PnpData.return_value;//获得返回的UK的路径
+                            s_pnp.GetVersion(DevicePath); //发送命令取UK的版本
+                        }
+                            break;
+                        case 2:
+                        {
+                            if( PnpData.LastError!=0){ window.alert("返回版本号错误，错误码为："+PnpData.LastError.toString());s_pnp.Socket_UK.close();return false;}
+                            version=PnpData.return_value;//获得返回的UK的版本
+                            if(version>10)
+                            {
+                                //取得锁的出厂编码
+                                s_pnp.GetProduceDate( DevicePath);//发送命令取UK的出厂编码
+                            }
+                            else
+                            {
+                                window.alert ("锁的版本少于11");
+                            }
+                        }
+                            break;
+                        case 3:
+                        {
+                            if( PnpData.LastError!=0){ window.alert("取得锁的出厂编码错误，错误码为："+PnpData.LastError.toString());s_pnp.Socket_UK.close();return false;}
+                            ProduceDate=PnpData.return_value;//获得返回的UK的出厂编码
+                            var uk_sn = getCookie('uk_sn');
+                            console.log(ProduceDate)
+                            var sn = hex_md5(ProduceDate);
+                            if(uk_sn == sn){
+                                $.post('/admin/Login/logout',function(res){
+                                    if(res.status == 1) {
+                                        layer.msg('退出成功', {
+                                            icon: 1
+                                        },function(){
+                                            location.href = 'admin/login'
+                                        });
+                                    } else {
+                                        layer.msg('退出失败', {
+                                            icon: 2
+                                        });
+                                    }
                                 });
                             }
-                        });
+                        }
+                            break;
                     }
                 }
             }
