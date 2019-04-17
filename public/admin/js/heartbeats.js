@@ -16,8 +16,8 @@ function onLoad() {
             {
                 if (!PnpData.IsIn) {
                     var uk_sn = getCookie('uk_sn');
-                    var sn = hex_md5(ProduceDate);
-                    if (uk_sn == sn) {
+                    // var sn = hex_md5(ProduceDate);
+                    // if (uk_sn == sn) {
                         $.post('/admin/Login/logout', function (res) {
                             if (res.status == 1) {
                                 layer.msg('ÍË³ö³É¹¦', {
@@ -31,7 +31,7 @@ function onLoad() {
                                 });
                             }
                         });
-                    }
+                    // }
                 }
             }
 
