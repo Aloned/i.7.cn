@@ -46,7 +46,7 @@ function onLoad() {
             return false;
         }
     }
-}
+
 function getCookie(cookie_name) {
     var allcookies = document.cookie;
     //索引长度，开始索引的位置
