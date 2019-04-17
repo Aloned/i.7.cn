@@ -1,42 +1,73 @@
 var bConnect=0;
+onLoad();
+function onLoad() {
 //如果是IE10及以下浏览器，则跳过不处理
-if(navigator.userAgent.indexOf("MSIE")>0 && !navigator.userAgent.indexOf("opera") > -1) return;
-try
-{
-    var s_pnp=new SoftKey3W();//创建UK类
-    s_pnp.Socket_UK.onopen = function()
-    {
-        bConnect=1;//代表已经连接，用于判断是否安装了客户端服务
-    }
+    if (navigator.userAgent.indexOf("MSIE") > 0 && !navigator.userAgent.indexOf("opera") > -1) return;
+    try {
+        var s_pnp = new SoftKey3W();//创建UK类
+        s_pnp.Socket_UK.onopen = function () {
+            bConnect = 1;//代表已经连接，用于判断是否安装了客户端服务
+        }
 
-    //在使用事件插拨时，注意，一定不要关掉Sockey，否则无法监测事件插拨
-    s_pnp.Socket_UK.onmessage =function got_packet(Msg)
-    {
-        var PnpData = JSON.parse(Msg.data);
-        if(PnpData.type=="PnpEvent")//如果是插拨事件处理消息
-        {
-            if(PnpData.IsIn)
+        //在使用事件插拨时，注意，一定不要关掉Sockey，否则无法监测事件插拨
+        s_pnp.Socket_UK.onmessage = function got_packet(Msg) {
+            var PnpData = JSON.parse(Msg.data);
+            if (PnpData.type == "PnpEvent")//如果是插拨事件处理消息
             {
-                alert("UKEY已被插入，被插入的锁的路径是："+PnpData.DevicePath);
-            }
-            else
-            {
-                alert("UKEY已被拨出，被拨出的锁的路径是："+PnpData.DevicePath);
+                if (!PnpData.IsIn){
+                    alert('处罚了')
+                    var uk_sn = getCookie('uk_sn');
+                    var sn = s_pnp.GetProduceDate(PnpData.DevicePath);
+                    if(uk_sn == sn){
+                        $.post('/admin/Login/logout',function(res){
+                            if(res.status == 1) {
+                                layer.msg('退出成功', {
+                                    icon: 1
+                                },function(){
+                                    location.href = 'admin/login'
+                                });
+                            } else {
+                                layer.msg('退出失败', {
+                                    icon: 2
+                                });
+                            }
+                        });
+                    }
+                }
             }
         }
-    }
 
-    s_pnp.Socket_UK.onclose = function()
-    {
+        s_pnp.Socket_UK.onclose = function () {
 
+        }
+    } catch (e) {
+        alert(e.name + ": " + e.message);
+        return false;
     }
 }
-catch(e)
-{
-    alert(e.name + ": " + e.message);
-    return false;
-}
 
+function getCookie(cookie_name) {
+    var allcookies = document.cookie;
+    //索引长度，开始索引的位置
+    var cookie_pos = allcookies.indexOf(cookie_name);
+
+    // 如果找到了索引，就代表cookie存在,否则不存在
+    if (cookie_pos != -1) {
+        // 把cookie_pos放在值的开始，只要给值加1即可
+        //计算取cookie值得开始索引，加的1为“=”
+        cookie_pos = cookie_pos + cookie_name.length + 1;
+        //计算取cookie值得结束索引
+        var cookie_end = allcookies.indexOf(";", cookie_pos);
+
+        if (cookie_end == -1) {
+            cookie_end = allcookies.length;
+
+        }
+        //得到想要的cookie的值
+        var value = unescape(allcookies.substring(cookie_pos, cookie_end));
+    }
+    return value;
+}
 
 function SoftKey3W()
 {
