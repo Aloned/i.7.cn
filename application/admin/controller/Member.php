@@ -98,7 +98,11 @@ class Member extends Base
 				$data = $request->except('password');
 			}
             if($data['bind_sn'] == 1){
-                $data['uk_sn'] = md5($data['uk_sn']);
+                if($data['uk_sn'] == '点击加载当前UKey编码'){
+                    unset($data['uk_sn']);
+                }else{
+                    $data['uk_sn'] = md5($data['uk_sn']);
+                }
             }else{
                 $data['uk_sn'] = '';
             }
