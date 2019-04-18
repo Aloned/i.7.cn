@@ -121,7 +121,7 @@
 										<div class="layui-input-inline my-input-line">
 											<input type="radio" lay-filter="bind_sn" name="bind_sn" value="1" title="是" />
 											<input type="radio" lay-filter="bind_sn" name="bind_sn" value="0" title="否" checked="checked"/>
-											<input onclick="login_onclick()" type="text" name="uk_sn" id="uksn" readonly value="点击加载当前加密狗编码" style="display: none;width: 300px;height: 28px;font-size: 16px;text-align: center">
+											<input onclick="login_onclick()" type="text" name="uk_sn" id="uksn" readonly value="点击加载当前Ukey编码" style="display: none;width: 300px;height: 28px;font-size: 16px;text-align: center;cursor: pointer">
 										</div>
 									</div>
 								</td>
@@ -151,44 +151,6 @@
 			version: new Date().getTime(),
 			base: '__PUBLIC__/admin/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
 		}).use('admin'); //加载入口
-
-//		function load()
-//		{
-//			//如果是IE10及以下浏览器，则跳过不处理
-//			if(navigator.userAgent.indexOf("MSIE")>0 && !navigator.userAgent.indexOf("opera") > -1) return;
-//			try
-//			{
-//				var s_pnp=new SoftKey3W();//创建UK类
-//				s_pnp.Socket_UK.onopen = function()
-//				{
-//					bConnect=1;//代表已经连接，用于判断是否安装了客户端服务
-//				}
-//
-//				//在使用事件插拨时，注意，一定不要关掉Sockey，否则无法监测事件插拨
-//				s_pnp.Socket_UK.onmessage =function got_packet(Msg)
-//				{
-//					var PnpData = JSON.parse(Msg.data);
-//					if(PnpData.type=="PnpEvent")//如果是插拨事件处理消息
-//					{
-//						if(PnpData.IsIn)
-//						{
-//							login_onclick();
-//						}
-//					}
-//				}
-//
-//				s_pnp.Socket_UK.onclose = function()
-//				{
-//
-//				}
-//			}
-//			catch(e)
-//			{
-//				alert(e.name + ": " + e.message);
-//				return false;
-//			}
-//		}
-
 
         function login_onclick()
         {
