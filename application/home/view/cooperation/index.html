@@ -6,18 +6,48 @@
 
 	<!-- 动态 -->
 <form id="formcop" method="post" action="">
-	<input type="text" id="name" name="name" placeholder="姓名">
-	<input type="text" id="company" name="company" placeholder="公司">
-	<input type="text" id="position" name="position" placeholder="职位">
-	<input type="text" id="tel" name="tel" placeholder="联系方式">
-	<select id="cooperation_ways" name="cooperation_ways">
-		<option value="">合作方式</option>
-		<option value="1">冠名/分论坛冠名</option>
-		<option value="2">主办方</option>
-		<option value="3">协办方</option>
-		<option value="4">参展方</option>
-	</select>
-	<button id="submit" type="submit">提交</button>
+	<div class="user-login">
+		<h3 class="textc fontb font36 col000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商 务 合 作</h3>
+		<div class="wrap">
+			<dl class="clearfix formstyle">
+				<dt class="textr">姓名</dt>
+				<dd><input type="text" id="name" name="name" placeholder="请输入您的姓名" class="input1 phoneInput"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt class="textr">公司</dt>
+				<dd><input type="text" id="company" name="company" placeholder="请输入您的公司" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt class="textr">职务</dt>
+				<dd><input type="text" id="position" name="position" placeholder="请输入您的职务" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt class="textr">联系方式</dt>
+				<dd><input type="text" id="tel" name="tel" placeholder="请输入您的联系方式" class="input1"></dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt class="textr">合作方式</dt>
+				<dd>
+					<select id="cooperation_ways" style="width: 350px;height: 50px;text-align: left;cursor: pointer;color: #5b5b5b" name="cooperation_ways">
+						<option value="">请选择您希望的合作方式</option>
+						<option value="1">冠名/分论坛冠名</option>
+						<option value="2">主办方</option>
+						<option value="3">协办方</option>
+						<option value="4">参展方</option>
+					</select>
+				</dd>
+			</dl>
+			<dl class="clearfix formstyle">
+				<dt>&nbsp;</dt>
+				<dd><button type="submit" style="width: 350px;height: 40px;background: #ff3030;color: white" id="submit" class="user-login-btn">提交</button></dd>
+			</dl>
+		</div>
+	</div>
+	<!--<input type="text" id="name" name="name" placeholder="姓名">-->
+	<!--<input type="text" id="company" name="company" placeholder="公司">-->
+	<!--<input type="text" id="position" name="position" placeholder="职位">-->
+	<!--<input type="text" id="tel" name="tel" placeholder="联系方式">-->
+
 </form>
 <script src="__PUBLIC__/plugins/layui/layui.all.js"></script>
 <include file="public/footer"/>
@@ -51,7 +81,7 @@
 		var i = true;
 		$.ajax({
 			type: "GET",
-			url: "existPhone",
+			url: "/home/cooperation/existPhone",
 			data: "phone="+phone,
 			async: false,
 			success: function(e){
