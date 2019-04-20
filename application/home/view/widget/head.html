@@ -19,6 +19,9 @@
 				<case value="4|7">
 					<a href="{:url('/partner/'.$vo.cat_id)}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
 				</case>
+		<case value="56">
+			<a href="{:url('/home/cooperation')}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
+		</case>
 			</switch>
 		</li>
 	</volist>
