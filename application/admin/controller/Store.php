@@ -8,29 +8,6 @@ use think\Paginator;
 
 class Store extends Base
 {
-    public function index1(){
-        $list = Db::name('store')->select();
-        foreach ($list as $value){
-            $res = Db::name('admin')->where(['tel'=>$value['store_tel']])->find();
-            if(!$res){
-                //生成管理员信息
-                $data1['role_id'] = 5;
-                $data1['store_id'] = $value['store_id'];
-                $data1['user_name'] = $value['store_tel'];
-                $data1['true_name'] = $value['store_contact'];
-                $data1['tel'] = $value['store_tel'];
-                $data1['is_open'] = 1;
-                $data1['password'] = md5('123456');
-                $data1['add_time'] = time();
-                $data1['last_login'] = time();
-                $data1['last_ip'] = '';
-
-                $res = Db::name('admin')->insert($data1);
-            }
-        }
-        echo 12;
-    }
-
     //资源审核列表
     public function resource()
     {
@@ -174,7 +151,7 @@ class Store extends Base
     }
 
 
-    //领票点资源上传
+    //资源上传
     public function uploadresource(){
         $request = Request::instance();
         if($request->isPost()){
