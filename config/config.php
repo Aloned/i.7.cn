@@ -259,5 +259,16 @@ return [
 		['id'=>4,'name'=>'商品模型'],*/
 		['id'=>5,'name'=>'单页模型'],
 		/*['id'=>6,'name'=>'表单模型']*/
-	]
+	],
+    // +----------------------------------------------------------------------
+    // | 七牛设置
+    // +----------------------------------------------------------------------
+    'qiniu'                 => [
+        // accessKey
+        'accessKey'    => '7YKPK73lkZP0UvLog4LqymohPRn3eFu0IIjayDA8',
+        // secretKey
+        'secretKey'    => 'knpWEHEp0wooV3YdWJ11DzHb5vOsGEFKK2g2g4Sq',
+        // bucket
+        'bucket'      => 'host01',
+    ],
 ];
