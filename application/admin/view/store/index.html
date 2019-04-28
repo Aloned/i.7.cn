@@ -86,8 +86,9 @@
 					     		 	<td><span class="txt-color3">{$vo.store_amount}</span></td>
 					     		 	<td><span class="txt-color2">{:specTicket($vo.store_id)}</span></td>
 					     		 	<td><span class="txt-color4">{$vo.store_amount - specTicket($vo.store_id)}</span></td>
-					     		 	<td style="font-size: 13px">
+					     		 	<td style="font-size: 13px;width: 80px;text-align: center">
 										<span class="txt-color4">已上传：{:resourceCount($vo.store_id)}</span>
+										<br>
 										<span class="txt-color2">已通过：{:resourcePassCount($vo.store_id)}</span>
 									</td>
 					     		 	<td>{$vo.store_address|mb_substr=0,20,'utf8'}</td>
