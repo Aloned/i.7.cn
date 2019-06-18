@@ -163,9 +163,39 @@ audio,canvas,video,progress{display:inline-block;}
 .zone img{
     width: 30%
 }
-.user-list img{
+/*.user-list img{*/
+    /*width: 30%;*/
+    /*margin-bottom: .2rem;*/
+/*}*/
+.user-list{
+    text-align: center;
+    color: #fff;
+    font-size: .15rem;
+}
+.user-list .user-infos{
+    display: inline-block;
     width: 30%;
+    height: 2.7rem;
+    margin-right: 1%;
     margin-bottom: .2rem;
+    position: relative;
+    background-size: cover;
+    text-align: left;
+}
+.user-list .user-infos p{
+    padding-left: .24rem;
+}
+.user-list .user-infos .u-name{
+    font-size: .32rem;
+    font-weight: bold;
+    margin-top: 1.2rem;
+}
+.user-list .user-infos .u-line{
+    width: .5rem;
+    height: .04rem;
+    border-radius: 4px;
+    background: #fff;
+    margin-left: .24rem;
 }
 .partner{
     padding: 0 .36rem;
