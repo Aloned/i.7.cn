@@ -64,20 +64,17 @@
     		<span class="section-title">嘉宾阵容</span>
     		<img src="/public/mobile/index/black-right.png">
     	</div>
-    	<div class="user-list">
-    		<img src="/public/mobile/index/user1.png">
-    		<img src="/public/mobile/index/user1.png">
-    		<img src="/public/mobile/index/user3.png">
-    		<img src="/public/mobile/index/user1.png">
-    		<img src="/public/mobile/index/user2.png">
-    		<img src="/public/mobile/index/user3.png">
-    		<img src="/public/mobile/index/user1.png">
-    		<img src="/public/mobile/index/user2.png">
-    		<img src="/public/mobile/index/user3.png">
-    		<img src="/public/mobile/index/user1.png">
-    		<img src="/public/mobile/index/user2.png">
-    		<img src="/public/mobile/index/user3.png">
-    	</div>
+		<div class="user-list">
+			<volist name="guestList" id="vo">
+			<div class="user-infos" style="background: url('{$vo.thumb}') center no-repeat;">
+				<p class="u-name">{$vo.title}</p>
+				<p class="u-line"></p>
+				<p class="u-des u-des1">{$vo.subtitle}</p>
+				<p class="u-des u-des2">参会嘉宾</p>
+			</div>
+			</volist>
+
+		</div>
     	<div class="section-tit">
     		<img src="/public/mobile/index/black-left.png">
     		<span class="section-title">合作伙伴</span>
