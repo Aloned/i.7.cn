@@ -3,3 +3,4 @@ runtime/
 uploads/
 composer.json
 composer.lock
+.idea/

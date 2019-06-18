@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background: #f7f8fa;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left
+}
+
+.f60 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px
+}
+
+.clean {
+    overflow: hidden
+}
+
+.box {
+    height: 1382px;
+    background: url('../images/img/topbg.png') center no-repeat;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 46px;
+    left: 56px;
+
+}
+
+.head-list {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 26%;
+    overflow: hidden
+}
+
+.head-list>li {
+    float: left;
+    margin-left: 3.4%;
+    margin-top: 82px;
+}
+
+.triangle-up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #fff;
+    margin-left: 2px
+}
+
+.box .content {
+    width: 90%;
+    margin: 80px auto 0;
+    position: relative;
+    text-align: center;
+}
+
+.content .left-banner {
+    position: absolute;
+    left: 0
+}
+
+.content .right-banner {
+    position: absolute;
+    right: 0
+}
+
+.content .content-tit {
+    display: inline-block;
+    margin-top: 36px;
+    width: 392px;
+    height: 108px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.content .content-txt {
+    width: 200px;
+    height: 50px;
+    margin: 30px auto;
+    overflow: hidden
+}
+
+.content .date {
+    font-size: 40px;
+    margin-right: 14px;
+}
+
+.btn {
+    margin-top: 36px;
+    width: 340px;
+    height: 86px;
+    display: inline-block;
+    background: url('../images/img/btn.png') center no-repeat;
+    background-size: cover;
+    line-height: 70px;
+    font-size: 30px;
+}
+
+.btn .arrow {
+    display: inline-block;
+    margin-left: 4px;
+    width: 24px;
+    height: 24px;
+    background: url('../images/img/arrow.png') center no-repeat;
+    background-size: 100%;
+}
+
+.man {
+    /* min-height: 2590px; */
+    background: #f7f8fa;
+    text-align: center;
+    z-index: 1;
+    /* margin-top: -270px; */
+}
+
+.man .show-list {
+    width: 82%;
+    min-height: 270px;
+    margin: -270px auto 0;
+    position: relative;
+    background: #f7f8fa;
+}
+
+.show-box {
+    /*height: 270px;*/
+    padding-top: 90px;
+}
+
+.man-ul {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.man-ul li {
+    position: relative;
+    width: 19%;
+    height: 276px;
+    margin: 2px;
+    overflow: hidden
+}
+
+.man-ul .man-img {
+    width: 100%;
+    height: 100%;
+}
+
+.man-desc {
+    width: 100%;
+    height: 100%;
+    background: rgba(239, 92, 50, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding-left: 26px;
+    padding-top: 36px;
+}
+
+.man-textdesc {
+    margin-top: 80px;
+    font-size: 18px;
+}
+
+.man .line {
+    width: 60px;
+    height: 4px;
+    background: #fff;
+    margin-bottom: 6px;
+}
+
+.man .zone-list {
+    width: 83%;
+    margin: 190px auto 0
+}
+.zone-list .zone{
+    width: 100%
+}
+.zone-list li {
+    width: 33%;
+    float: left;
+    position: relative;
+    color: #fff;
+}
+
+.zone-list .right-arrow {
+    position: absolute;
+    left: 80px;
+    bottom: 100px;
+    width: 8%;
+}
+
+.zone-list .btc {
+    position: absolute;
+    right: 70px;
+    bottom: 70px;
+    width: 25%;
+}
+
+.zone-list .zone-tit {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    font-size: 40px;
+}
+
+.bg-right {
+    position: absolute;
+    right: 0;
+    top: 1700px;
+}
+
+.partner {
+    width: 92%;
+    /*height: 1380px;*/
+    background: #fff;
+    z-index: 14;
+    position: relative;
+    margin-top: 90px;
+}
+
+.partner .par-list {
+    margin-left: 25%;
+    width: 75%;
+}
+
+.par-listInfo {
+    margin-top: 70px;
+    font-size: 28px;
+}
+
+.par-listInfo .par-tit {
+    margin-bottom: 36px;
+}
+.yun{
+    width: 190px;
+}
+
+.par-tit .zhu {
+    display: inline-block;
+    width: 8px;
+    height: 28px;
+    background: #fe5a2c;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.par-listInfo li {
+    display: inline-block
+}
+
+.back {
+    width: 92%;
+    margin-left: 8%;
+    background: #111a51;
+    margin-top: -100px;
+    position: relative;
+    height: 1750px;
+}
+
+.backInfo {
+    padding-top: 200px;
+    margin-right: 146px;
+    color: #fff;
+    position: relative;
+    z-index: 11;
+    background: #111a51;
+}
+
+.card-list {
+    width: 98%;
+    margin: 110px auto 0;
+}
+
+.card-list li {
+    background: #18215a;
+    border-radius: 14px;
+    text-align: center;
+    width: 22%;
+    height: 380px;
+    margin-left: 3%;
+    float: left;
+    margin-bottom: 30px
+}
+
+.card-list li:hover {
+    background: #092acf;
+}
+
+.card-img {
+    margin-top: 80px;
+}
+
+.card-line {
+    display: inline-block;
+    width: 70px;
+    height: 4px;
+    border-radius: 4px;
+    background: #3e4574;
+    margin-top: 24px;
+}
+
+.card-num {
+    font-size: 50px;
+    margin-top: 28px;
+}
+
+.card-desc {
+    font-size: 28px;
+    margin-top: 12px;
+}
+
+.zhuzi {
+    position: absolute;
+    right: 0;
+    top: 800px;
+}
+
+.back-meet {
+    margin-top: 100px;
+    margin-left: 10%;
+}
+
+.meet-list {
+    width: 46%;
+    height: 416px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 4%;
+    padding-left: 4%;
+}
+
+.meet1 {
+    background: url('../images/img/m1.png') center no-repeat;
+}
+
+.meet2 {
+    background: url('../images/img/m2.png') center no-repeat;
+}
+
+.meet-list .meet-tit {
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 44%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #6f7ca8
+}
+
+.meet-list .meet-num {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.back .bg-left {
+    position: absolute;
+    top: 1000px;
+    left: -200px;
+}
+
+.msg {
+    width: 100%;
+    margin-top: 180px;
+    height: 940px;
+    background: #fff;
+}
+
+.msg .map {
+    width: 80%;
+    margin: 108px auto 0;
+}
+
+.map>div {
+    float: left
+}
+
+.map-info {
+    width: 67%;
+    height: 906px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #373950;
+}
+
+.map-img {
+    width: 100%;
+}
+
+.map-text {
+    padding-left: 100px;
+    padding-top: 60px;
+    color: #fff;
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5
+}
+
+.map-r {
+    width: 32%;
+    min-height: 400px;
+    position: relative;
+    top: -76px;
+}
+
+.ting {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.map-box {
+    width: 362px;
+    height: 594px;
+    background: #fe5a2c;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 322px;
+    padding-left: 26px;
+    color: #fff;
+    padding-top: 60px;
+    line-height: 2;
+}
+
+.map-line {
+    background: #fe8c6c;
+    width: 38px;
+    height: 4px;
+    margin-top: 50px;
+    margin-bottom: 22px;
+}
+
+.bg-gray {
+    width: 100%;
+    height: 596px;
+    background: #f7f8fa;
+}
+
+.touch {
+    width: 100%;
+    height: 764px;
+    background: #111a51;
+    text-align: center;
+    color: #fff;
+}
+
+.ours {
+    width: 74%;
+    margin: 20px auto 120px;
+    text-align: left;
+}
+
+.ours-li {
+    display: inline-block;
+    position: relative;
+    width: 23%;
+    height: 338px;
+    border-radius: 10px;
+    background: #fe5a2c;
+    padding-left: 2%;
+    margin-right: 1%;
+}
+
+.douhao {
+    position: absolute;
+    left: 52px;
+    top: -32px;
+}
+
+.our-tit {
+    margin-top: 76px;
+    margin-bottom: 16px;
+}
+
+.our-line {
+    width: 80px;
+    height: 4px;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.our-textInfo {
+    font-size: 22px;
+    margin-top: 60px;
+    line-height: 1.5
+}
+
+.foot {
+    color: #999999;
+    font-size: 16px;
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold
+}
+
+.foot .f25 {
+    font-size: 25px;
+}
