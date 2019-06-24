@@ -1,4 +1,25 @@
-<include file="public/header"  title="{$detail.title} - {$website.title}" keywords="{$detail.keywords}" description="{$detail.description}"/>
+<!doctype HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+	<title>第七届创业者大会</title>
+	<link rel="stylesheet" href="/public/mobile/style/index.css">
+	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+        var html = document.getElementsByTagName("html")[0];
+        var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        html.style.fontSize = oWidth/pwidth*prem + "px";
+	</script>
+</head>
+<body>
+<header class="head">
+	<img src="__PUBLIC__/mobile/index/logo.png" class="logo">
+	<a href="Online.html"><button class="ticket fr">抢 票</button></a>
+	<span class="fr">报名人数已超<span class="orange">129908</span>人</span>
+</header>
+<section class="mine">
 	<div class="banner-wrap clearfix"></div>
 	<!-- 介绍 -->
 	<article>
@@ -10,4 +31,5 @@
 			</div>
 		</div>
 	</article>
+</section>
 <include file="public/footer"/>
