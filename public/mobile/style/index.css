@@ -258,21 +258,31 @@ audio,canvas,video,progress{display:inline-block;}
     font-size: .18rem;
     color: #8c90ad
 }
-.o-img{
-    margin-top: .4rem;
-    padding-bottom: .54rem;
-    position: relative;
-    padding-left: .42rem;
-    padding-left: 5.6%;
-    text-align: left;
-    overflow-x: scroll;
-    display: flex;
+.o-img?{
+    margin-top:.4rem;
+    padding-bottom:.54rem;
+    position:relative;
+    padding-left:5.6%;
+    text-align:left;
 }
-.o-img img{
-    float: left;
-    width: 5.35rem;
-    height: 3.2rem;
-    margin-right: .4rem;
+.o-img>div{
+    float:left;
+    width:5.35rem;
+    height:3.2rem;
+    margin-right:.4rem;
+    position:relative;
+}
+.o-img>div img{
+    width: 100%;
+    height: 100%;
+}
+.o-img>div>div{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.o-img>div>div>hr{
+    height:0px; border-top:1px solid #eee; border-right:0px; border-bottom:0px; border-left:0px;
 }
 .map{
     width: 90%;
