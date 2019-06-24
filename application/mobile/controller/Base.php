@@ -14,7 +14,7 @@ class Base extends Controller {
     {
         //微信端屏蔽
         if($this->is_weixin()){
-            echo '网站筹备中...';die;
+//            echo '网站筹备中...';die;
         }
     	$request = Request::instance();
     	//select 得到二维数组  find 得到一维数组
