@@ -338,3 +338,421 @@ audio,canvas,video,progress{display:inline-block;}
     bottom: 0;
     right: 0;
 }
+
+/*注册报名页*/
+.text-center{
+    text-align: center;
+}
+.orange{
+    color: #fe5a2c;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.head{
+    height: 1.26rem;
+    background: #000;
+    color: #fff;
+    line-height: 1.26rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.head .logo{
+    width: 22.6%;
+    vertical-align: middle;
+    margin-left: 3%;
+}
+.head .fr{
+    margin-right: .4rem;
+}
+.head span{
+    font-size: .26rem;
+}
+
+
+
+.sign{
+    height: 100%;
+    height: calc(100vh - 1.26rem);
+    padding-top: 1.26rem;
+    background: url('../index/bg-hom.png') center no-repeat;
+    background-size: cover;
+}
+.sign-box{
+    width: 90%;
+    height: 10rem;
+    height: 90%;
+    background: #fff;
+    margin: .4rem auto 0;
+    border-radius: 0.2rem;
+}
+.sign-box form{
+    padding: .2rem .4rem;
+}
+.form-list{
+    height: 1.4rem;
+    border-bottom: 1px solid #ccc;
+    margin-top: .4rem;
+}
+.tit{
+    font-size: .34rem;
+    font-weight: bold;
+}
+input{
+    border: none;
+    outline: none;
+    height: .6rem;
+    font-size: .28rem;
+}
+input::-webkit-input-placeholder{
+    color:#ededed;
+    font-size: .28rem;
+}
+input::-moz-placeholder{
+    color:#ededed;
+    font-size: .28rem;
+}
+input:-moz-placeholder{
+    color:#ededed;
+    font-size: .28rem;
+}
+input:-ms-input-placeholder{
+    color:#ededed;
+    font-size: .28rem;
+}
+.note{
+    font-size: .2rem;
+    color: #a0a0a0;
+    margin-top: .18rem;
+}
+.submit{
+    margin-top: .7rem;
+    width: 6rem;
+    height: 1.2rem;
+    background: url('../index/w/sign-sub.png') center no-repeat;
+    background-size: 100%;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+/*个人中心*/
+.text-center{
+    text-align: center;
+}
+.orange{
+    color: #fe5a2c;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.head{
+    height: 1.26rem;
+    background: #000;
+    color: #fff;
+    line-height: 1.26rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.head .logo{
+    width: 22.6%;
+    vertical-align: middle;
+    margin-left: 3%;
+}
+.head .ticket{
+    width: 18%;
+    height: .56rem;
+    background: url('../index/bg-btn.png') center no-repeat;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    float: right;
+    font-size: .26rem;
+    color: #fff;
+    margin-right: 3%;
+    margin-top: .3rem;
+    margin-left: .1rem;
+}
+.head span{
+    font-size: .22rem;
+}
+
+.foot{
+    height: 1.04rem;
+    background: rgba(57,25,25,.9);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    color: #fff;
+    font-size: .2rem;
+    z-index: 10;
+}
+.foot .foot-list{
+    display: flex;
+    justify-content: space-around
+}
+.foot-list li{
+    width: 16.6%;
+    text-align: center;
+    margin-top: .14rem;
+}
+.foot .foot-list img{
+    width: .46rem;
+    height: .46rem;
+    vertical-align: middle;
+}
+.foot .link-tit{
+    margin-top: .04rem;
+}
+
+.mine{
+    height: 100%;
+    height: calc(100vh - 1.26rem);
+    margin-top: 1.26rem;
+}
+.man{
+    background: url('../index/w/mine-bg.png') center no-repeat;
+    background-size: 100%;
+    height: 4.1rem;
+    position: relative
+}
+.user{
+    color: #fff;
+    padding: 0.6rem .44rem 0;
+}
+.user .photo{
+    width: 1.4rem;
+    margin-right: .12rem;
+}
+.inline{
+    display: inline-block;
+    padding-top: .1rem;
+    width: 5rem;
+}
+.user .user-name{
+    font-size: .46rem;
+    font-weight: bold;
+}
+.user .user-desc{
+    font-size: .24rem;
+}
+.user .quit{
+    width: 1.3rem;
+    height: .55rem;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: .3rem;
+    margin-top: .24rem;
+    font-size: .2rem;
+    padding: .06rem .2rem;
+    background: transparent;
+    color: #fff;
+}
+.man .btnlist{
+    width: 96%;
+    height: 1.5rem;
+    background: #f7f8fa;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+}
+.btnlist .group{
+    width: 4.8rem;
+    height: .7rem;
+    border-radius: .4rem;
+    margin: .32rem auto 0;
+    background: #ebecf5;
+    overflow: hidden;
+}
+.group .list-info{
+    height: .7rem;
+    line-height: .7rem;
+    color: #000;
+    font-size: .26rem;
+    text-align: center;
+    display: inline-block;
+    width: 42%;
+    font-weight: bold;
+    border-radius: .4rem;
+}
+.group .activit{
+    background: #405df6;
+    color: #fff;
+}
+.groups {
+    padding: 0 6%;
+}
+.list-ul{
+    margin-top: -.1rem;
+    display: flex;
+    justify-content: space-around
+}
+.list-ul li{
+    width: 2.1rem;
+    height: 2.7rem;
+    background: #fff;
+    text-align: center;
+}
+.list-ul li img{
+    margin-top: .22rem;
+    width: 1.08rem;
+}
+.list-ul li p{
+    font-size: .5rem;
+    font-weight: bold;
+    margin-bottom: -.1rem;
+}
+.list-ul li div{
+    font-size: .24rem;
+    color: #919191
+}
+.differ{
+    margin-top: .5rem;
+    font-size: .26rem;
+    overflow: hidden;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid #dddddd;
+}
+.differ .mt{
+    margin-top: .26rem;
+}
+.differ .goto{
+    width: 2.14rem;
+    height: .8rem;
+    background: #ea653d;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+.my-invit{
+    font-size: .4rem;
+    font-weight: bold;
+    margin: .44rem 0;
+}
+.table{
+    width: 100%;
+    margin-top: .36rem;
+    border: 1px solid #e8ebf1;
+    color: #000;
+    text-align: center;
+    font-size: .18rem;
+    margin-bottom: 1rem;
+}
+.table th, .table td{
+    width: 33%;
+    height: .7rem;
+    border: none;
+}
+.table th{
+    background: #e8ebf1
+}
+.table tr:nth-child(2n){
+    background: #f7f8fa;
+}
+.dialog{
+    display: none;
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.dialog .dialog-box{
+    width: 6.5rem;
+    height: 7rem;
+    background: #fff;
+    margin: 2.7rem auto 0;
+    border-radius: .2rem;
+    text-align: center
+}
+.plus{
+    display: block
+}
+.copy{
+    display: none;
+    position: relative;
+}
+.sun{
+    width: 1.5rem;
+    margin: .6rem auto .4rem;
+}
+.dialog-tit{
+    font-size: .52rem;
+    font-weight: bold
+}
+.dialog-text{
+    font-size: .26rem;
+    color: #999;
+    margin-bottom: .42rem;
+}
+.dialog-box button{
+    width: 2.64rem;
+    height: 1rem;
+    font-size: .34rem;
+    color: #fff;
+    border: none;
+    outline: none
+}
+.make-btn{
+    background: #ea653d
+}
+.copy-btn{
+    background: #000;
+}
+.copy .copy-tit{
+    font-size: .48rem;
+    font-weight: bold;
+    padding: .7rem 0;
+}
+.copy-text{
+    color: #999;
+    font-size: .26rem;
+    margin-bottom: .3rem;
+}
+.close{
+    position: absolute;
+    right: .3rem;
+    top: .3rem;
+    width: .3rem;
+}
+.copy-link{
+    width: 5.86rem;
+    height: .74rem;
+    background: #f5f5f5;
+    border-radius: .5rem;
+    margin: 0 auto;
+    line-height: .74rem;
+    font-size: .25rem;
+}
+.copy-this{
+    width: 3.4rem;
+    height: .9rem;
+    background: #ea653d;
+    font-size: .34rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: .34rem 0 .66rem;
+}
+.copy .tip{
+    font-size: .24rem;
+}
