@@ -1,38 +1,163 @@
-<include file="public/header" title="用户登录 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
-<div class="banner-wrap clearfix"></div>
-<!-- 个人中心 -->
-<!-- 个人中心 -->
-<article>
-	<div class="center-head clearfix">
-		<div class="wrap">
-			<dl class="clearfix">
-				<dt><img src="__PUBLIC__/mobile/images/bgheadimg.png"></dt>
-				<dd>
-					<p class="colfff font32 fontber">{$user.uname}<br/><span class="font26 fontb">普通会员</span></p>
-				</dd>
-			</dl>
-			<ul class="clearfix">
-				<li class="textc">
-					<span class="font36 fontb">{:inviteNumber($user.ucode)}</span>
-					<p class="font22">好友报名数</p>
-				</li>
-				<li class="textc">
-					<span class="font36 fontb">{:invitedNumber($user.ucode)}</span>
-					<p class="font22">好友领票数</p>
-				</li>
-			</ul>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="center-list">
-		<include file="public/uside"/>
-	</div>
-</article>
-
+<!doctype HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta content="telephone=no" name="format-detection" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+<title>第七届创业者大会</title>
 <script type="text/javascript">
-	
+var html = document.getElementsByTagName("html")[0];
+var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+html.style.fontSize = oWidth/pwidth*prem + "px";
 </script>
-
-<include file="public/nfooter" />
+    <link rel="stylesheet" href="/public/mobile/style/index.css">
+    <script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <header class="head">
+    	<img src="__PUBLIC__/mobile/index/logo.png" class="logo">
+        <button class="ticket fr">抢 票</button>
+        <span class="fr">报名人数已超<span class="orange">129908</span>人</span>
+    </header>
+    <section class="mine">
+        <div class="man">
+            <div class="user">
+                <img src="__PUBLIC__/mobile/index/w/mine-photo.png" class="photo">
+                <div class="inline">
+                    <div class="fl">
+                        <p class="user-name">{$user.uname}</p>
+                    <p class="user-desc">普通会员</p>
+                    </div>
+                    <div class="fr">
+                        <button class="quit">退出</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="btnlist">
+                <div class="group">
+                    <div class="list-info activit">邀请榜单</div>
+                    <div class="list-info ">邀请好友列表</div>
+                </div>
+            </div>
+        </div>
+        <div class="groups">
+            <ul class="list-ul">
+                <li>
+                    <img src="__PUBLIC__/mobile/index/w/mine-list1.png">
+                    <p>{$rank}</p>
+                    <div>当前排名</div>
+                </li>
+                <li>
+                    <img src="__PUBLIC__/mobile/index/w/mine-list2.png">
+                    <p>{:inviteNumber($user.ucode)}</p>
+                    <div>已邀请人数</div>
+                </li>
+                <li>
+                    <img src="__PUBLIC__/mobile/index/w/mine-list1.png">
+                    <p>{:downNumber($user.ucode)}</p>
+                    <div>已领票人数</div>
+                </li>
+            </ul>
+            <div class="differ">
+                <p class="fl mt">还差 <span class="orange">{:poorNumber($user.ucode)}</span>人即可升级VIP门票</p>
+                <button class="goto fr">去邀请  <img src="__PUBLIC__/mobile/index/w/right-white.png" alt=""></button>
+            </div>
+            <p class="my-invit">邀请排行榜</p>
+            <table class="table">
+                <thead>
+                    <th>排名</th>
+                    <th>用户</th>
+                    <th>邀请人数</th>
+                </thead>
+                <tbody>
+                <volist name="sortlist" id="vo">
+                    <tr>
+                        <td>{$i}</td>
+                        <td>{$vo.uname}</td>
+                        <td>{$vo.invited}</td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+        
+    </section>
+    <section class="dialog">
+        <div class="dialog-box">
+            <div class="plus">
+                <img src="__PUBLIC__/mobile/index/w/mine-sun.png" class="sun"><br>
+                <h1 class="dialog-tit">邀请好友</h1>
+                <p class="dialog-text">生成本人专属邀请函，转发朋友圈。<br> 10名好友通过专属邀请函报名并领票后，<br>可升级为VIP门票。</p>
+                <button class="make-btn">生成邀请函</button>
+                <button class="copy-btn">复制链接</button>
+            </div>
+            <div class="copy">
+                <h1 class="copy-tit">邀请好友</h1>
+                <p class="copy-text">复制链接发给好友，让大家知道这个<br>热血沸腾人，充满希望的集会</p>
+                <img src="__PUBLIC__/mobile/index/w/close.png" class="close">
+                <div class="copy-link">http://7.ih.cn//online.html?ufrom=XA4U8</div>
+                <button class="copy-this">复制链接</button>
+                <p class="tip">赢VIP门票，创业大会大礼包</p>
+            </div>
+        </div>
+    </section>
+    <footer class="foot">
+        <ul class="foot-list">
+            <li>
+                <a href="index.html">
+                    <img src="__PUBLIC__/mobile/index/h1.png">
+                    <p class="link-tit">首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="__PUBLIC__/mobile/index/h2.png">
+                    <p class="link-tit">分论坛</p>
+                </a>
+            </li>
+            <li>
+                <a href="exhibition.html">
+                    <img src="__PUBLIC__/mobile/index/h3.png">
+                    <p class="link-tit">展会</p>
+                </a>
+            </li>
+            <li>
+                <a href="getTickets.html">
+                    <img src="__PUBLIC__/mobile/index/h4.png">
+                    <p class="link-tit">领票点</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="__PUBLIC__/mobile/index/h5.png">
+                    <p class="link-tit">议程</p>
+                </a>
+            </li>
+            <li>
+                <a href="mine.html">
+                    <img src="__PUBLIC__/mobile/index/w/select-mine.png">
+                    <p class="link-tit orange">我的</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.goto').click(function(){
+                $('.dialog').show()
+            })
+            $('.make-btn').click(function(){
+                $('.plus').hide()
+                $('.dialog-box .copy').show()
+            })
+            $('.copy-this, .copy-btn').click(function(){
+                $('.dialog').hide()
+                $('.dialog-box .copy').hide()
+                 $('.plus').show()
+            })
+        })
+    </script>
+</body>
+</html>
