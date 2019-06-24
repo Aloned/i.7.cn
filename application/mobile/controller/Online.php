@@ -18,4 +18,12 @@ class Online extends Base
     	$this->assign('nav',0);
 		return view();
     }
+
+    //联系我们
+    public function exhibition()
+    {
+        die;
+        return view();
+    }
+
 }

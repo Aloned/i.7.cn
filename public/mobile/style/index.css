@@ -258,7 +258,7 @@ audio,canvas,video,progress{display:inline-block;}
     font-size: .18rem;
     color: #8c90ad
 }
-.o-img?{
+.o-img{
     margin-top:.4rem;
     padding-bottom:.54rem;
     position:relative;
@@ -339,7 +339,7 @@ audio,canvas,video,progress{display:inline-block;}
     right: 0;
 }
 
-/*◊¢≤·±®√˚“≥*/
+/*◊¢ÔøΩ·±®ÔøΩÔøΩ“≥*/
 .text-center{
     text-align: center;
 }
@@ -442,7 +442,7 @@ input:-ms-input-placeholder{
     color: #fff;
 }
 
-/*∏ˆ»À÷––ƒ*/
+/*ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ*/
 .text-center{
     text-align: center;
 }
@@ -755,4 +755,182 @@ input:-ms-input-placeholder{
 }
 .copy .tip{
     font-size: .24rem;
+}
+
+ .contentArea {
+     padding: 1.76rem 0.4rem 1.2rem;
+ }
+.contentArea .ticketTitle {
+    font-size:0.5rem;
+    font-family:PingFangSC-Semibold;
+    font-weight:bold;
+    color:rgba(0,0,0,1);
+}
+.contentArea .lineBottom {
+    width: 0.98rem;
+    height: 0.08rem;
+    background-color: #405DF6;
+    margin-top: 0.2rem;
+}
+.contentArea .tipsTicket {
+    font-size:0.28rem;
+    font-family:PingFangSC;
+    font-weight:bold;
+    color:rgba(153,153,153,1);
+}
+.contentArea .placeList{
+    background-color: #fff;
+    padding: 0.56rem 0.1rem 0.56rem 0.2rem;
+    margin-left: -0.4rem;
+    margin-right: -0.4rem;
+    margin-top: 0.5rem;
+}
+.contentArea .placeList .placeItem {
+    display: inline-block;
+    width:1.6rem;
+    height:0.64rem;
+    border-radius:0.32rem;
+    text-align: center;
+    line-height: 0.64rem;
+    font-size:0.24rem;
+    font-family:PingFangSC;
+    font-weight:bold;
+    color:#333;
+    margin: 0.12rem 0.05rem;
+    background: #F6F6F6;
+}
+.contentArea .placeList .yellowColorItem{
+    background:rgba(234,101,61,1);
+    color: #fff;
+}
+.contentArea .detailItem {
+    padding-top: 0.1rem;
+}
+.contentArea .DetailPlace .detailItem {
+    padding-top: 0.48rem;
+    padding-bottom: 0.4rem;
+    border-bottom:1px solid rgba(221,221,221,1);
+}
+.contentArea .DetailPlace .detailItem .ticketNum {
+    font-size:0.26rem;
+    font-family:PingFangSC;
+    font-weight:bold;
+    margin-bottom: 0.24rem;
+}
+.contentArea .DetailPlace .detailItem .ticketNum p:first-child{
+    display: inline-block;
+    color: #999;
+    padding-right: 0.25rem;
+    border-right: 1px solid rgba(220,220,220,1); ;
+}
+.contentArea .DetailPlace .detailItem .ticketNum p:last-child{
+    display: inline-block;
+    color: #EA653D;
+    padding-left: 0.2rem;
+}
+.contentArea .DetailPlace .detailItem .ticketNum img{
+    width: 0.12rem;
+    height: 0.06rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.1rem;
+}
+.contentArea .DetailPlace .detailItem .placeName {
+    font-size:0.28rem;
+    font-family:PingFangSC;
+    font-weight:bold;
+    color:rgba(0,0,0,1);
+}
+/*Â±ï‰Ωç*/
+ .contentArea{
+     padding-top: 1.26rem;
+     height: 600px;
+ }
+.contentArea .headerNextImg {
+    height: 2.82rem;
+    background: url("../index/s/headerImg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.contentArea .showImg {
+    /*background-color: #fff;*/
+    height: 7.2rem;
+}
+.contentArea .showImg .imgBtn {
+    position: relative;
+    top:-0.98rem;
+    width: 7.2rem;
+    padding: 0.52rem 0.38rem 0;
+    box-sizing: border-box;
+    background-color: #f7f8fa;
+    height: 7.72rem;
+    margin: auto;
+
+}
+.contentArea .showImg .imgBtn .titleName{
+    font-size:0.4rem;
+    font-family:PingFangSC-Semibold;
+    font-weight:bold;
+    color:rgba(0,0,0,1);
+    margin-bottom: 0.38rem;
+}
+.contentArea .showImg .imgBtn .blowContent {
+    background-color: #fff;
+    padding-bottom: 0.2rem;
+}
+.contentArea .showImg .imgBtn img{
+    width: 100%;
+}
+.contentArea .showImg .imgBtn .goShower{
+    margin: auto;
+    margin-top: 0.2rem;
+    width:3.14rem;
+    height:0.8rem;
+    background:rgba(236,101,61,1);
+    font-size:0.26rem;
+    font-family:STHeitiSC-Medium;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    line-height: 0.8rem;
+}
+.contentArea .showImg .imgBtn .goShower img{
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.18rem;
+    vertical-align: middle;
+}
+
+.goEnterprise {
+    padding: 0 0.52rem;
+    box-sizing: border-box;
+}
+.goEnterprise .titleItem{
+    font-size:0.4rem;
+    font-family:PingFangSC-Semibold;
+    font-weight:bold;
+    color:rgba(0,0,0,1);
+    margin-bottom: 0.34rem;
+}
+.enterpriseList {
+    background-color: #fff;
+    padding: 8px 7px;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+.enterpriseList ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom:1px solid rgba(236,236,236,1);
+}
+.enterpriseList ul li:last-child {
+    border: none;
+}
+.enterpriseList ul li img{
+    width: 1.56rem;
+    height: 1.14rem;
+}
+.enterpriseList ul li .name_position {
+    width: 4.6rem;
+    padding-left: 0.38rem;
 }
