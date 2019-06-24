@@ -1,61 +1,72 @@
-<include file="public/header" title="在线报名 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
-<div class="banner-wrap clearfix"></div>
+<!doctype HTML>
+<html>
 
-<!-- 报名 -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+    <title>第七届创业者大会</title>
+    <script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+    (function(e, t) { var i = document,
+            n = window; var l = i.documentElement; var r, a; var d, o = document.createElement("style"); var s;
 
-<article id="step1" style="display: none">
-	<div class="user-login">
-		<h3 class="fontb textc col000">在线报名</h3>
-		<div class="wrap">
-			<dl class="clearfix formstyle">
-				<dt class="textr">手机</dt>
-				<!--<dd><input type="text" name="utel" placeholder="请输入您的手机号" class="input1 phoneInput"></dd>-->
-			</dl>
-			<dl class="clearfix formstyle">
-				<dt class="textr">验证码</dt>
-				<dd>
-					<input type="text" name="code" placeholder="请输入您的验证码" class="input1 codeInput">
-					<a href="javascript:;" class="sendbtn">发送验证码</a>
-				</dd>
-			</dl>
-			<a href="javascript:;" class="user-login-btn nextstep">下一步</a>
+        function m() { var i = l.getBoundingClientRect().width; if (!t) { t = 540 } if (i > t) { i = t } var n = i * 100 / e;
+            o.innerHTML = "html{font-size:" + n + "px;}" } r = i.querySelector('meta[name="viewport"]');
+        a = "width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"; if (r) { r.setAttribute("content", a) } else { r = i.createElement("meta");
+            r.setAttribute("name", "viewport");
+            r.setAttribute("content", a); if (l.firstElementChild) { l.firstElementChild.appendChild(r) } else { var c = i.createElement("div");
+                c.appendChild(r);
+                i.write(c.innerHTML);
+                c = null } } m(); if (l.firstElementChild) { l.firstElementChild.appendChild(o) } else { var c = i.createElement("div");
+            c.appendChild(o);
+            i.write(c.innerHTML);
+            c = null } n.addEventListener("resize", function() { clearTimeout(s);
+            s = setTimeout(m, 300) }, false);
+        n.addEventListener("pageshow", function(e) { if (e.persisted) { clearTimeout(s);
+                s = setTimeout(m, 300) } }, false); if (i.readyState === "complete") { i.body.style.fontSize = "16px" } else { i.addEventListener("DOMContentLoaded", function(e) { i.body.style.fontSize = "16px" }, false) } })(750, 750);
+    </script>
+    <link rel="stylesheet" href="__PUBLIC__/mobile/style/index.css">
+</head>
 
-		</div>
-	</div>
-</article>
-
-<!-- 报名 -->
-<article id="step2">
-	<div class="user-login">
-		<h3 class="textc fontb font36 col000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;报 名</h3>
-		<div class="wrap">
-			<dl class="clearfix formstyle">
-				<dt class="textr">手机</dt>
-				<dd><input type="text" name="utel" placeholder="请输入您的手机号" class="input1 phoneInput"></dd>
-			</dl>
-			<dl class="clearfix formstyle">
-				<dt class="textr">名字</dt>
-				<dd><input type="text" id="uname" name="uname" placeholder="请输入您的姓名" class="input1"></dd>
-			</dl>
-			<dl class="clearfix formstyle">
-				<dt class="textr">公司</dt>
-				<dd><input type="text" id="ucompany" name="ucompany" placeholder="请输入公司名称" class="input1"></dd>
-			</dl>
-			<dl class="clearfix formstyle">
-				<dt class="textr">职务</dt>
-				<dd><input type="text" id="uposition" name="uposition" placeholder="请输入目前职务" class="input1"></dd>
-			</dl>
-			<a href="javascript:;" id="submit" class="user-login-btn">提交</a>
-		</div>
-	</div>
-</article>
-
+<body>
+    <header class="head">
+        <img src="__PUBLIC__/mobile/index/logo.png" class="logo">
+        <span class="fr">报名人数已超44人</span>
+    </header>
+    <div class="sign">
+        <div class="sign-box">
+            <form>
+                <div class="form-list">
+                    <p class="tit">账号</p>
+                    <input type="number" name="utel" class="phoneInput" placeholder="请输入手机号">
+                </div>
+                <div class="form-list">
+                    <p class="tit">姓名</p>
+                    <input type="text" id="uname" name="uname" placeholder="请输入姓名">
+                </div>
+                <div class="form-list">
+                    <p class="tit">公司</p>
+                    <input type="text" id="ucompany" name="ucompany" placeholder="请输入公司名称">
+                </div>
+                <div class="form-list">
+                    <p class="tit">职务</p>
+                    <input type="text" id="uposition" name="uposition" placeholder="请输入目前职务">
+                </div>
+                <p class="note">注：请提交报名者本人真实、准确信息。</p>
+                <div class="text-center">
+                    <button type="submit" href="javascript:;" id="submit" class="submit">提交<img src="__PUBLIC__/mobile/index/w/right-white.png"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 <script type="text/javascript">
     var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-//    var sendBtn = $('.sendbtn');
+    //    var sendBtn = $('.sendbtn');
     var phoneInput = $('.phoneInput'); //手机号
-//    var codeInput = $('.codeInput'); //验证码
-//    var loginBtn = $('.user-login-btn'); //下一步
+    //    var codeInput = $('.codeInput'); //验证码
+    //    var loginBtn = $('.user-login-btn'); //下一步
 
     // 判断手机号是否正确
     function isTel(phoneInput) {
@@ -67,30 +78,6 @@
             return false;
         }
     }
-
-    // 倒计数
-//    function timeCount(sendBtn) {
-//
-//        var wait = 59;
-//        var time = setInterval(function() {
-//            sendBtn.unbind();
-//            sendBtn.text(wait + '秒后');
-//            sendBtn.css('background', '#6f6e6e');
-//            sendBtn.css('pointer-events','none');
-//            sendBtn.css('cursor', 'wait');
-//            wait--;
-//            if(wait < 0) {
-//                clearInterval(time);
-//                sendBtn.text('重新发送');
-//                sendBtn.css('background', '#ff0000');
-//                sendBtn.css('cursor', 'pointer');
-//                sendBtn.css('pointer-events','auto');
-//                sendBtn.click(function() {
-//                    timeCount(sendBtn)
-//                })
-//            }
-//        }, 1000)
-//    }
 
     // 下一步 验证  手机号 和验证码填写是否正确
     function mobileverification() {
@@ -132,40 +119,6 @@
             }
         });
     }
-
-    // 发送验证码
-//    sendBtn.bind('touchstart',function(){
-//        // 判断手机号是否正确
-//        var phoneStuta = isTel(phoneInput);
-//
-//
-//        if(phoneStuta) {
-//            sendBtn.css('background', '#6f6e6e');
-//            sendBtn.css('pointer-events','none');
-//            sendBtn.css('cursor', 'wait');
-//            $.ajax({
-//                type: "post",
-//                url: "{:url('ajax/send')}",
-//                data: {
-//                    'utel': phoneInput.val()
-//                },
-//                dataType: 'json',
-//                async: true,
-//                success: function(res) {
-//                    if(res.status == 1) {
-//                        // 执行倒计数
-//                        timeCount(sendBtn)
-//                    }else{
-//                        alert(res.msg);
-//                    }
-//
-//                },
-//                error: function(e) {
-//                    console.log(e)
-//                }
-//            });
-//        }
-//    });
 
 
     // 下一步
@@ -276,4 +229,4 @@
     }
 
 </script>
-<include file="public/nfooter"/>
+</html>
