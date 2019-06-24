@@ -77,7 +77,7 @@ function poorNumber($ucode){
     $num = invitedNumber($ucode);
     if($num < 10){
         $count = 10 - $num;
-        return '距升级VIP票还差'.$count.'人';
+        return $count;
     }else{
         return '您已生成'.floor($num/10).'张VIP门票，继续加油!';
     }
