@@ -12,6 +12,42 @@ class User extends BaseUser
 {
 	//个人中心
 	public function my(){
+        //获取当前用户邀请码
+        $ucode = Db::name('user')->where('uid',session('userid'))->value('ucode');
+        //我邀请的人
+        $list = Db::name('user')->where('ufrom',$ucode)->select();
+
+        //查询前10人
+        $uid = $_SESSION['think']['userid'];
+        $res = Db::query("SELECT t.invited, tu.uid,tu.uname,tu.ucode FROM(
+		SELECT
+			tu.ufrom,
+			count(1) AS invited
+		FROM
+			md_user tu
+		WHERE
+			tu.ufrom != ''
+		GROUP BY
+			tu.ufrom
+		ORDER BY
+			count(1) DESC
+	) t
+LEFT JOIN md_user tu ON t.ufrom = tu.ucode
+ORDER BY
+	t.invited DESC,
+	tu.uid ASC limit 0,100;");
+        $rank = 0;
+        foreach ($res as $key => $value){
+            if($value['uid'] == $uid){
+                $rank = $key+1;
+            }
+        }
+
+        $this->assign('sortlist',$res);
+        $this->assign('list',$list);
+        $this->assign('rank',$rank);
+        $this->assign('nav2',3);
+        $this->assign('nav',99);
 		$this->assign('nav',99);
 		$this->assign('nav2',1);
 		return view();
