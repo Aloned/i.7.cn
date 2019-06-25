@@ -258,7 +258,7 @@ audio,canvas,video,progress{display:inline-block;}
     font-size: .18rem;
     color: #8c90ad
 }
-.o-img?{
+.o-img{
     margin-top:.4rem;
     padding-bottom:.54rem;
     position:relative;
