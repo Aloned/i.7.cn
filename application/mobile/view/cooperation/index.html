@@ -1,4 +1,46 @@
-<include file="public/header" title="商务合作" keywords="商务合作/报名" description="商务合作"/>
+<!doctype HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+	<title>第七届创业者大会</title>
+	<link rel="stylesheet" href="/public/mobile/style/index.css">
+	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+        var html = document.getElementsByTagName("html")[0];
+        var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        html.style.fontSize = oWidth/pwidth*prem + "px";
+	</script>
+	<style>
+		#formcoop>input{font-size: 0.32rem;border:none;border-bottom: 1px solid #0a0a0a;background: none;width: 86%;height: 0.8rem;margin-top: 0.3rem;margin-left: 7%}
+		#formcoop>p{float: left;font-size:0.32rem;margin-left: 7%;margin-top: 0.2rem;color: #8e8e8e}
+		#cooperation_ways{float: left;margin-top:0.1rem;position:absolute;border:none;width:60%;height:0.65rem;line-height:24px;font-size:0.3rem;background: white;text-align: center;color: #4a4a4a;}
+		#submitcoop{width: 86%;height: 1rem;border:none;font-size: 0.5rem;line-height: 0.6rem;margin: 0.3rem 0 1.2rem 7%;background: #009688;color: white}
+		.layui-layer-btn0{font-size: 0.3rem;!important;}
+		::-webkit-input-placeholder { /* WebKit browsers */
+			color: #999 !important;
+			font-size: 16px;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+			color: #999 !important;
+			font-size: 16px;
+		}
+
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+			color: #999 !important;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+<header class="head">
+	<img src="__PUBLIC__/mobile/index/logo.png" class="logo">
+	<a href="Online.html"><button class="ticket fr">抢 票</button></a>
+	<span class="fr">报名人数已超<span class="orange">129908</span>人</span>
+</header>
+<section class="mine">
 <div style="font-size: 0.5rem">
 	<div class="banner-wrap clearfix"></div>
 
@@ -6,7 +48,7 @@
 
 	<!-- 动态 -->
 <form id="formcoop" method="post" id="sbuforum" action="">
-	<input type="text" id="name" name="name" placeholder="姓名">
+	<input type="text"  id="name" name="name" placeholder="姓名">
 	<input type="text" id="company" name="company" placeholder="公司">
 	<input type="text" id="position" name="position" placeholder="职位">
 	<input type="text" id="tel" name="tel" placeholder="联系方式">
@@ -24,6 +66,7 @@
 	<button id="submitcoop" type="submit">提&nbsp;&nbsp;交</button>
 </form>
 </div>
+</section>
 <script src="__PUBLIC__/plugins/layui/layui.all.js"></script>
 <include file="public/footer"/>
 <script type="text/javascript">
