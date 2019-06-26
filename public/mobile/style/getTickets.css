@@ -48,17 +48,24 @@ audio,canvas,video,progress{display:inline-block;}
     outline: none;
     border: none;
     border-radius: 4px;
+    float: right;
     font-size: .26rem;
     color: #fff;
     margin-right: 3%;
+    margin-top: .3rem;
+    margin-left: .1rem;
 }
 .head span{
-    margin-left:12%;
-    font-size: .26rem;
-    margin-right: 2%;
+    font-size: .22rem;
 }
 .head span i{
     color: #FC5A2C;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
 }
 .home{
     height: 100%;
