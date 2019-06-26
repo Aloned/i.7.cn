@@ -145,7 +145,7 @@
 			async: true,
 			success: function(res) {
 				if(res.status == 1001) {
-					window.location.href = res.url;
+					window.location.href = "{:url('/mobile/my')}";
 				}else{
 					alert(res.msg);
 				}
