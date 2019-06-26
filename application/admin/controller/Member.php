@@ -106,7 +106,7 @@ class Member extends Base
             }else{
                 $data['uk_sn'] = '';
             }
-			
+            unset($data['bind_sn']);
 			$data['add_time'] = time();
 			$data['last_login'] = time();
 			$data['last_ip'] = $request->ip();
