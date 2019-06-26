@@ -1,6 +1,88 @@
-<include file="public/header" title="用户登录 - {$website.title}" keywords="{$website.keywords}" description="{$website.content}" />
-<div class="banner-wrap clearfix"></div>
+<!doctype HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+	<title>第七届创业者大会</title>
+	<link rel="stylesheet" href="/public/mobile/style/index.css">
+	<script src="__PUBLIC__/mobile/js/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/reset.css?ver=06111957">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/style/style.css?ver=06111957">
+	<script type="text/javascript">
+        var html = document.getElementsByTagName("html")[0];
+        var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        html.style.fontSize = oWidth/pwidth*prem + "px";
+	</script>
+	<style>
+		#formcoop>input{font-size: 0.32rem;border:none;border-bottom: 1px solid #0a0a0a;background: none;width: 86%;height: 0.8rem;margin-top: 0.3rem;margin-left: 7%}
+		#formcoop>p{float: left;font-size:0.32rem;margin-left: 7%;margin-top: 0.2rem;color: #8e8e8e}
+		#cooperation_ways{float: left;margin-top:0.4rem;position:absolute;border:1px solid black;width:60%;height:0.65rem;line-height:24px;font-size:0.3rem;background: white;text-align: center;color: #4a4a4a;}
+		#submitcoop{width: 86%;height: 1rem;border:none;font-size: 0.5rem;line-height: 0.6rem;margin: 1rem 0 1.2rem 7%;background: #009688;color: white}
+		.layui-layer-btn0{font-size: 0.3rem;!important;}
+		::-webkit-input-placeholder { /* WebKit browsers */
+			color: #999 !important;
+			font-size: 16px;
+		}
 
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+			color: #999 !important;
+			font-size: 16px;
+		}
+
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+			color: #999 !important;
+			font-size: 16px;
+		}
+		.fl{
+			float: left;
+		}
+		.fr{
+			float: right;
+		}
+		.head{
+			height: 1.26rem;
+			background: #000;
+			color: #fff;
+			line-height: 1.26rem;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 10;
+		}
+		.head .logo{
+			width: 22.6%;
+			vertical-align: middle;
+			margin-left: 3%;
+		}
+		.head .ticket{
+			width: 18%;
+			height: .56rem;
+			background: url('__PUBLIC__/mobile/index/bg-btn.png') center no-repeat;
+			outline: none;
+			border: none;
+			border-radius: 4px;
+			float: right;
+			font-size: .26rem;
+			color: #fff;
+			margin-right: 3%;
+			margin-top: .3rem;
+			margin-left: .1rem;
+		}
+		.head span{
+			font-size: .22rem;
+		}
+	</style>
+</head>
+
+<header class="head">
+	<img src="__PUBLIC__/mobile/index/logo.png" class="logo">
+	<a href="Online.html"><button class="ticket fr">抢 票</button></a>
+	<span class="fr">报名人数已超<span style="color: #fe5a2c">310</span>人</span>
+</header>
+<section class="mine">
 <!-- 报名 -->
 <article>
 	<div class="user-login">
@@ -20,8 +102,8 @@
 	    </div>
 	</div>
 </article>
-
-<include file="public/nfooter"/>
+</section>
+</body>
 <script type="text/javascript">
 	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
 	var sendBtn = $('.sendbtn');
