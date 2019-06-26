@@ -51,12 +51,14 @@ ORDER BY
 //                $ranking = $key+1;
 //            }
 //        }
-
+        $detail = Db::name('user')->where('uid',session('userid'))->find();
+        $this->assign('detail',$detail);
 		$this->assign('sortlist',$res);
 		$this->assign('list',$list);
 		$this->assign('ranking',3);
 		$this->assign('nav',99);
 		$this->assign('nav2',1);
+		$this->assign('arr',['未领票','已领票']);
 		return view();
 	}
 	

@@ -20,7 +20,7 @@
 		<li><a href="{:url('/place')}">领票点</a></li>
 		<li><a href="{:url('/home/cooperation')}">商务合作</a></li>
 		<li><a href="{:url('/my')}">我的账号</a></li>
-		<li><a href="">展位</a></li>
+		<li><a href="{:url('/home/cooperation/booth')}">展位</a></li>
 		<li><a href="">中文/EN</a></li>
 	</ul>
 	<div class="content">
@@ -28,15 +28,6 @@
 			<img src="/public/home/images/img/left-banner.png" class="left-banner">
 			<img src="/public/home/images/img/right-banner.png" class="right-banner">
 			<img src="/public/home/images/img/logo.png" class="logo">
-		</div>
-		<div class="content-tit">
-			<div class="content-txt">
-				<div class="date fl">8.18</div>
-				<div class="fl text-left">
-					<div>郑州</div>
-					<div>国际会展中心</div>
-				</div>
-			</div>
 		</div>
 		<div>
 			<a href="" class="btn">立即抢票<i class="arrow"></i></a>
@@ -56,7 +47,7 @@
 				<volist name="guestList" id="vo">
 					<li class="fl">
 						<img src="{$vo.thumb}" class="man-img">
-						<div class="man-desc text-left" style="display: none">
+						<div class="man-desc text-left1" style="display: none">
 							<h1>{$vo.title}</h1>
 							<div class="man-textdesc">
 								<div class="line"></div>
@@ -323,7 +314,7 @@
 </body>
 <script type="text/javascript">
 	$('.man-img').mousemove(function () {
-		$('.text-left').hide();
+		$('.text-left1').hide();
 		$(this).next().show();
 	})
 </script>

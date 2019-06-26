@@ -1,48 +1,15 @@
-
-<ul class="clearfix">
-	<li><a href="/home/index" title="{$website.title}" <eq name="$nav" value="0"> class="active" </eq>>首页</a></li>
-	<volist name="list" id="vo">
-		<li>
-			<switch name="$vo.cat_id" >
-				<case value="1|2">
-					<a href="{:url('/page/'.$vo.cat_id)}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
-				</case>
-				<case value="3">
-					<a href="{:url('/guest')}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
-				</case>
-				<case value="5">
-					<a href="{:url('/news')}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
-				</case>
-				<case value="6">
-					<a href="{:url('/place')}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
-				</case>
-				<case value="4|7">
-					<a href="{:url('/partner/'.$vo.cat_id)}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
-				</case>
-		<case value="56">
-			<a href="{:url('/home/cooperation')}" title="{$vo.cat_name}" <eq name="$nav" value="$vo.cat_id"> class="active" </eq>>{$vo.cat_name}</a></li>
-		</case>
-			</switch>
-		</li>
-	</volist>
-	<li><a href="{:url('/my')}" title="我的" <eq name="$nav" value="99"> class="active" </eq>>我的</a></li>
-	<div id="subOne" class="noselect">分论坛 &#8744;</div>
-	<dl id="subforum">
-		<volist name="subforums" id="vo">
-			<a target="_blank" href="/home/subforum/index/id/{$vo.id}">{$vo.title}</a>
-		</volist>
-	</dl>
-</ul>
-<script>
-	$(function () {
-		$('#subOne').click(function () {
-			if($('#subforum').is(':visible')){
-				$(this).html('分论坛 &#8744;');
-				$('#subforum').hide();
-			}else{
-				$(this).html('分论坛 &#8743;');
-				$('#subforum').show();
-			}
-		})
-	})
-</script>
+<header class="header">
+	<img src="__PUBLIC__/home/images/img/ico.png" class="icon">
+	<ul class="head-list">
+		<li><a href="{:url('/home/index')}">首页</a></li>
+		<li><a href="">分论坛 <span class="triangle-up"></span></a></li>
+		<li><a href="{:url('/page/1')}">简介</a></li>
+		<li><a href="{:url('/page/2')}">议程</a></li>
+		<li><a href="{:url('/news')}">媒体报道</a></li>
+		<li><a href="{:url('/place')}">领票点</a></li>
+		<li><a href="{:url('/home/cooperation')}">商务合作</a></li>
+		<li><a href="{:url('/my')}">我的账号</a></li>
+		<li><a href="{:url('/home/cooperation/booth')}">展位</a></li>
+		<li><a href="">中文/EN</a></li>
+	</ul>
+</header>

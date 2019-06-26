@@ -35,4 +35,8 @@ class Cooperation extends Base
         }
         exit;
     }
+
+    public function booth(){
+        return view('booth');
+    }
 }

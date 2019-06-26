@@ -12,21 +12,130 @@
 	<!-- <script src="__PUBLIC__/home/js/touch.js"></script> -->
 	<script src="__PUBLIC__/home/js/swiper.js"></script>
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/reset.css?ver=06130952">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/style.css?ver=06130952">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/style/base.css">
+	<script type="text/javascript" src="__PUBLIC__/home/js/rem.js"></script>
 	<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/mobile";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
-	<title>2018云和数据第六届创业者大会</title>
+	<title>第七届创业者大会</title>
+	<style>
+		html,body{
+			width: 100%;
+			width: 100vw;
+			overflow-x: hidden;
+			/*background: #fff;*/
+		}
+		.header{
+			height: 1.4rem;
+			background: #000;
+			line-height: 1.4rem;
+			color: #fff;
+			font-size: .2rem;
+		}
+		.header .icon{
+			float: left;
+			width: 1.5rem;
+			margin-left: .6rem;
+			margin-top: .4rem;
+		}
+		.header .head-list{
+			width: 73%;
+			float: right;
+			display: flex;
+			justify-content: space-around
+		}
+		.triangle-up {
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-top: 10px solid #fff;
+			margin-left: 2px
+		}
+		.content-info{
+			height: 6.6rem;
+			background: url('__PUBLIC__/home/images/img/meet-bg.png') center no-repeat;
+			background-size: 100% 100%;
+			padding-left: 2rem;
+			padding-top: 1.14rem;
+		}
+		.content-box{
+			margin-right: .2rem;
+			font-size: .26rem;
+		}
+		.content-box .big{
+			font-size: .5rem;
+			font-weight: bold
+		}
+		.tobe{
+			display: block;
+			width: 3.6rem;
+			height: .9rem;
+			text-align: center;
+			line-height: .9rem;
+			font-size: .34rem;
+			font-weight: bold;
+			background: linear-gradient(to right,#cc363f,#1627e1);
+			border-radius: .5rem;
+			margin-top: .9rem;
+		}
+		.main{
+			color: #000;
+		}
+		.box{
+			width: 81.25%;
+			margin: -1.1rem auto 0;
+			background: #fff;
+			padding: .8rem .78rem;
+		}
+		.blue-line{
+			display: inline-block;
+			width: .06rem;
+			height: .3rem;
+			background: #3e60f6;
+		}
+		.title b{
+			font-size: .34rem;
+			margin-left: .2rem;
+		}
+		.shadow{
+			box-shadow: 1px 1px 22px 0px #ccc;
+		}
+		.map{
+			margin-top: .44rem;
+			margin-bottom: .7rem;
+		}
+		.map img{
+			width: 100%;
+		}
+		.com{
+			padding: 0 .5rem;
+			font-size: .3rem;
+			margin-top: .4rem;
+		}
+		.lists{
+			height: 1.9rem;
+			border-bottom: 1px solid #ccc;
+			display: flex;
+		}
+		.left{
+			/*width: 6.8rem;*/
+
+		}
+		.business{
+			padding-left: .3rem;
+			padding-top: .4rem;
+		}
+		footer{
+			color: #999;
+			font-size: .26rem;
+			text-align: center;
+			padding: .3rem 0 .26rem;
+		}
+		footer .compary{
+			font-size: .16rem;
+		}
+	</style>
 </head>
 <body>
-<head>
-	<div class="head">
-		<div class="wrap">
-			<div class="fl logo"><a href="{$website.url}"><img src="{$website.logo}"></a></div>
-			<div class="fr nav">
 				{:widget('widget/head')}
-			</div>
-			<p class="col000 textr font14 head-pos">报名已破<span class="fontber">{$website.tcount}</span>人<br><span class="font12 col7e">每晚6点更新数据</span></p>
-		</div>
-	</div>
-</head>
-				
