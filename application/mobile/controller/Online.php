@@ -19,11 +19,4 @@ class Online extends Base
 		return view();
     }
 
-    //联系我们
-    public function exhibition()
-    {
-        die;
-        return view();
-    }
-
 }
