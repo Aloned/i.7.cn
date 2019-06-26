@@ -812,3 +812,29 @@ input:-ms-input-placeholder{
     width: 4.6rem;
     padding-left: 0.38rem;
 }
+.zone {
+    overflow: hidden;
+    text-align: left;
+    color: #fff;
+}
+.zone .zone-list{
+    float: left;
+    width: 30%;
+    margin-left: 2.3%;
+    height: 2.7rem;
+}
+.zone .zone-box{
+    padding: .44rem .54rem;
+}
+.zone1{
+    background: url('../index/zone1.png') center no-repeat;
+    background-size: cover;
+}
+.zone2{
+    background: url('../index/zone2.png') center no-repeat;
+    background-size: cover;
+}
+.zone3{
+    background: url('../index/zone3.png') center no-repeat;
+    background-size: cover;
+}
