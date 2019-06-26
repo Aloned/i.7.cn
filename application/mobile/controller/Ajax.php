@@ -198,7 +198,7 @@ class Ajax extends Controller
 	}
 
     public function sendMsg($phone){
-        $content = urlencode('【创业者大会】您已成功报名云和数据第六届创业者大会！请火速抢票！同时邀请十位好友报名领票即刻升为VIP门票');
+        $content = urlencode('【中国创业者大会】恭喜您已成功报名，登陆官网7.ih.cn就近领票。邀请多位朋友报名取票成功立升VIP门票');
         $url = 'https://dx.ipyy.net/sms.aspx?action=send&userid=&account=ZZ00321&password='.strtoupper(md5('ZZ0032188')).'&mobile='.$phone.'&content='.$content.'&sendTime=&extno=3';
         $ch = curl_init();
         //设置选项，包括URL
